@@ -58,7 +58,7 @@ app.get("/airports", async (req, res) => {
 });
 
 //---End point for all airports in a country
-app.get("/airports/:iso_country", async (req, res) => {
+app.get("/airports/country/:iso_country", async (req, res) => {
   const airportCountry = req.params.iso_country;
   const regex = new RegExp("^" + airportCountry + "$", "i"); // Case-insensitive regex to make sure if user types lowercase it will still match with the database
   Airport.find({ iso_country: { $regex: regex } }).then((iso_country) => {
@@ -72,18 +72,27 @@ app.get("/airports/:iso_country", async (req, res) => {
 
 //----End point for SINGLE result (IATA code)----//
 
-// app.get("/airports/iata/:iata_code", async (req, res) => {
-//   const iataCode = req.params.iata_code.toLowerCase();
-//   let byIata = Airport.find(
-//     (item) => item.iata_code.toLowerCase() === iataCode
-//   );
+app.get("/airports/iata/:iata_code", async (req, res) => {
+  const iataCode = req.params.iata_code.toLowerCase();
+  const regex2 = new RegExp("^" + iataCode + "$", "i");
+  Airport.find({ iata_code: { $regex: regex2 } }).then((iata_code) => {
+    if (iata_code) {
+      res.json(iata_code);
+    } else {
+      res.status(404).json({ error: `That IATA code does not exist` });
+    }
+  });
+});
 
-//   if (byIata) {
-//     res.json(byIata);
-//   } else {
-//     res.status(404).send("No Airport was found");
-//   }
-// });
+//----End point for name of airport ----//
+
+//PUT HERE//
+
+//----End point for search by city ----//
+
+//NOTE: will probably need to match to municipality as there is no city name to match with
+
+//PUT HERE//
 
 // Start the server
 app.listen(port, () => {
