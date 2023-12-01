@@ -1,7 +1,0 @@
-{
-  "name": "final-project-airportfinder",
-  "version": "1.0.0",
-  "scripts": {
-    "postinstall": "npm install --prefix backend"
-  }
-}
