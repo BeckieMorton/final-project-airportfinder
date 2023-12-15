@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Map } from "../../components/Map/Map";
+import styles from "./Results.module.css";
 
 export const Results = () => {
   const { code } = useParams(null);
@@ -38,13 +40,18 @@ export const Results = () => {
 
   return (
     <>
-      <div>
-        <h1>{airportName}</h1>
-        <h2>Code: {airportCode}</h2>
-        <h2>Type: {airportType}</h2>
-        <h2>Continent: {airportContinent}</h2>
-        <h2>Country: {airportCountry}</h2>
-        <h2>Municipality: {municipality}</h2>
+      <div className={styles.resultsContainer}>
+        <div className={styles.resultsBox}>
+          <h1>{airportName}</h1>
+          <h2>Code: {airportCode}</h2>
+          <h2>Type: {airportType}</h2>
+          <h2>Continent: {airportContinent}</h2>
+          <h2>Country: {airportCountry}</h2>
+          <h2>Municipality: {municipality}</h2>
+        </div>
+        <div className={styles.resultsBox}>
+          <Map />
+        </div>
       </div>
     </>
   );

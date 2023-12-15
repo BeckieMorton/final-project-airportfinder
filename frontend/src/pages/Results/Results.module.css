@@ -1,0 +1,20 @@
+.resultsContainer {
+  /* grid parent */
+  display: grid;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.resultsBox {
+  /* grid child */
+  text-align: center;
+  border: 2px solid blue;
+}
+
+/* media query for desktop */
+@media screen and (min-width: 825px) {
+  .resultsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
