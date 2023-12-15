@@ -4,9 +4,12 @@ import { NavLink } from "react-router-dom";
 import { Map } from "../../components/Map/Map";
 import styles from "./Results.module.css";
 
+//My deployed database
+//https://final-project-airportfinder.onrender.com
+
 export const Results = () => {
   const { code } = useParams(null);
-  const myBackendIataAPI = `https://project-express-api-hcmb.onrender.com/airports/iata/${code}`;
+  const myBackendIataAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
 
   const [airport, setAirport] = useState({});
 
@@ -29,7 +32,6 @@ export const Results = () => {
   }, [code]);
 
   console.log(`this is in airport SHOULD BE ONE AIRPORT:`, airport);
-  console.log(`this is in code in the iatacode.jsx:`, code);
 
   const airportName = airport.name;
   const airportCode = airport.iata_code;
@@ -37,7 +39,11 @@ export const Results = () => {
   const airportContinent = airport.continent;
   const airportCountry = airport.iso_country;
   const municipality = airport.municipality;
+  const latitude = airport.latitude_deg;
+  const longitude = airport.longitude_deg;
 
+  console.log(`country is:`, airportCountry);
+  console.log(`latitude is:`, latitude);
   return (
     <>
       <div className={styles.resultsContainer}>
@@ -48,6 +54,8 @@ export const Results = () => {
           <h2>Continent: {airportContinent}</h2>
           <h2>Country: {airportCountry}</h2>
           <h2>Municipality: {municipality}</h2>
+          <h2>Lat: {latitude}</h2>
+          <h2>Long: {longitude}</h2>
         </div>
         <div className={styles.resultsBox}>
           <Map />
