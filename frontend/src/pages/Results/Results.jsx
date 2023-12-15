@@ -24,7 +24,8 @@ export const Results = () => {
           throw new Error("Network Response Error");
         }
         const json = await response.json();
-        setAirport(json[0]);
+        setAirport(json);
+        console.log("set airport to one airport here");
       } catch (error) {
         console.log("Error fetching data:", error);
       }
@@ -43,6 +44,10 @@ export const Results = () => {
   const municipality = airport.municipality;
   const latitude = airport.latitude_deg;
   const longitude = airport.longitude_deg;
+
+  console.log(`name is, ${airport.name}`);
+  console.log(`name is`, airportName);
+  console.log(`latitude is:`, latitude);
 
   return (
     <>

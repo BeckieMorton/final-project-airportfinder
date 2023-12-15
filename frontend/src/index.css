@@ -18,6 +18,26 @@ body {
   margin-top: 3rem;
 }
 
+h1 {
+  font-size: 66px;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+p {
+  font-size: 50px;
+}
+
+input {
+  font-size: 50px;
+}
+
+a {
+  font-size: 50px;
+}
+
 button {
   background-color: #335383;
   color: #fff;

@@ -5,12 +5,14 @@ export const MainSearch = () => {
   const [airports, setAirports] = useState([]);
   const [code, setCode] = useState("");
 
-  const myBackendAPI = `mongodb://127.0.0.1:27017/Airportfinder`;
+  //const myBackendAPI = `mongodb://127.0.0.1:27017/Airportfinder`;
+
+  const myAPI = "https://project-express-api-hcmb.onrender.com/airports";
 
   useEffect(() => {
     const fetchAirports = async () => {
       try {
-        const response = await fetch(myBackendAPI);
+        const response = await fetch(myAPI);
         if (!response.ok) {
           throw new Error("Network Response Error");
         }
@@ -24,6 +26,9 @@ export const MainSearch = () => {
 
     fetchAirports();
   }, []);
+
+  console.log(`what is in airports array?: should be everything?:`, airports);
+  console.log(`what is in code:? should be what user types in input:`, code);
 
   return (
     <div>
