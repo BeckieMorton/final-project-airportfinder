@@ -20,7 +20,7 @@ export const Map = () => {
     <>
       <div className={styles.mapBox}>
         <MapContainer
-          className={styles.mapit}
+          className={styles.map}
           center={[51.505, -0.09]}
           zoom={13}
           scrollWheelZoom={false}

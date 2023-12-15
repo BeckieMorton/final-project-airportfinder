@@ -10,11 +10,12 @@
   /* grid child */
   text-align: center;
   border: 2px solid blue;
+  padding: 1em;
 }
 
 /* media query for desktop */
 @media screen and (min-width: 825px) {
   .resultsContainer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 70% 30%);
   }
 }
