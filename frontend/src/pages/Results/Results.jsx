@@ -7,6 +7,9 @@ import styles from "./Results.module.css";
 //My deployed database
 //https://final-project-airportfinder.onrender.com
 
+//expressAPIrender - other airport file
+//https://project-express-api-hcmb.onrender.com
+
 export const Results = () => {
   const { code } = useParams(null);
   const myBackendIataAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
@@ -21,8 +24,7 @@ export const Results = () => {
           throw new Error("Network Response Error");
         }
         const json = await response.json();
-        setAirport(json);
-        console.log("Updated airport state:", airport);
+        setAirport(json[0]);
       } catch (error) {
         console.log("Error fetching data:", error);
       }
@@ -42,8 +44,6 @@ export const Results = () => {
   const latitude = airport.latitude_deg;
   const longitude = airport.longitude_deg;
 
-  console.log(`country is:`, airportCountry);
-  console.log(`latitude is:`, latitude);
   return (
     <>
       <div className={styles.resultsContainer}>
