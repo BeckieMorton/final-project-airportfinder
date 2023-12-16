@@ -19,19 +19,19 @@ body {
 }
 
 h1 {
-  font-size: 66px;
-}
-
-h2 {
   font-size: 56px;
 }
 
+h2 {
+  font-size: 46px;
+}
+
 p {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 input {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 a {

@@ -18,7 +18,6 @@ export const MainSearch = () => {
         }
         const json = await response.json();
         setAirports(json);
-        console.log("Updated airports state:", airports);
       } catch (error) {
         console.log("Error fetching data:", error);
       }
@@ -26,9 +25,6 @@ export const MainSearch = () => {
 
     fetchAirports();
   }, []);
-
-  console.log(`what is in airports array?: should be everything?:`, airports);
-  console.log(`what is in code:? should be what user types in input:`, code);
 
   return (
     <div>

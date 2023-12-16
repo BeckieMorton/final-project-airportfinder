@@ -77,7 +77,7 @@ app.get("/airports/country/:iso_country", async (req, res) => {
 app.get("/airports/iata/:iata_code", async (req, res) => {
   const iataCode = req.params.iata_code.toLowerCase();
   const regex2 = new RegExp("^" + iataCode + "$", "i");
-  Airport.findOne({ iata_code: { $regex: regex2 } }).then((iata_code) => {
+  Airport.find({ iata_code: { $regex: regex2 } }).then((iata_code) => {
     if (iata_code) {
       res.json(iata_code);
     } else {
