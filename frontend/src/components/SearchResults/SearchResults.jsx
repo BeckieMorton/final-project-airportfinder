@@ -26,18 +26,18 @@ export const SearchResults = () => {
           throw new Error("Network Response Error");
         }
         const json = await response.json();
-        setAirport(json);
+        setAirport(json[0]);
         console.log("airport array set with searched airport");
       } catch (error) {
         console.log("Error fetching data:", error);
       } finally {
-        setStillLoading(false);
       }
     };
 
     fetchIataDetails();
   }, [code]);
 
+  console.log(`value of airport:`, airport);
   const airportName = airport.name;
   const airportCode = airport.iata_code;
   const airportType = airport.type;
@@ -46,6 +46,8 @@ export const SearchResults = () => {
   const municipality = airport.municipality;
   const latitude = airport.latitude_deg;
   const longitude = airport.longitude_deg;
+
+  console.log(`this should be in the airportName:`, airportName);
 
   //this will show loading while data is being fetch fetched from the API
   if (!airport || !airport.name) {

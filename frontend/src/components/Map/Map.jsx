@@ -24,6 +24,8 @@ export const Map = () => {
   const { airport, setAirport } = useAirportStore();
   //const { stillLoading, setStillLoading } = useStillLoadingStore();
 
+  //map works but updates only on refresh, need to fix it, look at using useEffect to wrap around all of the use store and definiting variables, and passing through the airport info
+
   const latitude = airport.latitude_deg;
   const longitude = airport.longitude_deg;
   console.log(`new latitude in map is:`, latitude);

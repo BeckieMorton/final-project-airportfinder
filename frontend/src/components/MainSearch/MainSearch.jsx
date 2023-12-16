@@ -17,7 +17,7 @@ export const MainSearch = () => {
           throw new Error("Network Response Error");
         }
         const json = await response.json();
-        setAirports(json);
+        setAirports(json[0]);
       } catch (error) {
         console.log("Error fetching data:", error);
       }
