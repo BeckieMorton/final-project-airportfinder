@@ -1,20 +1,27 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import useAirportStore from "../../stores/useAirportStore";
 
 export const Weather = () => {
   const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
   const API_KEY = "9055fb4826563eac25a47e211073a627"; //Beckie's API key
 
-  //define coordinates object
-  const coordinates = {
-    lat: 78.2,
-    long: 15.6,
-  };
-  //get longitude and latitude value from airport.municipality
-
-  const currentWeather = `${BASE_URL}?lat=${coordinates.lat}&lon=${coordinates.long}&units=metric&APPID=${API_KEY}`;
-
+  const { airport, setAirport } = useAirportStore();
+  const [loading, setLoading] = useState(true);
+  const [lat, setLatitude] = useState(null);
+  const [long, setLongitude] = useState(null);
   const [weatherForCity, setWeatherForCity] = useState({});
+
+  //get longitude and latitude value from airport.municipality
+  useEffect(() => {
+    if (airport && airport.latitude_deg && airport.longitude_deg) {
+      setLatitude(airport.latitude_deg);
+      setLongitude(airport.longitude_deg);
+      setLoading(false);
+    }
+  }, [airport]);
+
+  const currentWeather = `${BASE_URL}?lat=${lat}&lon=${long}&units=metric&APPID=${API_KEY}`;
 
   useEffect(() => {
     const fetchWeather = async () => {
