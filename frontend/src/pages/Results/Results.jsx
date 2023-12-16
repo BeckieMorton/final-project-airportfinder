@@ -16,15 +16,16 @@ export const Results = () => {
   return (
     <>
       <div className={styles.resultsContainer}>
-        {/* <div className={styles.resultsBox}>
+        <div className={styles.resultsBox}>
           <SearchResults />
         </div>
         <div className={styles.resultsBox}>
           <Map />
-        </div> */}
-        <div className={styles.weatherBox}>
+        </div>
+        <div className={styles.resultsBox}>
           <Weather />
         </div>
+        <div className={styles.resultsBox}>test</div>
       </div>
     </>
   );

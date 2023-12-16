@@ -7,7 +7,9 @@ export const MainSearch = () => {
 
   //const myBackendAPI = `mongodb://127.0.0.1:27017/Airportfinder`;
 
-  const myAPI = "https://project-express-api-hcmb.onrender.com/airports";
+  //WHY AM I DOING THIS FETCH HERE??? I DONT NEED IT. DO I???
+
+  const myAPI = "https://final-project-airportfinder.onrender.com/airports";
 
   useEffect(() => {
     const fetchAirports = async () => {

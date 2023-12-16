@@ -33,20 +33,34 @@ export const Weather = () => {
     fetchWeather();
   }, [currentWeather]);
 
-  const currentName = weatherForCity.name;
-  console.log(`details in array:`, weatherForCity);
-  // const currentLat = weatherForCity.coord.lat;
-  // const currentLong = weatherForCity.coord.lon;
+  console.log(`details in weather array:`, weatherForCity);
 
+  const currentName = weatherForCity.name ? weatherForCity.name : "N/A";
   const currentLat = weatherForCity.coord ? weatherForCity.coord.lat : "N/A";
   const currentLong = weatherForCity.coord ? weatherForCity.coord.lon : "N/A";
+  const currentTemp = weatherForCity.main ? weatherForCity.main.temp : "N/A";
+  const currentFeelsLike = weatherForCity.main
+    ? weatherForCity.main.feels_like
+    : "N/A";
+
+  const weatherMain = weatherForCity.weather
+    ? weatherForCity.weather[0].main
+    : "N/A";
+
+  const weatherDesc = weatherForCity.weather
+    ? weatherForCity.weather[0].description
+    : "N/A";
 
   return (
     <>
       <div>Weather</div>
-      <p>{currentName}</p>
-      <p>{currentLat}</p>
-      <p>{currentLong}</p>
+      <p>Name: {currentName}</p>
+      <p>Latitude: {currentLat}</p>
+      <p>Longitude: {currentLong}</p>
+      <p>Current Temp: {currentTemp}</p>
+      <p>Feels like: {currentFeelsLike}</p>
+      <p>Weather: {weatherMain}</p>
+      <p>Weather description: {weatherDesc}</p>
     </>
   );
 };

@@ -14,38 +14,44 @@ import styles from "./SearchResults.module.css";
 
 export const SearchResults = () => {
   const { code } = useParams(null);
-  const myBackendIataAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
+  const myAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
 
   const { airport, setAirport } = useAirportStore();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchIataDetails = async () => {
       try {
-        const response = await fetch(myBackendIataAPI);
+        const response = await fetch(myAPI);
         if (!response.ok) {
           throw new Error("Network Response Error");
         }
         const json = await response.json();
-        setAirport(json[0]);
+        setAirport(json);
         console.log("airport array set with searched airport");
       } catch (error) {
         console.log("Error fetching data:", error);
       } finally {
+        setLoading(false);
       }
     };
 
     fetchIataDetails();
-  }, [code]);
+  }, [code, setAirport, myAPI]);
+
+  if (loading || !airport) {
+    return <div>loading data</div>;
+  }
 
   console.log(`value of airport:`, airport);
-  const airportName = airport.name;
-  const airportCode = airport.iata_code;
-  const airportType = airport.type;
-  const airportContinent = airport.continent;
-  const airportCountry = airport.iso_country;
-  const municipality = airport.municipality;
-  const latitude = airport.latitude_deg;
-  const longitude = airport.longitude_deg;
+  const airportName = airport?.name;
+  const airportCode = airport?.iata_code;
+  const airportType = airport?.type;
+  const airportContinent = airport?.continent;
+  const airportCountry = airport?.iso_country;
+  const municipality = airport?.municipality;
+  const latitude = airport?.latitude_deg;
+  const longitude = airport?.longitude_deg;
 
   console.log(`this should be in the airportName:`, airportName);
 
