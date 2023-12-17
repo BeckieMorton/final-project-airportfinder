@@ -48,13 +48,11 @@ a {
 }
 
 button {
-  background-color: #f99417;
-  color: #f5f5f5;
-  padding: 10px 20px;
+  background: none;
+  color: inherit;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: 0;
+  font: inherit;
   cursor: pointer;
-  margin: 10px;
-  text-decoration: none;
+  outline: inherit;
 }

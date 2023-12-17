@@ -30,27 +30,35 @@ export const MainSearch = () => {
   }, []);
 
   return (
-    <div className={styles.mainSearchContainer}>
-      <div>
-        <h1>Discover Global Airports Near and Far.</h1>
-      </div>
+    <>
+      <div className={styles.mainSearchContainer}>
+        <h1>Discover Global Airports Near and Far</h1>
 
-      <p>Enter the airport IATA code</p>
-      <div className={styles.searchBox}>
-        <p>
-          <input
-            type="text"
-            placeholder="e.g JRO"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-          />
-          <Link to={`/airports/iata/${code}`} key={code}>
-            <img src="./public/assets/search-icon-orange.png" />
-          </Link>
-        </p>
-        <p>test</p>
-        <p>test2</p>
+        <div className={styles.searchBox}>
+          <p>
+            <select className={styles.searchSelection}>
+              <option value="">Search by...</option>
+              <option value="1">IATA Code</option>
+              <option value="2">City</option>
+              <option value="3">Country</option>
+            </select>
+
+            <input
+              type="text"
+              placeholder="e.g JRO"
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+            />
+
+            <Link to={`/airports/iata/${code}`} key={code}>
+              <img
+                className={styles.searchIcon}
+                src="./public/assets/search-icon-orange.png"
+              />
+            </Link>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };

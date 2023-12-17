@@ -2,3 +2,7 @@
   padding: 1rem;
   text-align: center;
 }
+
+.headerContainer img:hover {
+  /* maybe an animation for the hover effect? */
+}
