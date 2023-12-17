@@ -9,7 +9,11 @@
 .resultsBox {
   /* grid child */
   text-align: center;
-  border: 2px solid blue;
+  border: 2px solid #f99417;
+  border-radius: 1rem;
+  gap: 2rem;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 
 /* media query for desktop */

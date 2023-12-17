@@ -1,46 +1,55 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+/* colour palatte
+
+white background: #fbfbfbfb
+text dark blue: #363062
+medium blue: #4D4C7D
+orange: #F99417 */
 
 :root {
   margin: 0;
-  font-family: "Roboto Mono", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: "Roboto Mono", sans-serif;
-  color: #252525;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: #363062;
   font-weight: 400;
-  background-color: #f7f2e9;
+  background-color: #fbfbfbfb;
   min-height: 100vh;
-  padding: 3em 2em 6rem 2em;
-
-  margin-top: 3rem;
 }
 
 h1 {
   font-size: 26px;
+  color: #363062;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2.7px;
 }
 
 h2 {
+  font-family: "Poppins", sans-serif;
   font-size: 26px;
+  color: #363062;
 }
 
 p {
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
+  color: #363062;
 }
 
 input {
   font-size: 20px;
+  color: #363062;
 }
 
 a {
   font-size: 20px;
+  color: #363062;
 }
 
 button {
-  background-color: #335383;
-  color: #fff;
+  background-color: #f99417;
+  color: #f5f5f5;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;

@@ -1,3 +1,22 @@
 .mainSearchInput {
   padding-left: 1em;
 }
+
+.mainSearchContainer {
+  text-align: center;
+}
+
+
+.mainSearchContainer h1 {
+  
+}
+
+.mainSearchContainer img {
+  max-width: 50px;
+}
+
+.searchBox input {
+  border: 3px solid #363062;
+  border-radius: 8px;
+  padding: 1rem 3rem 1rem 3rem;
+}

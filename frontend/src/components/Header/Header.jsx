@@ -1,9 +1,16 @@
-import React from "react";
+import { BrowserRouter, NavLink, Routes } from "react-router-dom";
+import styles from "./Header.module.css";
 
 export const Header = () => {
   return (
     <div>
-      <h1>Airport Finder - header component</h1>
+      <nav>
+        <div className={styles.headerContainer}>
+          <NavLink to="/">
+            <img src="./public/assets/AirportFinder_transparent_orangedb.png" />
+          </NavLink>
+        </div>
+      </nav>
     </div>
   );
 };

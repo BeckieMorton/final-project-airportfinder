@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import styles from "./MainSearch.module.css";
 
 export const MainSearch = () => {
   const [airports, setAirports] = useState([]);
@@ -29,17 +30,27 @@ export const MainSearch = () => {
   }, []);
 
   return (
-    <div>
-      <p style={{ textDecoration: "underline" }}>Enter the airport IATA code</p>
-      <input
-        type="text"
-        placeholder="e.g JRO"
-        value={code}
-        onChange={(e) => setCode(e.target.value)}
-      />
-      <Link to={`/airports/iata/${code}`} key={code}>
-        &nbsp;Find Airport
-      </Link>
+    <div className={styles.mainSearchContainer}>
+      <div>
+        <h1>Discover Global Airports Near and Far.</h1>
+      </div>
+
+      <p>Enter the airport IATA code</p>
+      <div className={styles.searchBox}>
+        <p>
+          <input
+            type="text"
+            placeholder="e.g JRO"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+          />
+          <Link to={`/airports/iata/${code}`} key={code}>
+            <img src="./public/assets/search-icon-orange.png" />
+          </Link>
+        </p>
+        <p>test</p>
+        <p>test2</p>
+      </div>
     </div>
   );
 };
