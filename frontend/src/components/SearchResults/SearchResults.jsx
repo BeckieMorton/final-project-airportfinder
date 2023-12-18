@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Map } from "../../components/Map/Map";
-
+import { createClient } from "pexels";
 import useAirportStore from "../../stores/useAirportStore";
 import styles from "./SearchResults.module.css";
 
@@ -106,7 +106,6 @@ export const SearchResults = () => {
     type: "region",
   });
   const country = regionNamesInEnglish.of(airportCountry);
-  // Expected output: "United States"
 
   return (
     <>

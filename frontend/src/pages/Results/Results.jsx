@@ -5,6 +5,7 @@ import { SearchResults } from "../../components/SearchResults/SearchResults";
 import { Weather } from "../../components/Weather/Weather";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
+import { CountryImage } from "../../components/CountryImage/CountryImage";
 
 import styles from "./Results.module.css";
 
@@ -28,7 +29,13 @@ export const Results = () => {
         <div className={styles.resultsBox}>
           <Map />
         </div>
-        <div className={styles.resultsBox}>test</div>
+        <div className={styles.resultsBox}>
+          <CountryImage />
+        </div>
+        <div className={styles.resultsBox}>info about country?</div>
+        <div className={styles.resultsBox}>
+          info about closer airports for user
+        </div>
       </div>
       <Footer />
     </>
