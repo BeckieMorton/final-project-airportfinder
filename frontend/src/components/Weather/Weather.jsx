@@ -42,7 +42,6 @@ export const Weather = () => {
 
   console.log(`details in weather array:`, weatherForCity);
 
-  const currentName = weatherForCity.name ? weatherForCity.name : "N/A";
   const currentTemp = weatherForCity.main ? weatherForCity.main.temp : "N/A";
   const currentFeelsLike = weatherForCity.main
     ? weatherForCity.main.feels_like
@@ -55,9 +54,11 @@ export const Weather = () => {
   const weatherDesc = weatherForCity.weather
     ? weatherForCity.weather[0].description
     : "N/A";
-  let weatherImage = "";
 
   //assign icon to weather to display
+
+  let weatherImage = "";
+
   switch (weatherMain) {
     case "Clouds":
       weatherImage = "/assets/weather-clouds.png";
@@ -81,16 +82,50 @@ export const Weather = () => {
       break;
   }
 
+  //display time and date
+  const Clock = (props) => {
+    const timezone = props;
+    //---Get current time at airport -----//
+    const options = {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      hour12: false,
+      minute: "2-digit",
+      second: "2-digit",
+    };
+    let newTime = new Date(
+      (weatherForCity.dt + timezone + new Date().getTimezoneOffset() * 60) *
+        1000
+    ).toLocaleTimeString([], options);
+
+    return newTime;
+  };
+
+  //console.log(`new time outside clock function:`, newTime);
+
+  //--------Get the user's time and date--------//
+  // const getUserTime = () => {
+  //   //get the users current time and date
+  //   const now = new Date();
+  //   return;
+  // };
+
+  const time = Clock(weatherForCity.timezone);
+
   return (
     <>
       <div>
+        <p>{time}</p>
+      </div>
+      <div>
         <img src={weatherImage} />
       </div>
-      <p>Name: {currentName}</p>
-      <p>Current Temp: {currentTemp}</p>
+      <h2>{currentTemp}°C</h2>
       <p>Feels like: {currentFeelsLike}</p>
-      <p>Weather: {weatherMain}</p>
-      <p>Weather description: {weatherDesc}</p>
+      <h2>{weatherMain}</h2>
+      <p>{weatherDesc}</p>
     </>
   );
 };

@@ -59,15 +59,64 @@ export const SearchResults = () => {
     return <div>loading data....</div>;
   }
 
+  // ------formats airport type string------//
+  const formatAirportSize = (props) => {
+    let sizeNotFormatted = props;
+    let sizeFormatted = sizeNotFormatted
+      .replace(/_/g, " ")
+      .replace(/\bairport\b/g, "");
+
+    return sizeFormatted;
+  };
+
+  const size = formatAirportSize(airportType);
+
+  // ------formats continent string------//
+  let continent = "";
+  switch (airportContinent) {
+    case "AS":
+      continent = "Asia";
+      break;
+    case "OC":
+      continent = "Oceania";
+      break;
+    case "EU":
+      continent = "Europe";
+      break;
+    case "AF":
+      continent = "Africa";
+      break;
+    case "AN":
+      continent = "Antarctica";
+      break;
+    case "SA":
+      continent = "South America";
+      break;
+    case "NA":
+      continent = "North America";
+      break;
+    default:
+      //case for error
+      continent = "Continent not found";
+      break;
+  }
+
+  // ----formats country code into name-----//
+  const regionNamesInEnglish = new Intl.DisplayNames(["en"], {
+    type: "region",
+  });
+  const country = regionNamesInEnglish.of(airportCountry);
+  // Expected output: "United States"
+
   return (
     <>
       <div>
         <h1>{airportName}</h1>
-        <h2>Code: {airportCode}</h2>
-        <h2>Type: {airportType}</h2>
-        <h2>Continent: {airportContinent}</h2>
-        <h2>Country: {airportCountry}</h2>
+        <h2>Continent: {continent}</h2>
+        <h2>Country: {country}</h2>
         <h2>Municipality: {municipality}</h2>
+        <h2>IATA Code: {airportCode}</h2>
+        <h2>Type: {size}</h2>
         <img src={`https://flagsapi.com/${flag}/flat/64.png`}></img>
       </div>
     </>
