@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { Map } from "../../components/Map/Map";
 import { SearchResults } from "../../components/SearchResults/SearchResults";
 import { Weather } from "../../components/Weather/Weather";
+import { Header } from "../../components/Header/Header";
+import { Footer } from "../../components/Footer/Footer";
 
 import styles from "./Results.module.css";
 
@@ -15,18 +17,20 @@ import styles from "./Results.module.css";
 export const Results = () => {
   return (
     <>
+      <Header />
       <div className={styles.resultsContainer}>
         <div className={styles.resultsBox}>
           <SearchResults />
         </div>
         <div className={styles.resultsBox}>
-          <Map />
+          <Weather />
         </div>
         <div className={styles.resultsBox}>
-          <Weather />
+          <Map />
         </div>
         <div className={styles.resultsBox}>test</div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -16,19 +16,56 @@
   border: 3px solid #4d4c7d;
   border-radius: 25px;
   padding: 1rem 3rem 1rem 3rem;
-  font-size: 20px;
+  font-size: 16px;
   color: #363062;
   margin-right: 0.5em;
 }
 
 .searchSelection {
-  align-items: center;
-  box-sizing: border-box;
-  display: inline-block;
-  border: 3px solid #4d4c7d;
-  border-radius: 30px;
-  padding: 1rem;
-  margin-right: 0.5rem;
+  display: none;
+  padding: 0.5rem;
+}
+
+.searchSlogan {
   font-size: 20px;
   color: #363062;
+  text-align: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.mobileSelectButton {
+  background-color: #f99417;
+  border: 2px solid #4d4c7d;
+  border-radius: 3px;
+  padding: 0;
+  margin: 0.5rem;
+}
+
+/* media query for desktop */
+@media screen and (min-width: 825px) {
+  .searchSelection {
+    box-sizing: border-box;
+    border: 3px solid #4d4c7d;
+    border-radius: 25px;
+    padding: 1rem 3rem 1rem 3rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #363062;
+    margin-right: 0.5em;
+    display: inline-block;
+  }
+
+  .searchBox input {
+    box-sizing: border-box;
+    border: 3px solid #4d4c7d;
+    border-radius: 25px;
+    padding: 1rem 3rem 1rem 3rem;
+    font-size: 16px;
+    color: #363062;
+    margin-right: 0.5em;
+  }
+}
+
+.mainSearchContainer {
+  font-size: 16px;
 }

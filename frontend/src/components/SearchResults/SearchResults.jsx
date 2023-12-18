@@ -50,8 +50,7 @@ export const SearchResults = () => {
   const airportContinent = airport?.continent;
   const airportCountry = airport?.iso_country;
   const municipality = airport?.municipality;
-  const latitude = airport?.latitude_deg;
-  const longitude = airport?.longitude_deg;
+  const flag = airport?.iso_country;
 
   console.log(`this should be in the airportName:`, airportName);
 
@@ -69,8 +68,7 @@ export const SearchResults = () => {
         <h2>Continent: {airportContinent}</h2>
         <h2>Country: {airportCountry}</h2>
         <h2>Municipality: {municipality}</h2>
-        <h2>Lat: {latitude}</h2>
-        <h2>Long: {longitude}</h2>
+        <img src={`https://flagsapi.com/${flag}/flat/64.png`}></img>
       </div>
     </>
   );

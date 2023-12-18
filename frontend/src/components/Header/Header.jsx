@@ -5,9 +5,20 @@ export const Header = () => {
   return (
     <div>
       <nav>
-        <div className={styles.headerContainer}>
+        <div className={styles.headerContainerMobile}>
           <NavLink to="/">
-            <img src="./public/assets/AirportFinder_transparent_orangedb.png" />
+            <img
+              src="/assets/AirportFinder_transparent_orangedb.png"
+              alt="AirportFinder Logo"
+            />
+          </NavLink>
+        </div>
+        <div className={styles.headerContainerDesktop}>
+          <NavLink to="/">
+            <img
+              src="/assets/AirportFinder_transparent_orangedb.png"
+              alt="Airport Finder Logo"
+            />
           </NavLink>
         </div>
       </nav>

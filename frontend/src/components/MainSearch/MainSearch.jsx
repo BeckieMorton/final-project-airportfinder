@@ -32,20 +32,27 @@ export const MainSearch = () => {
   return (
     <>
       <div className={styles.mainSearchContainer}>
-        <h1>Discover Global Airports Near and Far</h1>
+        <h1 className={styles.searchSlogan}>
+          Discover Global Airports Near and Far
+        </h1>
 
         <div className={styles.searchBox}>
           <p>
             <select className={styles.searchSelection}>
-              <option value="">Search by...</option>
+              <option disabled selected value="">
+                Search by
+              </option>
               <option value="1">IATA Code</option>
-              <option value="2">City</option>
-              <option value="3">Country</option>
+              <option value="2">Country</option>
+              <option disabled value="3">
+                City/Area
+              </option>
             </select>
 
             <input
+              className={styles.searchInput}
               type="text"
-              placeholder="e.g JRO"
+              placeholder="Search"
               value={code}
               onChange={(e) => setCode(e.target.value)}
             />
@@ -57,6 +64,11 @@ export const MainSearch = () => {
               />
             </Link>
           </p>
+        </div>
+        <div>
+          <button className={styles.mobileSelectButton}>City </button>
+          <button className={styles.mobileSelectButton}>IATA Code</button>
+          <button className={styles.mobileSelectButton}>Country</button>
         </div>
       </div>
     </>

@@ -3,22 +3,24 @@
   display: grid;
   max-width: 100%;
   margin: 0 auto;
+  padding: 1rem;
   grid-template-columns: 1fr; /* Single column by default */
 }
 
 .resultsBox {
   /* grid child */
   text-align: center;
-  border: 2px solid #f99417;
-  border-radius: 1rem;
+  border: 1px solid #f99417;
+  border-radius: 0.5rem;
   gap: 2rem;
   padding: 1rem;
   margin: 0.5rem;
+  background-color: white;
 }
 
 /* media query for desktop */
 @media screen and (min-width: 825px) {
   .resultsContainer {
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 50% 20% 30%;
   }
 }

@@ -2,12 +2,29 @@
   border: 2px solid red;
   color: green;
   background-color: aqua;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   text-align: center;
 }
 
 .map {
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
+}
+
+/* media query for desktop */
+@media screen and (min-width: 825px) {
+  .mapBox {
+    border: 2px solid red;
+    color: green;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
+  }
 }

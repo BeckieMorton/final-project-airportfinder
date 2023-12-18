@@ -43,8 +43,6 @@ export const Weather = () => {
   console.log(`details in weather array:`, weatherForCity);
 
   const currentName = weatherForCity.name ? weatherForCity.name : "N/A";
-  const currentLat = weatherForCity.coord ? weatherForCity.coord.lat : "N/A";
-  const currentLong = weatherForCity.coord ? weatherForCity.coord.lon : "N/A";
   const currentTemp = weatherForCity.main ? weatherForCity.main.temp : "N/A";
   const currentFeelsLike = weatherForCity.main
     ? weatherForCity.main.feels_like
@@ -57,13 +55,38 @@ export const Weather = () => {
   const weatherDesc = weatherForCity.weather
     ? weatherForCity.weather[0].description
     : "N/A";
+  let weatherImage = "";
+
+  //assign icon to weather to display
+  switch (weatherMain) {
+    case "Clouds":
+      weatherImage = "/assets/weather-clouds.png";
+      break;
+    case "Clear":
+      weatherImage = "/assets/weather-clear.png";
+      break;
+    case "Snow":
+      weatherImage = "/assets/weather-snow.png";
+      break;
+    case "Rain":
+    case "Drizzle":
+      weatherImage = "/assets/weather-rain.png";
+      break;
+    case "Thunderstorm":
+      weatherImage = "/assets/weather-thunderstorm.png";
+      break;
+    default:
+      //case for Mist, Smoke, Haze, Dust, Fog, Sand, Dust, Ash, Squall, Tornado
+      weatherImage = "/assets/weather-other.png";
+      break;
+  }
 
   return (
     <>
-      <div>Weather</div>
+      <div>
+        <img src={weatherImage} />
+      </div>
       <p>Name: {currentName}</p>
-      <p>Latitude: {currentLat}</p>
-      <p>Longitude: {currentLong}</p>
       <p>Current Temp: {currentTemp}</p>
       <p>Feels like: {currentFeelsLike}</p>
       <p>Weather: {weatherMain}</p>

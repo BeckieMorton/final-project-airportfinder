@@ -24,6 +24,7 @@ export const Map = () => {
   const [loading, setLoading] = useState(true);
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
+  const [name, setName] = useState(null);
 
   //map works but updates only on refresh, need to fix it, look at using useEffect to wrap around all of the use store and definiting variables, and passing through the airport info
 
@@ -31,6 +32,7 @@ export const Map = () => {
     if (airport && airport.latitude_deg && airport.longitude_deg) {
       setLatitude(airport.latitude_deg);
       setLongitude(airport.longitude_deg);
+      setName(airport.name);
       setLoading(false);
     }
   }, [airport]);
@@ -52,9 +54,7 @@ export const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={[latitude, longitude]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
+          <Popup>{name}</Popup>
         </Marker>
       </MapContainer>
     </div>
