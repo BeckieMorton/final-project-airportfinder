@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import styles from "./CountryImage.module.css";
+import useAirportStore from "../../stores/useAirportStore";
 
 export const CountryImage = () => {
-  const apiKey = "2v4JItSSdhRl8LqxjHtgaRy5SFDWSfo48dBeBEeBYu5ug2nRAsfs3DHU";
-  const query = "Tanzania";
-  const apiUrl = `https://api.pexels.com/v1/search?query=${query}&per_page=1`;
-
+  const { airport, setAirport } = useAirportStore();
   const [imageToDisplay, setImageToDisplay] = useState(null);
 
+  const query = "Tanzania";
+
+  const apiKey = "2v4JItSSdhRl8LqxjHtgaRy5SFDWSfo48dBeBEeBYu5ug2nRAsfs3DHU";
+  const apiUrl = `https://api.pexels.com/v1/search?query=${query}&per_page=1`;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,8 +28,9 @@ export const CountryImage = () => {
 
         if (data && data.photos && data.photos.length > 0) {
           const photo = data.photos[0];
-          console.log("Photo URL:", photo.src.small);
-          setImageToDisplay(photo.src.small);
+          console.log(photo);
+          console.log("Photo URL:", photo.src.medium);
+          setImageToDisplay(photo.src.medium);
         } else {
           console.log("No photos found.");
         }
@@ -38,12 +42,17 @@ export const CountryImage = () => {
     fetchData();
   }, [apiUrl, apiKey]);
 
-  console.log("image to display", imageToDisplay);
+  // ----formats country code into name-----//
+  const regionNamesInEnglish = new Intl.DisplayNames(["en"], {
+    type: "region",
+  });
+  const image = regionNamesInEnglish.of(imageToDisplay);
 
   return (
     <div>
-      <h2>CountryImage</h2>
-      {imageToDisplay && <img src={imageToDisplay} alt="Country" />}
+      <div className={styles.imageBox}>
+        {imageToDisplay && <img src={image} alt="Country" />}
+      </div>
     </div>
   );
 };

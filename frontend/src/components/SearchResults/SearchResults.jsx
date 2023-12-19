@@ -1,8 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Map } from "../../components/Map/Map";
-import { createClient } from "pexels";
 import useAirportStore from "../../stores/useAirportStore";
 import styles from "./SearchResults.module.css";
 
@@ -12,36 +9,37 @@ import styles from "./SearchResults.module.css";
 //expressAPIrender - other airport file
 //https://project-express-api-hcmb.onrender.com
 
+//NEED TO MOVE FETCH TO RESULTS COMPONENT TO FIX STATE ISSUE
+
 export const SearchResults = () => {
-  const { code } = useParams(null);
-  const myAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
+  // const { code } = useParams(null);
+  // const myAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
 
   const { airport, setAirport } = useAirportStore();
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchIataDetails = async () => {
-      try {
-        const response = await fetch(myAPI);
-        if (!response.ok) {
-          throw new Error("Network Response Error");
-        }
-        const json = await response.json();
-        setAirport(json);
-        console.log("airport array set with searched airport");
-      } catch (error) {
-        console.log("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchIataDetails = async () => {
+  //     try {
+  //       const response = await fetch(myAPI);
+  //       if (!response.ok) {
+  //         throw new Error("Network Response Error");
+  //       }
+  //       const json = await response.json();
+  //       setAirport(json);
+  //     } catch (error) {
+  //       console.log("Error fetching data:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchIataDetails();
-  }, [code, setAirport, myAPI]);
+  //   fetchIataDetails();
+  // }, [code, setAirport, myAPI]);
 
-  if (loading || !airport) {
-    return <div>loading data</div>;
-  }
+  // if (loading || !airport) {
+  //   return <div>loading data</div>;
+  // }
 
   console.log(`value of airport:`, airport);
   const airportName = airport?.name;
@@ -51,8 +49,6 @@ export const SearchResults = () => {
   const airportCountry = airport?.iso_country;
   const municipality = airport?.municipality;
   const flag = airport?.iso_country;
-
-  console.log(`this should be in the airportName:`, airportName);
 
   //this will show loading while data is being fetch fetched from the API
   if (!airport || !airport.name) {
@@ -105,14 +101,14 @@ export const SearchResults = () => {
   const regionNamesInEnglish = new Intl.DisplayNames(["en"], {
     type: "region",
   });
-  const country = regionNamesInEnglish.of(airportCountry);
+  const countryToDisplay = regionNamesInEnglish.of(airportCountry);
 
   return (
     <>
       <div>
         <h1>{airportName}</h1>
         <h2>Continent: {continent}</h2>
-        <h2>Country: {country}</h2>
+        <h2>Country: {countryToDisplay}</h2>
         <h2>Municipality: {municipality}</h2>
         <h2>IATA Code: {airportCode}</h2>
         <h2>Type: {size}</h2>
