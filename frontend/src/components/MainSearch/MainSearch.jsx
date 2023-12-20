@@ -1,33 +1,16 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "./MainSearch.module.css";
+import useAirportStore from "../../stores/useAirportStore";
 
 export const MainSearch = () => {
-  const [airports, setAirports] = useState([]);
+  const { airport, setAirport } = useAirportStore();
   const [code, setCode] = useState("");
+  const [searchOption, setSearchOption] = useState("");
 
-  //const myBackendAPI = `mongodb://127.0.0.1:27017/Airportfinder`;
+  console.log(`search option:`, searchOption);
 
-  //WHY AM I DOING THIS FETCH HERE??? I DONT NEED IT. DO I???
-
-  const myAPI = "https://final-project-airportfinder.onrender.com/airports";
-
-  useEffect(() => {
-    const fetchAirports = async () => {
-      try {
-        const response = await fetch(myAPI);
-        if (!response.ok) {
-          throw new Error("Network Response Error");
-        }
-        const json = await response.json();
-        setAirports(json[0]);
-      } catch (error) {
-        console.log("Error fetching data:", error);
-      }
-    };
-
-    fetchAirports();
-  }, []);
+  //NEED TO CLEAR THE AIRPORT STORE TO START A NEW SEARCH HERE
 
   return (
     <>
@@ -38,15 +21,17 @@ export const MainSearch = () => {
 
         <div className={styles.searchBox}>
           <p>
-            <select className={styles.searchSelection}>
-              <option disabled selected value="">
+            <select
+              className={styles.searchSelection}
+              value={searchOption}
+              onChange={(event) => setSearchOption(event.target.value)}
+            >
+              <option selected disabled value="">
                 Search by
               </option>
               <option value="1">IATA Code</option>
               <option value="2">Country</option>
-              <option disabled value="3">
-                City/Area
-              </option>
+              <option value="3">City/Area</option>
             </select>
 
             <input
@@ -56,19 +41,29 @@ export const MainSearch = () => {
               value={code}
               onChange={(e) => setCode(e.target.value)}
             />
-
-            <Link to={`/airports/iata/${code}`} key={code}>
-              <img
-                className={styles.searchIcon}
-                src="./public/assets/search-icon-orange.png"
-              />
+            <Link
+              to={
+                searchOption === "1"
+                  ? `/airports/iata/${code}`
+                  : searchOption === "2"
+                  ? `/airports/country/${code}`
+                  : searchOption === "3"
+                  ? `/airports/city/${code}`
+                  : "/"
+              }
+            >
+              <button className={styles.searchButton}>
+                <img
+                  className={styles.searchIcon}
+                  src="./assets/search-icon-orange.png"
+                  alt="Search"
+                />
+              </button>
             </Link>
           </p>
         </div>
-        <div>
-          <button className={styles.mobileSelectButton}>City </button>
-          <button className={styles.mobileSelectButton}>IATA Code</button>
-          <button className={styles.mobileSelectButton}>Country</button>
+        <div className={styles.mobileSelection}>
+          add mobile view section options here
         </div>
       </div>
     </>

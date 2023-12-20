@@ -8,15 +8,12 @@ import { CountryImage } from "../../components/CountryImage/CountryImage";
 import useAirportStore from "../../stores/useAirportStore";
 import { useParams } from "react-router-dom";
 
-import styles from "./Results.module.css";
+import styles from "./ResultsIata.module.css";
 
 //My deployed database
 //https://final-project-airportfinder.onrender.com
 
-//expressAPIrender - other airport file
-//https://project-express-api-hcmb.onrender.com
-
-export const Results = () => {
+export const ResultsIata = () => {
   //----Function to fetch airport data BEFORE results and relevant components render--IMPORTANT--->
 
   const { code } = useParams(null);
