@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import useAirportStore from "../../stores/useAirportStore";
+
+import { SearchResultsIata } from "../../components/SearchResultsIata/SearchResultsIata";
 import { Map } from "../../components/Map/Map";
-import { SearchResults } from "../../components/SearchResults/SearchResults";
 import { Weather } from "../../components/Weather/Weather";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { CountryImage } from "../../components/CountryImage/CountryImage";
-import useAirportStore from "../../stores/useAirportStore";
-import { useParams } from "react-router-dom";
 
 import styles from "./ResultsIata.module.css";
 
@@ -50,7 +51,7 @@ export const ResultsIata = () => {
       <Header />
       <div className={styles.resultsContainer}>
         <div className={styles.resultsBox}>
-          <SearchResults />
+          <SearchResultsIata />
         </div>
         <div className={styles.resultsBox}>
           <Weather />
@@ -61,7 +62,7 @@ export const ResultsIata = () => {
         <div className={styles.resultsBox}>{/* <CountryImage /> */}</div>
         <div className={styles.resultsBox}>info about country?</div>
         <div className={styles.resultsBox}>
-          info about closer airports for user
+          info about closer airports for user. use ipapi api see folder
         </div>
       </div>
       <Footer />

@@ -1,0 +1,23 @@
+.listContainer {
+  /* grid parent */
+}
+
+.listBox {
+  /* grid box */
+}
+
+/* media query for desktop */
+@media screen and (min-width: 825px) {
+  .listContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+  }
+
+  .listBox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+}

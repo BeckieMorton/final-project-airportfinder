@@ -8,7 +8,10 @@ const routes = (
   <>
     <Route path="/" element={<Home />} />
     <Route path="/airports/iata/:code" element={<ResultsIata />} />
-    <Route path="/airports/country/:iso_country" element={<ResultsCountry />} />
+    <Route
+      path="/airports/country/:newCountryCode"
+      element={<ResultsCountry />}
+    />
     {/* <Route path="/airports/city/:municipality" element={<ResultsCity />} /> */}
   </>
 );

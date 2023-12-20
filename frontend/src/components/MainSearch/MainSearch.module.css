@@ -38,6 +38,10 @@
   display: none;
 }
 
+.validateMessage {
+  color: red;
+}
+
 /* media query for desktop */
 @media screen and (min-width: 825px) {
   .searchSelection {
@@ -62,8 +66,8 @@
     color: #363062;
     margin-right: 0.5em;
   }
-}
 
-.mainSearchContainer {
-  font-size: 16px;
+  .mainSearchContainer {
+    font-size: 16px;
+  }
 }
