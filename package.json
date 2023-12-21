@@ -1,0 +1,10 @@
+{
+  "name": "final-project-airportfinder",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "npm install --prefix backend"
+  },
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}
