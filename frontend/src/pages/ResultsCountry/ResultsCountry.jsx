@@ -20,8 +20,6 @@ export const ResultsCountry = () => {
   const { newCountryCode } = useParams();
 
   const myAPI = `https://final-project-airportfinder.onrender.com/airports/country/${newCountryCode}`;
-  console.log(`my api inside results:`, myAPI);
-  console.log(`inside results and the code is:`, newCountryCode);
 
   useEffect(() => {
     const fetchCountryDetails = async () => {
@@ -36,7 +34,6 @@ export const ResultsCountry = () => {
           throw new Error("Network Response Error");
         }
         const json = await response.json();
-        console.log("Response Data:", json);
         setCountry(json);
         console.log(country);
       } catch (error) {

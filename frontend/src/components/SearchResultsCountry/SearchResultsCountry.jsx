@@ -6,8 +6,6 @@ import styles from "./SearchResultsCountry.module.css";
 export const SearchResultsCountry = () => {
   const { country, setCountry } = useCountryStore();
 
-  console.log(`country airport to THIS IS THE LIST`, country);
-
   //want to sort results from small to large airports. add code here
 
   return (

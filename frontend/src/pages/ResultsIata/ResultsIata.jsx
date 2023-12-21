@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import useAirportStore from "../../stores/useAirportStore";
 
 import { SearchResultsIata } from "../../components/SearchResultsIata/SearchResultsIata";
-import { Map } from "../../components/Map/Map";
+import { MapIata } from "../../components/MapIata/MapIata";
 import { Weather } from "../../components/Weather/Weather";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
@@ -57,7 +57,7 @@ export const ResultsIata = () => {
           <Weather />
         </div>
         <div className={styles.resultsBox}>
-          <Map />
+          <MapIata />
         </div>
         <div className={styles.resultsBox}>{/* <CountryImage /> */}</div>
         <div className={styles.resultsBox}>info about country?</div>
