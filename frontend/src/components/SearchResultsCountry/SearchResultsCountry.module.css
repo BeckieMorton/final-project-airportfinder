@@ -20,4 +20,12 @@
     padding: 10px;
     text-align: center;
   }
+
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .list a {
+    text-decoration: none;
+  }
 }

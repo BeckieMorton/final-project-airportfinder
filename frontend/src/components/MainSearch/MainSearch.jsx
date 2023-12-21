@@ -135,9 +135,7 @@ export const MainSearch = () => {
             </button>
           </p>
         </div>
-        <div className={styles.validateMessage}>
-          message here:{validateMessage}
-        </div>
+        <div className={styles.validateMessage}>{validateMessage}</div>
         <div className={styles.mobileSelection}>
           add mobile view section options here
         </div>

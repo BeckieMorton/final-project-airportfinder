@@ -1,4 +1,5 @@
 import useCountryStore from "../../stores/useCountryStore";
+import { Link } from "react-router-dom";
 
 import styles from "./SearchResultsCountry.module.css";
 
@@ -7,54 +8,42 @@ export const SearchResultsCountry = () => {
 
   console.log(`country airport to THIS IS THE LIST`, country);
 
-  //need to map the country array out on render
-
-  const nametest = country[0].name;
-  // const airportCode = airport?.iata_code;
-  // const airportType = airport?.type;
-  // const airportRegion = airport?.iso_region;
-  // const municipality = airport?.municipality;
-  // const homeLink = airport?.home_link;
+  //want to sort results from small to large airports. add code here
 
   return (
     <div>
-      <h2>Airport list for - Country</h2>
-      <div className={styles.listContainer}>
-        {/* first row for headings */}
-        <div className={styles.listBox}>
-          <p>Name</p>
-          <p>{nametest}</p>
-        </div>
-        <div className={styles.listBox}>
-          <p>Region</p>
-        </div>
-        <div className={styles.listBox}>
-          <p>Municipality</p>
-        </div>
-        <div className={styles.listBox}>
-          <p>Type</p>
-        </div>
-        <div className={styles.listBox}>
-          <p>Link</p>
-        </div>
-        {/* next row to map out data */}
-        {/* {airportName && airport.name} */}
-        <div className={styles.listBox}>
-          <p>working?</p>
-        </div>
-        <div className={styles.listBox}>
-          <p>Region</p>
-        </div>
-        <div className={styles.listBox}>
-          <p>Municipality</p>
-        </div>
-        <div className={styles.listBox}>
-          <p>Type</p>
-        </div>
-        <div className={styles.listBox}>
-          <p>Link</p>
-        </div>
-      </div>
+      <h2>We have found {country.length} airports. </h2>
+      <p>Click on the name for further information</p>
+
+      <table className={styles.list}>
+        <thead>
+          <tr>
+            <th>Name</th>
+            {/* <th>Region</th> */}
+            <th>Municipality</th>
+            <th>Type</th>
+            {/* <th>Homepage</th> */}
+          </tr>
+        </thead>
+        <tbody>
+          {country.map((country, index) => (
+            <tr key={index}>
+              <td>
+                {country.name && (
+                  <Link to={`/airports/iata/${country.iata_code}`}>
+                    {country.name}
+                  </Link>
+                )}
+              </td>
+
+              {/* <td>{country.region && <p>{country.region}</p>}</td> */}
+              <td>{country.municipality && <p>{country.municipality}</p>}</td>
+              <td>{country.type && <p>{country.type}</p>}</td>
+              {/* <td>{country.link && <p>{country.link}</p>}</td> */}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
