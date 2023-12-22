@@ -10,6 +10,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { CountryImage } from "../../components/CountryImage/CountryImage";
 
 import styles from "./ResultsIata.module.css";
+import { Distance } from "../../components/Distance/Distance";
 
 //My deployed database
 //https://final-project-airportfinder.onrender.com
@@ -60,9 +61,11 @@ export const ResultsIata = () => {
           <MapIata />
         </div>
         <div className={styles.resultsBox}>{/* <CountryImage /> */}</div>
-        <div className={styles.resultsBox}>info about country?</div>
         <div className={styles.resultsBox}>
-          info about closer airports for user. use ipapi api see folder
+          <Distance />
+        </div>
+        <div className={styles.resultsBox}>
+          list 5 large airports in that country
         </div>
       </div>
       <Footer />

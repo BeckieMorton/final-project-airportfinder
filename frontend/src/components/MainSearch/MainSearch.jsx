@@ -125,7 +125,6 @@ export const MainSearch = () => {
               value={code}
               onChange={(e) => setCode(e.target.value)}
             />
-
             <button onClick={handleButtonClick} className={styles.searchButton}>
               <img
                 className={styles.searchIcon}
