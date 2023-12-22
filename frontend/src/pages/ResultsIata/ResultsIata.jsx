@@ -49,30 +49,40 @@ export const ResultsIata = () => {
 
   return (
     <>
-      <Header />
-      <div className={styles.resultsContainer}>
-        {/* 1st row */}
-        <div className={styles.resultsBox}>
-          <SearchResultsIata />
-        </div>
-        <div className={styles.resultsBox}>
-          <Weather />
-        </div>
-        <div className={styles.resultsBox}>
-          <MapIata />
+      <div className={styles.mainContainer}>
+        <Header />
+        <div className={styles.resultsContainer1}>
+          {/* 1st row */}
+          <div className={styles.resultsBox}>
+            <SearchResultsIata />
+          </div>
+          <div className={styles.resultsBox}>
+            <Weather />
+          </div>
+          <div className={styles.resultsBox}>
+            <MapIata />
+          </div>
         </div>
         {/* 2nd row */}
-        <div className={styles.resultsBoxSecond}>
-          <Distance />
+        <div className={styles.resultsContainer2}>
+          <div className={styles.resultsBoxSecond}>
+            long box spaning 100% with distance data closest airport to you.
+          </div>
         </div>
-        <div className={styles.resultsBoxSecond}>
-          image{/* <CountryImage /> */}
+        {/* 3rd row */}
+        <div className={styles.resultsContainer3}>
+          <div className={styles.resultsBoxSecond}>
+            <Distance />5 largest airports in country
+          </div>
+          <div className={styles.resultsBoxSecond}>
+            5 closest airports to user
+          </div>
+          <div className={styles.resultsBoxSecond}>
+            5 closest airports to THIS one
+          </div>
         </div>
-        <div className={styles.resultsBoxSecond}>
-          list 5 large airports in that country
-        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

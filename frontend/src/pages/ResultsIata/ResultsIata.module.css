@@ -1,9 +1,10 @@
-.resultsContainer {
+.resultsContainer1,
+.resultsContainer2,
+.resultsContainer3 {
   /* grid parent */
   display: grid;
   max-width: 100%;
   margin: 0 auto;
-  padding: 1rem;
   grid-template-columns: repeat(1, 1fr); /* Single column by default */
 }
 
@@ -20,8 +21,19 @@
 
 /* media query for desktop */
 @media screen and (min-width: 825px) {
-  .resultsContainer {
+  .mainContainer {
+    width: auto;
+  }
+  .resultsContainer1 {
     grid-template-columns: 50% 20% 30%;
+  }
+
+  .resultsContainer2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .resultsContainer3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .resultsBoxSecond {
@@ -30,7 +42,6 @@
     border: 1px solid #f99417;
     border-radius: 0.5rem;
     gap: 2rem;
-    padding: 0.5rem;
     margin: 0.5rem;
     background-color: white;
   }
