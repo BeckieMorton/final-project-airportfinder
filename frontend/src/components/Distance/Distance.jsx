@@ -29,108 +29,108 @@ export const Distance = () => {
 
     //get users ip address and convert to lat and long
     //this will only work if user has location set as on on their browser.
-    // const getUserLocation = () => {
-    //   if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(
-    //       (position) => {
-    //         const { latitude, longitude } = position.coords;
-    //         setUserLat(latitude);
-    //         setUserLong(longitude);
-    //       },
-    //       (error) => {
-    //         console.error("Error getting user location:", error);
-    //       }
-    //     );
-    //   } else {
-    //     console.error("Geolocation is not supported by this browser.");
-    //   }
-    // };
+    const getUserLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            setUserLat(latitude);
+            setUserLong(longitude);
+          },
+          (error) => {
+            console.error("Error getting user location:", error);
+          }
+        );
+      } else {
+        console.error("Geolocation is not supported by this browser.");
+      }
+    };
 
-    // getUserLocation();
+    getUserLocation();
 
-    //----calculate distance using geolib library----//
-    //   const distance = geolib.getDistance(
-    //     { latitude: userLat, longitude: userLong },
-    //     { latitude: airportLat, longitude: airportLong }
-    //   );
+    //calculate distance using geolib library----//
+    // const distance = geolib.getDistance(
+    //   { latitude: userLat, longitude: userLong },
+    //   { latitude: airportLat, longitude: airportLong }
+    // );
 
-    //   console.log(`distance between is:`, distance);
+    // console.log(`distance between is:`, distance);
   }, [airport]);
 
   //-------Get data from Lufthansa API--------//
 
-  useEffect(() => {
-    //---POST request for access token ----//
-    const fetchAccessToken = async () => {
-      const apiUrl = "https://api.lufthansa.com/v1/oauth/token";
-      const clientId = "w6wtw5xph6gayfqy6vqdrdgh8";
-      const clientSecret = "3p6tzwart8";
+  // useEffect(() => {
+  //   //---POST request for access token ----//
+  //   const fetchAccessToken = async () => {
+  //     const apiUrl = "https://api.lufthansa.com/v1/oauth/token";
+  //     const clientId = "w6wtw5xph6gayfqy6vqdrdgh8";
+  //     const clientSecret = "3p6tzwart8";
 
-      const data = new URLSearchParams({
-        client_id: clientId,
-        client_secret: clientSecret,
-        grant_type: "client_credentials",
-      });
+  //     const data = new URLSearchParams({
+  //       client_id: clientId,
+  //       client_secret: clientSecret,
+  //       grant_type: "client_credentials",
+  //     });
 
-      const requestOptions = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: data,
-      };
+  //     const requestOptions = {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //       },
+  //       body: data,
+  //     };
 
-      try {
-        const response = await fetch(apiUrl, requestOptions);
+  //     try {
+  //       const response = await fetch(apiUrl, requestOptions);
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const responseData = await response.json();
-        setAccessToken(responseData.access_token);
-      } catch (error) {
-        console.error("Error:", error.message);
-      }
-    };
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! Status: ${response.status}`);
+  //       }
+  //       const responseData = await response.json();
+  //       setAccessToken(responseData.access_token);
+  //     } catch (error) {
+  //       console.error("Error:", error.message);
+  //     }
+  //   };
 
-    fetchAccessToken();
-  }, []);
+  //   fetchAccessToken();
+  // }, []);
 
-  useEffect(() => {
-    //---GET request for nearest airport from lat and long ----//
-    const fetchData = async () => {
-      if (!accessToken) {
-        console.log(`access token not going through`);
-        return;
-      }
+  // useEffect(() => {
+  //   //---GET request for nearest airport from lat and long ----//
+  //   const fetchData = async () => {
+  //     if (!accessToken) {
+  //       console.log(`access token not going through`);
+  //       return;
+  //     }
 
-      const apiUrl = `https://api.lufthansa.com/v1/mds-references/airports/nearest/${userLat},${userLong}?lang=en`;
+  //     const apiUrl = `https://api.lufthansa.com/v1/mds-references/airports/nearest/${userLat},${userLong}?lang=en`;
 
-      const requestOptions = {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          Accept: "application/json",
-        },
-      };
+  //     const requestOptions = {
+  //       method: "GET",
+  //       headers: {
+  //         Authorization: `Bearer ${accessToken}`,
+  //         Accept: "application/json",
+  //       },
+  //     };
 
-      fetch(apiUrl, requestOptions)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log("Response:", data);
-          setNearestAirports(data);
-        })
-        .catch((error) => {
-          console.error("Error:", error.message);
-        });
-    };
-    fetchData();
-  }, [accessToken]);
+  //     fetch(apiUrl, requestOptions)
+  //       .then((response) => {
+  //         if (!response.ok) {
+  //           throw new Error(`HTTP error! Status: ${response.status}`);
+  //         }
+  //         return response.json();
+  //       })
+  //       .then((data) => {
+  //         console.log("Response:", data);
+  //         setNearestAirports(data);
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error:", error.message);
+  //       });
+  //   };
+  //   fetchData();
+  // }, [accessToken]);
 
   //destructure 3 closest airports
 

@@ -11,6 +11,7 @@ import { CountryImage } from "../../components/CountryImage/CountryImage";
 
 import styles from "./ResultsIata.module.css";
 import { Distance } from "../../components/Distance/Distance";
+import { NearbyAirports } from "../../NearbyAirports/NearbyAirports";
 
 //My deployed database
 //https://final-project-airportfinder.onrender.com
@@ -72,13 +73,13 @@ export const ResultsIata = () => {
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>
           <div className={styles.resultsBoxSecond}>
-            <Distance />5 largest airports in country
+            {/* <Distance />5 largest airports in country */}
           </div>
           <div className={styles.resultsBoxSecond}>
             5 closest airports to user
           </div>
           <div className={styles.resultsBoxSecond}>
-            5 closest airports to THIS one
+            <NearbyAirports />
           </div>
         </div>
         <Footer />
