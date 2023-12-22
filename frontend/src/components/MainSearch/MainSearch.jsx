@@ -13,7 +13,6 @@ export const MainSearch = () => {
   const navigate = useNavigate();
 
   //use effect to populate countryArray with json data to validate the user input for searching by country name
-  //this works
   useEffect(() => {
     const fetchData = async () => {
       try {

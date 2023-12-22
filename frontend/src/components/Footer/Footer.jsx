@@ -8,7 +8,12 @@ export const Footer = () => {
           <img src="/assets/AirportFinder_transparent_darkb.png" />
         </div>
         <div className={styles.footerBox}>
-          <p>Technigo Web Development Boot Camp Autumn 2023</p>
+          <div className={styles.nameContainer}>
+            <p>Technigo Web Development Boot Camp Autumn 2023</p>
+            <div className={styles.nameBox}>
+              <p>About us</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
