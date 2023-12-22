@@ -1,4 +1,7 @@
 import useAirportStore from "../../stores/useAirportStore";
+import { Link } from "react-router-dom";
+
+import styles from "./SearchResultsIata.module.css";
 
 export const SearchResultsIata = () => {
   const { airport, setAirport } = useAirportStore();
@@ -64,11 +67,55 @@ export const SearchResultsIata = () => {
     <>
       <div>
         <h1>{airportName}</h1>
-        <h2>Continent: {continent}</h2>
-        <h2>Country: {countryToDisplay}</h2>
-        <h2>Municipality: {municipality}</h2>
-        <h2>IATA Code: {airportCode}</h2>
-        <h2>Type: {size}</h2>
+        <table className={styles.detailsTable}>
+          <tr>
+            <td>
+              <h2>Continent:</h2>
+            </td>
+            <td>
+              <h2 style={{ fontWeight: "400" }}>{continent || "N/A"}</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Country:</h2>
+            </td>
+            <td>
+              <Link to={`/airports/country/${airport.iso_country}`}>
+                <h2
+                  className={styles.countryLink}
+                  style={{ fontWeight: "400" }}
+                >
+                  {countryToDisplay || "N/A"}
+                </h2>
+              </Link>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Municipality:</h2>
+            </td>
+            <td>
+              <h2 style={{ fontWeight: "400" }}>{municipality || "N/A"}</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>IATA Code:</h2>
+            </td>
+            <td>
+              <h2 style={{ fontWeight: "400" }}>{airportCode || "N/A"}</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Type:</h2>
+            </td>
+            <td>
+              <h2 style={{ fontWeight: "400" }}>{size || "N/A"}</h2>
+            </td>
+          </tr>
+        </table>
         <img src={`https://flagsapi.com/${flag}/flat/64.png`}></img>
       </div>
     </>

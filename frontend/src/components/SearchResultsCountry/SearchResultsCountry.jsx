@@ -28,7 +28,10 @@ export const SearchResultsCountry = () => {
             <tr key={index}>
               <td>
                 {country.name && (
-                  <Link to={`/airports/iata/${country.iata_code}`}>
+                  <Link
+                    className={styles.airportLink}
+                    to={`/airports/iata/${country.iata_code}`}
+                  >
                     {country.name}
                   </Link>
                 )}

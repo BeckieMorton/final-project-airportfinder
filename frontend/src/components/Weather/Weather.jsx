@@ -40,8 +40,6 @@ export const Weather = () => {
     fetchWeather();
   }, [currentWeather]);
 
-  console.log(`details in weather array:`, weatherForCity);
-
   const currentTemp = weatherForCity.main ? weatherForCity.main.temp : "N/A";
   const currentFeelsLike = weatherForCity.main
     ? weatherForCity.main.feels_like
@@ -102,15 +100,6 @@ export const Weather = () => {
 
     return newTime;
   };
-
-  //console.log(`new time outside clock function:`, newTime);
-
-  //--------Get the user's time and date--------//
-  // const getUserTime = () => {
-  //   //get the users current time and date
-  //   const now = new Date();
-  //   return;
-  // };
 
   const time = Clock(weatherForCity.timezone);
 

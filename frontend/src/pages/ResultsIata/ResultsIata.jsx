@@ -51,6 +51,7 @@ export const ResultsIata = () => {
     <>
       <Header />
       <div className={styles.resultsContainer}>
+        {/* 1st row */}
         <div className={styles.resultsBox}>
           <SearchResultsIata />
         </div>
@@ -60,11 +61,14 @@ export const ResultsIata = () => {
         <div className={styles.resultsBox}>
           <MapIata />
         </div>
-        <div className={styles.resultsBox}>{/* <CountryImage /> */}</div>
-        <div className={styles.resultsBox}>
+        {/* 2nd row */}
+        <div className={styles.resultsBoxSecond}>
           <Distance />
         </div>
-        <div className={styles.resultsBox}>
+        <div className={styles.resultsBoxSecond}>
+          image{/* <CountryImage /> */}
+        </div>
+        <div className={styles.resultsBoxSecond}>
           list 5 large airports in that country
         </div>
       </div>

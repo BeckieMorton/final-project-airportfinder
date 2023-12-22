@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "geolib": "^3.3.4",
     "leaflet": "^1.9.4",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",

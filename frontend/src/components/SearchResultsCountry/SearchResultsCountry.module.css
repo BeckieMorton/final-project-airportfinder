@@ -1,9 +1,5 @@
-.listContainer {
-  /* grid parent */
-}
-
-.listBox {
-  /* grid box */
+.airportLink:hover {
+  color: #ff8813;
 }
 
 /* media query for desktop */
