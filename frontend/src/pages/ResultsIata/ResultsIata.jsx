@@ -9,10 +9,11 @@ import { Weather } from "../../components/Weather/Weather";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { CountryImage } from "../../components/CountryImage/CountryImage";
-
-import styles from "./ResultsIata.module.css";
 import { Distance } from "../../components/Distance/Distance";
 import { NearbyAirports } from "../../NearbyAirports/NearbyAirports";
+import { NearbyUser } from "../../components/NearbyUser/NearbyUser";
+
+import styles from "./ResultsIata.module.css";
 
 //My deployed database
 //https://final-project-airportfinder.onrender.com
@@ -81,7 +82,7 @@ export const ResultsIata = () => {
             5 largest airports in country
           </div>
           <div className={styles.resultsBoxSecond}>
-            5 closest airports to user
+            <NearbyUser />
           </div>
           <div className={styles.resultsBoxSecond}>
             <NearbyAirports />

@@ -29,7 +29,6 @@ export const Distance = () => {
     }
 
     //get user location as latitude and longitude
-
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, error);
     } else {
