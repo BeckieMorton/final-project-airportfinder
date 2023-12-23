@@ -12,6 +12,8 @@
   "dependencies": {
     "geolib": "^3.3.4",
     "leaflet": "^1.9.4",
+    "lottie": "^0.0.1",
+    "lottie-react": "^2.4.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
     "pexels": "^1.4.0",

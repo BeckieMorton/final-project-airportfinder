@@ -45,7 +45,7 @@ export const MainSearch = () => {
 
   //to make sure countryArray is populated before mapping it and using it to convert user input into a country code
   if (!countryArray) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   //validate the user input so it can be correctly used by react router link

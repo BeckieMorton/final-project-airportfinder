@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAirportStore from "../../stores/useAirportStore";
+import { LottieComponent } from "../../LottieComponent/LottieComponent";
 
 import { SearchResultsIata } from "../../components/SearchResultsIata/SearchResultsIata";
 import { MapIata } from "../../components/MapIata/MapIata";
@@ -45,7 +46,11 @@ export const ResultsIata = () => {
   }, [code, setAirport, myAPI]);
 
   if (loading || !airport) {
-    return <div>loading data</div>;
+    return (
+      <div>
+        <LottieComponent />
+      </div>
+    );
   }
 
   return (

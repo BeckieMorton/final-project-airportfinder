@@ -1,0 +1,12 @@
+.animationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% of the viewport height */
+  width: 100vw;
+}
+
+.animationContainer img {
+  flex: 0;
+  margin: auto;
+}
