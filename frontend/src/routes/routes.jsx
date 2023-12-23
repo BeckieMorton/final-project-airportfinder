@@ -3,6 +3,7 @@ import { Home } from "../pages/Home/Home";
 import { ResultsIata } from "../pages/ResultsIata/ResultsIata";
 import { ResultsCountry } from "../pages/ResultsCountry/ResultsCountry";
 import { ResultsCity } from "../pages/ResultsCity/ResultsCity";
+import { ResultsName } from "../pages/ResultsName/ResultsName";
 
 const routes = (
   <>
@@ -13,7 +14,7 @@ const routes = (
       element={<ResultsCountry />}
     />
     <Route path="/airports/area/:municipality" element={<ResultsCity />} />
-    <Route path="/airports/name/:name" element={<ResultsName />} />
+    <Route path="/airports/name/:code" element={<ResultsName />} />
   </>
 );
 

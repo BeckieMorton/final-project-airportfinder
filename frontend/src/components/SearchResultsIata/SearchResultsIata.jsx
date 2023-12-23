@@ -6,7 +6,7 @@ import styles from "./SearchResultsIata.module.css";
 export const SearchResultsIata = () => {
   const { airport, setAirport } = useAirportStore();
 
-  console.log(`value of airport:`, airport);
+  console.log(`value of airport inside search results iata:`, airport);
   const airportName = airport?.name;
   const airportCode = airport?.iata_code;
   const airportType = airport?.type;

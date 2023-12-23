@@ -37,7 +37,7 @@ export const ResultsIata = () => {
         const json = await response.json();
         setAirport(json);
       } catch (error) {
-        console.log("Error fetching data:", error);
+        console.log("Error fetching iata data:", error);
       } finally {
         setLoading(false);
       }

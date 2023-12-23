@@ -12,6 +12,44 @@ export const MainSearch = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  //----HANDLE NAME SEARCH VALIDATION-----//
+  const myAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
+
+  // const handleNameValidation = () => {
+  //   //fetch the airport details first
+  //   const fetchNameDetails = async () => {
+  //     try {
+  //       const response = await fetch(myAPI);
+  //       if (!response.ok) {
+  //         throw new Error("Network Response Error");
+  //       }
+  //       const json = await response.json();
+  //       setAirport(json);
+  //     } catch (error) {
+  //       console.log("Error fetching data:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchNameDetails();
+
+  //   if (loading || !airport) {
+  //     return (
+  //       <div>
+  //         <LottieComponent />
+  //       </div>
+  //     );
+  //   }
+
+  //compare user input with airport array and find the matches, store in name array
+
+  //do i need to then convert the user input into something passable in the route?
+  // };
+
+  // use the airport details to find any matches with the user input
+
+  //-----HANDLE COUNTRY SEARCH VALIDATION----//
   //use effect to populate countryArray with json data to validate the user input for searching by country name
   useEffect(() => {
     const fetchData = async () => {
@@ -45,7 +83,7 @@ export const MainSearch = () => {
 
   //to make sure countryArray is populated before mapping it and using it to convert user input into a country code
   if (!countryArray) {
-    return <div></div>;
+    return <div>waiting for country array</div>;
   }
 
   //validate the user input so it can be correctly used by react router link
