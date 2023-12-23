@@ -28,6 +28,21 @@ router.get("/airports/country/:iso_country", async (req, res) => {
   });
 });
 
+//---End point for all airports in a municipality/area/city
+router.get("/airports/area/:municipality", async (req, res) => {
+  const airportMunicipality = req.params.municipality;
+  const regex = new RegExp(airportMunicipality, "i"); // Case-insensitive regex to make sure if user types lowercase it will still match with the database
+  AirportModel.find({ municipality: { $regex: regex } }).then(
+    (municipality) => {
+      if (municipality) {
+        res.json(municipality);
+      } else {
+        res.status(404).json({ error: `Municipality not found` });
+      }
+    }
+  );
+});
+
 //----End point for SINGLE result (IATA code)----//
 router.get("/airports/iata/:iata_code", async (req, res) => {
   const iataCode = req.params.iata_code.toLowerCase();
