@@ -72,13 +72,13 @@ export const ResultsIata = () => {
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
           <div className={styles.resultsBoxSecond}>
-            long box spaning 100% with distance data closest airport to you.
+            <Distance />
           </div>
         </div>
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>
           <div className={styles.resultsBoxSecond}>
-            {/* <Distance />5 largest airports in country */}
+            5 largest airports in country
           </div>
           <div className={styles.resultsBoxSecond}>
             5 closest airports to user

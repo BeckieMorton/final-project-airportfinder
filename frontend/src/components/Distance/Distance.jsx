@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAirportStore from "../../stores/useAirportStore";
 import * as geolib from "geolib";
+import { getDistance } from "geolib";
 import styles from "./Distance.module.css";
 
 //using Lufthansa Developer Center API to find nearest airports to the user
@@ -11,12 +12,12 @@ export const Distance = () => {
   const { airport, setAirport } = useAirportStore();
   const [airportLat, setAirportLat] = useState("");
   const [airportLong, setAirportLong] = useState("");
-  const [userLat, setUserLat] = useState(null);
-  const [userLong, setUserLong] = useState(null);
   const [locationOff, setlocationOff] = useState(true);
   const [nearestAirports, setNearestAirports] = useState("");
   const [inputMetres, setInputMetres] = useState("");
   const [resultKm, setResultKm] = useState(null);
+  const [userLat, setUserLat] = useState("");
+  const [userLong, setUserLong] = useState("");
 
   //----------Calculate distance----------//
 
@@ -27,112 +28,50 @@ export const Distance = () => {
       setAirportLong(airport.longitude_deg);
     }
 
-    //get users ip address and convert to lat and long
-    //this will only work if user has location set as on on their browser.
-    const getUserLocation = () => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const { latitude, longitude } = position.coords;
-            setUserLat(latitude);
-            setUserLong(longitude);
-          },
-          (error) => {
-            console.error("Error getting user location:", error);
-          }
-        );
-      } else {
-        console.error("Geolocation is not supported by this browser.");
-      }
-    };
+    //get user location as latitude and longitude
 
-    getUserLocation();
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+      console.log("Geolocation not supported");
+    }
 
-    //calculate distance using geolib library----//
-    // const distance = geolib.getDistance(
-    //   { latitude: userLat, longitude: userLong },
-    //   { latitude: airportLat, longitude: airportLong }
-    // );
+    function success(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+      setUserLat(latitude);
+      setUserLong(longitude);
+      setlocationOff(false);
+    }
 
-    // console.log(`distance between is:`, distance);
+    function error() {
+      console.log("Unable to retrieve your location");
+    }
   }, [airport]);
 
+  //compare user location to airport location and tell them how far away they are from it.
+
+  useEffect(() => {
+    if (airport && airport.latitude_deg && airport.longitude_deg) {
+      setAirportLat(airport.latitude_deg);
+      setAirportLong(airport.longitude_deg);
+    }
+  }, [airport]);
+
+  //get distance with userLat, userLong, airportLat, airportLong
+
+  const distance = (
+    getDistance(
+      { latitude: userLat, longitude: userLong },
+      { latitude: airportLat, longitude: airportLong }
+    ) / 1000
+  ).toFixed(1);
+
+  console.log(`distance is:`, distance);
+
   //-------Get data from Lufthansa API--------//
-
-  // useEffect(() => {
-  //   //---POST request for access token ----//
-  //   const fetchAccessToken = async () => {
-  //     const apiUrl = "https://api.lufthansa.com/v1/oauth/token";
-  //     const clientId = "w6wtw5xph6gayfqy6vqdrdgh8";
-  //     const clientSecret = "3p6tzwart8";
-
-  //     const data = new URLSearchParams({
-  //       client_id: clientId,
-  //       client_secret: clientSecret,
-  //       grant_type: "client_credentials",
-  //     });
-
-  //     const requestOptions = {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/x-www-form-urlencoded",
-  //       },
-  //       body: data,
-  //     };
-
-  //     try {
-  //       const response = await fetch(apiUrl, requestOptions);
-
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! Status: ${response.status}`);
-  //       }
-  //       const responseData = await response.json();
-  //       setAccessToken(responseData.access_token);
-  //     } catch (error) {
-  //       console.error("Error:", error.message);
-  //     }
-  //   };
-
-  //   fetchAccessToken();
-  // }, []);
-
-  // useEffect(() => {
-  //   //---GET request for nearest airport from lat and long ----//
-  //   const fetchData = async () => {
-  //     if (!accessToken) {
-  //       console.log(`access token not going through`);
-  //       return;
-  //     }
-
-  //     const apiUrl = `https://api.lufthansa.com/v1/mds-references/airports/nearest/${userLat},${userLong}?lang=en`;
-
-  //     const requestOptions = {
-  //       method: "GET",
-  //       headers: {
-  //         Authorization: `Bearer ${accessToken}`,
-  //         Accept: "application/json",
-  //       },
-  //     };
-
-  //     fetch(apiUrl, requestOptions)
-  //       .then((response) => {
-  //         if (!response.ok) {
-  //           throw new Error(`HTTP error! Status: ${response.status}`);
-  //         }
-  //         return response.json();
-  //       })
-  //       .then((data) => {
-  //         console.log("Response:", data);
-  //         setNearestAirports(data);
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error:", error.message);
-  //       });
-  //   };
-  //   fetchData();
-  // }, [accessToken]);
-
-  //destructure 3 closest airports
+  //IN NEARBY AIRPORTS COMPONENT
 
   return (
     <>
@@ -143,9 +82,9 @@ export const Distance = () => {
         </p>
       ) : (
         <>
-          <div>Distance</div>
-          <p>this airport is ???km away from you</p>
-          <p>The following airports are closest to you</p>
+          <div>
+            <p>This airport is {distance}km away from you.</p>
+          </div>
         </>
       )}
     </>
