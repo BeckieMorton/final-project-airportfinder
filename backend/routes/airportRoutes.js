@@ -31,7 +31,7 @@ router.get("/airports/country/:iso_country", async (req, res) => {
 //---End point for all airports in a municipality/area/city
 router.get("/airports/area/:municipality", async (req, res) => {
   const airportMunicipality = req.params.municipality;
-  const regex = new RegExp(airportMunicipality, "i"); // Case-insensitive regex to make sure if user types lowercase it will still match with the database
+  const regex = new RegExp(airportMunicipality, "i"); // Case-insensitive, find the phrase anywhere in the string, not exact match
   AirportModel.find({ municipality: { $regex: regex } }).then(
     (municipality) => {
       if (municipality) {
@@ -41,6 +41,19 @@ router.get("/airports/area/:municipality", async (req, res) => {
       }
     }
   );
+});
+
+//---End point for airports name
+router.get("/airports/name/:name", async (req, res) => {
+  const airportName = req.params.name;
+  const regex = new RegExp(airportName, "i"); // Case-insensitive, find the phrase anywhere in the string, not exact match
+  AirportModel.find({ name: { $regex: regex } }).then((name) => {
+    if (name) {
+      res.json(name);
+    } else {
+      res.status(404).json({ error: `Name not found` });
+    }
+  });
 });
 
 //----End point for SINGLE result (IATA code)----//
