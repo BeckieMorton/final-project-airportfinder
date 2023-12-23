@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useCountryStore from "../../stores/useCountryStore";
+import { LottieComponent } from "../../LottieComponent/LottieComponent";
 
 import { SearchResultsCountry } from "../../components/SearchResultsCountry/SearchResultsCountry";
 import { Header } from "../../components/Header/Header";
@@ -47,7 +48,11 @@ export const ResultsCountry = () => {
   }, [newCountryCode, setCountry, myAPI]);
 
   if (loading || !country || !newCountryCode) {
-    return <div>loading data</div>;
+    return (
+      <div>
+        <LottieComponent />
+      </div>
+    );
   }
 
   return (

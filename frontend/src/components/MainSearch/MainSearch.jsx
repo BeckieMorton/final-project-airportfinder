@@ -51,8 +51,10 @@ export const MainSearch = () => {
   //validate the user input so it can be correctly used by react router link
   const handleButtonClick = (event) => {
     switch (searchOption) {
-      case "1":
-        //validate iata code
+      case "0": //name search
+        navigate(`/airports/name/${code}`);
+        break;
+      case "1": //iata search
         if (code.length === 3) {
           navigate(`/airports/iata/${code}`);
         } else {
@@ -63,20 +65,14 @@ export const MainSearch = () => {
           setCode("");
         }
         break;
-      case "2":
+      case "2": //country search
         if (
           !loading &&
           newCountryCode !== undefined &&
           newCountryCode.length === 2
         ) {
-          console.log(`code for option 2:`, newCountryCode); //this is correct
           setTest(newCountryCode);
-          console.log(
-            "Value of newCountryCode before navigation:",
-            newCountryCode
-          );
           navigate(`/airports/country/${newCountryCode}`);
-          console.log(`/airports/country/${newCountryCode}`);
         } else {
           if (loading) {
             console.log("data is loading...");
@@ -113,6 +109,7 @@ export const MainSearch = () => {
               <option selected disabled value="">
                 Search by
               </option>
+              <option value="0">Name</option>
               <option value="1">IATA Code</option>
               <option value="2">Country</option>
               <option value="3">City/Area</option>

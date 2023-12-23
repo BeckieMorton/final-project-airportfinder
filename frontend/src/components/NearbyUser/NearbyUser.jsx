@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAirportStore from "../../stores/useAirportStore";
 import styles from "./NearbyUser.module.css";
+import { Link } from "react-router-dom";
 
 export const NearbyUser = () => {
   const { airport, setAirport } = useAirportStore();
@@ -115,7 +116,7 @@ export const NearbyUser = () => {
       nearestAirports.NearestAirportResource.Airports.Airport[1].Names.Name.$;
   }
 
-  const closestThree = [1, 2, 3];
+  const closestThree = [0, 1, 2];
 
   return (
     <>
@@ -131,11 +132,17 @@ export const NearbyUser = () => {
           if (airport) {
             const name = airport.Names.Name.$;
             const distance = airport.Distance.Value;
+            const iatacode = airport.AirportCode;
 
             return (
               <div key={index}>
                 <p>
-                  {name} is {distance}km away
+                  <Link
+                    className={styles.airportLink}
+                    to={`/airports/iata/${iatacode}`}
+                  >
+                    {name} - ({iatacode}) - is {distance}km away
+                  </Link>
                 </p>
               </div>
             );
