@@ -49,13 +49,14 @@ export const ResultsName = () => {
 
   return (
     <>
+      <Header />
       <div className={styles.nameContainer}>
-        <Header />
-        <div className={styles.resultsBox}>
+        <div className={styles.nameBox}>what info can i put here?</div>
+        <div className={styles.nameBox}>
           <SearchResultsName />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

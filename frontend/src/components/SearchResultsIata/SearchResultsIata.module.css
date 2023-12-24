@@ -2,6 +2,7 @@
   text-align: center;
   border-collapse: collapse;
   margin: 0 auto;
+  line-height: 0;
 }
 
 td,

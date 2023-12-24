@@ -123,6 +123,10 @@ export const MainSearch = () => {
           }
         }
         break;
+      case "": //user hasnt selected a search by option yet
+        setValidateMessage("Please choose a 'Search by' option and try again");
+
+        break;
       default:
         //case for error
         continent = "Option is not valid";
@@ -150,7 +154,6 @@ export const MainSearch = () => {
               <option value="0">Name</option>
               <option value="1">IATA Code</option>
               <option value="2">Country</option>
-              <option value="3">City/Area</option>
             </select>
             <input
               className={styles.searchInput}
@@ -159,7 +162,11 @@ export const MainSearch = () => {
               value={code}
               onChange={(e) => setCode(e.target.value)}
             />
-            <button onClick={handleButtonClick} className={styles.searchButton}>
+            <button
+              onClick={handleButtonClick}
+              className={styles.searchButton}
+              onKeyDown={(e) => (e.key === "Enter" ? handleButtonClick : "")}
+            >
               <img
                 className={styles.searchIcon}
                 src="./assets/search-icon-orange.png"

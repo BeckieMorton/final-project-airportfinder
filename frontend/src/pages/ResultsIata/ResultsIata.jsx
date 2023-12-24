@@ -79,7 +79,7 @@ export const ResultsIata = () => {
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>
           <div className={styles.resultsBoxSecond}>
-            5 largest airports in country
+            <CountryImage />
           </div>
           <div className={styles.resultsBoxSecond}>
             <NearbyUser />
