@@ -1,33 +1,64 @@
 <h1 align="center">
   <a href="">
-    <img src="/src/assets/design-handoff.svg" alt="Project Banner Image">
+    <img src="/public/assets/AirportFinder_transparent_orangedbpng" alt="Airport Finder">
   </a>
 </h1>
 
 
 
-## Getting Started with the Project
+## Technigo Web Development Bootcamp - FINAL PROJECT ##
 
-
-
-### The problem
+For my final project I have built a search engine to search for details about airports around the world.
 
 Minimal requirements: 
 
-Describe how you approached to problem: This week was a fanastic experience and
 
 ### Technologies used
 
 HTML5, CSS3, React, React Router, with Editor: VS Code
 
-### Backend
 
+### React Libraries/Dependencies
 
-### Frontend
+zustand for global state management
 
+moment.js for data and time
 
-### API's and resources used
+geolib (https://github.com/manuelbieh/geolib - to convert User IP address to latitude and longitude
 
+intl.DisplayNames for country names
+
+Lottie files animations for loading page animations
+
+### API's
+
+My API for the main airport data: https://final-project-airportfinder.onrender.com/
+
+Weather API: https://openweathermap.org
+
+Pexel API: 
+
+Flag API: https://flagsapi.com
+
+Map API: Leaflet uses openstreetmap
+
+Nearest airport data: Lufthansa API
+
+Country search data: http://restcountries.com
+
+Continent codes: created my own json file in data folder
+
+### Resources
+
+Logo: created using Canva and GIMP
+
+Fonts: 
+
+Colour scheme: 
+white background: #fbfbfbfb
+text dark blue: #363062
+medium blue: #4D4C7D
+orange: #F99417
 
 
 ### If I had more time...
@@ -36,6 +67,8 @@ HTML5, CSS3, React, React Router, with Editor: VS Code
 
 
 ### View it live
+
+<ins>Frontend:</ins> 
 
 <ins> Backend:</ins> 
 
