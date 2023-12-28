@@ -1,6 +1,9 @@
-<h1 align="center">
+
     ![AirportFinder logo](/public/assets/AirportFinder_transparent_orangedb.png?raw=true "AirportFinder")
-</h1>
+
+
+
+![Screenshot of Happy Thoughts](/public/assets/screenshot1.png?raw=true "Screenshot of Happy Thoughts")
 
 frontend/public/assets/AirportFinder_transparent_orangedb.png
 
