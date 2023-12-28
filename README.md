@@ -1,5 +1,5 @@
 
-<img src="public/assets/AirportFinder_transparent_orangedb.png" />
+<img src="frontend/public/assets/AirportFinder_transparent_orangedb.png" />
 
 
 
