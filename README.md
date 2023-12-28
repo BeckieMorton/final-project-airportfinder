@@ -1,10 +1,10 @@
 <h1 align="center">
   <a href="">
-    <img src="/public/assets/AirportFinder_transparent_orangedbpng" alt="Airport Finder">
+    <img src="./public/assets/AirportFinder_transparent_orangedb.png" alt="Airport Finder">
   </a>
 </h1>
 
-
+frontend/public/assets/AirportFinder_transparent_orangedb.png
 
 ## Technigo Web Development Bootcamp - FINAL PROJECT ##
 
