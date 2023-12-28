@@ -1,5 +1,7 @@
-
+## Technigo Web Development Bootcamp - FINAL PROJECT ##
+<h2 align=center>
 <img src="frontend/public/assets/AirportFinder_transparent_orangedb.png" />
+</h2>h2>
 
 
 
@@ -7,7 +9,7 @@
 
 frontend/public/assets/AirportFinder_transparent_orangedb.png
 
-## Technigo Web Development Bootcamp - FINAL PROJECT ##
+
 
 For my final project I have built a search engine to search for details about airports around the world.
 
