@@ -1,15 +1,9 @@
-## Technigo Web Development Bootcamp - FINAL PROJECT ##
 <h2 align=center>
+
+## Technigo Web Development Bootcamp - FINAL PROJECT ##
+  
 <img src="frontend/public/assets/AirportFinder_transparent_orangedb.png" />
 </h2>h2>
-
-
-
-![Screenshot of Happy Thoughts](/public/assets/screenshot1.png?raw=true "Screenshot of Happy Thoughts")
-
-frontend/public/assets/AirportFinder_transparent_orangedb.png
-
-
 
 For my final project I have built a search engine to search for details about airports around the world.
 
