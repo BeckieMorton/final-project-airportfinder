@@ -1,5 +1,5 @@
 
-    ![AirportFinder logo](/public/assets/AirportFinder_transparent_orangedb.png?raw=true "AirportFinder")
+<img src="./assets/AirportFinder_transparent_orangedb.png" />
 
 
 
