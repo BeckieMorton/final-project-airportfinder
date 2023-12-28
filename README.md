@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="">
-    <img src="./public/assets/AirportFinder_transparent_orangedb.png" alt="Airport Finder">
-  </a>
+    ![AirportFinder logo](/public/assets/AirportFinder_transparent_orangedb.png?raw=true "AirportFinder")
 </h1>
 
 frontend/public/assets/AirportFinder_transparent_orangedb.png
