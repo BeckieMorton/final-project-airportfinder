@@ -9,6 +9,7 @@ import { Weather } from "../../components/Weather/Weather";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { CountryImage } from "../../components/CountryImage/CountryImage";
+import { Airlines } from "../../components/Airlines/Airlines";
 import { Distance } from "../../components/Distance/Distance";
 import { NearbyAirports } from "../../NearbyAirports/NearbyAirports";
 import { NearbyUser } from "../../components/NearbyUser/NearbyUser";
@@ -79,7 +80,8 @@ export const ResultsIata = () => {
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>
           <div className={styles.resultsBoxSecond}>
-            <CountryImage />
+            {/* <CountryImage /> */}
+            <Airlines />
           </div>
           <div className={styles.resultsBoxSecond}>
             <NearbyUser />

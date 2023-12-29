@@ -8,6 +8,16 @@ export const SearchResultsCountry = () => {
 
   //want to sort results from small to large airports. add code here
 
+  //--------------------//
+
+  const headers = [
+    { key: "name", label: "Name" },
+    { key: "municipality", label: "City/Area" },
+    { key: "type", label: "Type" },
+  ];
+
+  // ------------------------//
+
   return (
     <div>
       <h2>We have found {country.length} airports. </h2>
