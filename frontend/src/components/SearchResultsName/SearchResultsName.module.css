@@ -15,6 +15,27 @@
     gap: 10px;
   }
 
+  .airportLink:hover {
+    color: #ff8813;
+  }
+
+  .homeLink:hover {
+    color: #ff8813;
+  }
+
+  .airportBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .airportItem {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border: 1px solid #f99417;
+    border-radius: 0.5rem;
+  }
+
   .listBox {
     border: 1px solid #ccc;
     padding: 10px;
@@ -25,15 +46,19 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .list p {
+    font-size: 14;
+  }
+
   .list a {
     text-decoration: none;
   }
 
   .airportLink:hover {
-    color: #ff8813;
+    color: #f99417;
   }
 
   .homeLink:hover {
-    color: #ff8813;
+    color: #f99417;
   }
 }

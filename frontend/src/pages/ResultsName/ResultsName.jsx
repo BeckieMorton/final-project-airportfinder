@@ -51,7 +51,6 @@ export const ResultsName = () => {
     <>
       <Header />
       <div className={styles.nameContainer}>
-        <div className={styles.nameBox}>what info can i put here?</div>
         <div className={styles.nameBox}>
           <SearchResultsName />
         </div>

@@ -8,11 +8,8 @@
   max-width: 70%;
   display: inline-block;
   padding: 0.5rem;
+  text-align: center;
 }
-
-/* .headerContainer img:hover {
-  maybe an animation for the hover effect? 
-} */
 
 .headerContainerDesktop {
   display: none;
