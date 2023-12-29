@@ -7,37 +7,47 @@ import styles from "./SearchResultsName.module.css";
 export const SearchResultsName = () => {
   //need to access airport store to get results of all airports iwth the name
   const { airport, setAirport } = useAirportStore();
-  const airportContinent = airport?.continent;
 
   // ------formats continent string------//
-  let continent = "";
-  switch (airportContinent) {
-    case "AS":
-      continent = "Asia";
-      break;
-    case "OC":
-      continent = "Oceania";
-      break;
-    case "EU":
-      continent = "Europe";
-      break;
-    case "AF":
-      continent = "Africa";
-      break;
-    case "AN":
-      continent = "Antarctica";
-      break;
-    case "SA":
-      continent = "South America";
-      break;
-    case "NA":
-      continent = "North America";
-      break;
-    default:
-      //case for error
-      continent = "Continent not found";
-      break;
-  }
+  const formatContinent = (airportContinent) => {
+    switch (airportContinent) {
+      case "AS":
+        return "Asia";
+        break;
+      case "OC":
+        return "Oceania";
+        break;
+      case "EU":
+        return "Europe";
+        break;
+      case "AF":
+        return "Africa";
+        break;
+      case "AN":
+        return "Antarctica";
+        break;
+      case "SA":
+        return "South America";
+        break;
+      case "NA":
+        return "North America";
+        break;
+      default:
+        //case for error
+        return "Continent not found";
+        break;
+    }
+  };
+
+  // ------formats airport type string------//
+  const formatType = (airportType) => {
+    let sizeNotFormatted = airportType;
+    let sizeFormatted = sizeNotFormatted
+      .replace(/_/g, " ")
+      .replace(/\bairport\b/g, "");
+
+    return sizeFormatted;
+  };
 
   return (
     <div>
@@ -65,8 +75,8 @@ export const SearchResultsName = () => {
                 )}
                 <p>City/Area: {airport.municipality && airport.municipality}</p>
                 <p> Country: {airport.iso_country && airport.iso_country}</p>
-                <p> Continent: {continent && continent}</p>
-                <p>Type: {airport.type && airport.type}</p>
+                <p> Continent: {formatContinent(airport.continent)}</p>
+                <p>Type: {formatType(airport.type)}</p>
               </div>
             ))}
           </div>

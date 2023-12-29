@@ -74,7 +74,8 @@ export const ResultsIata = () => {
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
           <div className={styles.resultsBoxSecond}>
-            <Distance />
+            {/* <Distance /> */}
+            Commented out to stop overuse
           </div>
         </div>
         {/* 3rd row */}
@@ -84,10 +85,12 @@ export const ResultsIata = () => {
             <Airlines />
           </div>
           <div className={styles.resultsBoxSecond}>
-            <NearbyUser />
+            {/* <NearbyUser /> */}
+            Commented out to stop overuse
           </div>
           <div className={styles.resultsBoxSecond}>
-            <NearbyAirports />
+            {/* <NearbyAirports /> */}
+            Commented out to stop overuse
           </div>
         </div>
         <Footer />

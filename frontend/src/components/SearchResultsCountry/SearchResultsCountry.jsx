@@ -18,6 +18,16 @@ export const SearchResultsCountry = () => {
 
   // ------------------------//
 
+  // ------formats airport type string------//
+  const formatAirportSize = (props) => {
+    let sizeNotFormatted = props;
+    let sizeFormatted = sizeNotFormatted
+      .replace(/_/g, " ")
+      .replace(/\bairport\b/g, "");
+
+    return sizeFormatted;
+  };
+
   return (
     <div>
       <h2>We have found {country.length} airports. </h2>
@@ -28,7 +38,7 @@ export const SearchResultsCountry = () => {
           <tr>
             <th>Name</th>
             {/* <th>Region</th> */}
-            <th>Municipality</th>
+            <th>City/Area</th>
             <th>Type</th>
             {/* <th>Homepage</th> */}
           </tr>
@@ -49,7 +59,9 @@ export const SearchResultsCountry = () => {
 
               {/* <td>{country.region && <p>{country.region}</p>}</td> */}
               <td>{country.municipality && <p>{country.municipality}</p>}</td>
-              <td>{country.type && <p>{country.type}</p>}</td>
+              <td>
+                {country.type && <p>{formatAirportSize(country.type)}</p>}
+              </td>
               {/* <td>{country.link && <p>{country.link}</p>}</td> */}
             </tr>
           ))}

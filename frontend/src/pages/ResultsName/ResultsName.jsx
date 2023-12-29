@@ -15,8 +15,6 @@ export const ResultsName = () => {
   //my endpoint is "/airports/name/:name"
   const myAPI = `https://final-project-airportfinder.onrender.com/airports/name/${code}`;
 
-  console.log(`inside results name and the code is:`, code);
-
   const { airport, setAirport } = useAirportStore();
   const [loading, setLoading] = useState(true);
 
