@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./MainSearch.module.css";
 import { useNavigate } from "react-router-dom";
+import { LottieComponent } from "../../LottieComponent/LottieComponent";
 
 export const MainSearch = () => {
   const [code, setCode] = useState("");
@@ -49,7 +50,11 @@ export const MainSearch = () => {
 
   //to make sure countryArray is populated before mapping it and using it to convert user input into a country code
   if (!countryArray) {
-    return <div>waiting for country array</div>;
+    return (
+      <div>
+        <LottieComponent />
+      </div>
+    );
   }
 
   //validate the user input so it can be correctly used by react router link
