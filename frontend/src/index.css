@@ -15,7 +15,10 @@ body {
   color: #363062;
   font-weight: 400;
   background-color: #fbfbfbfb;
-  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  min-width: 100vw;
+  overflow-x: hidden;
 }
 
 h1 {

@@ -49,6 +49,14 @@ export const SearchResultsName = () => {
     return sizeFormatted;
   };
 
+  // ----formats country code into name-----//
+  const formatCountry = (countryName) => {
+    const regionNamesInEnglish = new Intl.DisplayNames(["en"], {
+      type: "region",
+    });
+    return regionNamesInEnglish.of(countryName);
+  };
+
   return (
     <div>
       {airport.length === 0 ? (
@@ -70,13 +78,23 @@ export const SearchResultsName = () => {
               <div key={index} className={styles.airportItem}>
                 {airport.name && (
                   <Link to={`/airports/iata/${airport.iata_code}`}>
-                    <h2 className={styles.airportLink}> {airport.name}</h2>
+                    <h2 className={styles.link}> {airport.name}</h2>
                   </Link>
                 )}
                 <p>City/Area: {airport.municipality && airport.municipality}</p>
-                <p> Country: {airport.iso_country && airport.iso_country}</p>
+                <Link to={`/airports/country/${airport.iso_country}`}>
+                  <p className={styles.link}>
+                    Country: {formatCountry(airport.iso_country)}
+                  </p>
+                </Link>
+
                 <p> Continent: {formatContinent(airport.continent)}</p>
                 <p>Type: {formatType(airport.type)}</p>
+                <p>
+                  <img
+                    src={`https://flagsapi.com/${airport.iso_country}/flat/64.png`}
+                  ></img>
+                </p>
               </div>
             ))}
           </div>

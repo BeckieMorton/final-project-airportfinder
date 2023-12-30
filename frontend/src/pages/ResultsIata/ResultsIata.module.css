@@ -3,9 +3,10 @@
 .resultsContainer3 {
   /* grid parent */
   display: grid;
-  max-width: 100%;
-  margin: 0 auto;
-  grid-template-columns: repeat(1, 1fr); /* Single column by default */
+  grid-template-columns: repeat(1, 1fr);
+  overflow: inherit;
+  max-height: fit-content;
+  box-sizing: border-box;
 }
 
 .resultsBox {
@@ -17,13 +18,11 @@
   padding: 0.5rem;
   margin: 0.5rem;
   background-color: white;
+  box-sizing: border-box;
 }
 
 /* media query for desktop */
 @media screen and (min-width: 825px) {
-  .mainContainer {
-    width: auto;
-  }
   .resultsContainer1 {
     grid-template-columns: 50% 20% 30%;
   }

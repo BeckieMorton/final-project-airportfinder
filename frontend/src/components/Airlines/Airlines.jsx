@@ -14,13 +14,10 @@ export const Airlines = () => {
   useEffect(() => {
     //get country code from airport store
     setCountryCode(airport?.iso_country);
-
     // Filter major airlines based on the country code
     setAirlines(
       majorairlines.filter((airline) => airline.country_code === countryCode)
     );
-    // Do something with the filtered airlines if needed
-    console.log(`these are the airlines to display!:`, airlines);
   }, [majorairlines, countryCode]);
 
   return (
@@ -28,7 +25,7 @@ export const Airlines = () => {
       <h2>Associated Airlines</h2>
       {airlines.length === 0 ? (
         <>
-          <p>No major airlines linked to this country</p>
+          <p>There are no major airlines currently based in this country</p>
         </>
       ) : (
         <>
@@ -37,8 +34,8 @@ export const Airlines = () => {
               <tr key={index}>
                 <td>
                   {airline.name && (
-                    <a href="{airline.Link}" className={styles.airportLink}>
-                      {airline.name}{" "}
+                    <a href={airline.Link} className={styles.airportLink}>
+                      <p className={styles.airlineLink}>{airline.name}</p>
                     </a>
                   )}
                 </td>
@@ -47,6 +44,21 @@ export const Airlines = () => {
           </tbody>
         </>
       )}
+      <h2>Major airlines in</h2>
+      add code here to display all airlines in the associated continent
+      {/* <tbody className={styles.airlineList}>
+        {airlines.map((airline, index) => (
+          <tr key={index}>
+            <td>
+              {airline.name && (
+                <a href={airline.Link} className={styles.airportLink}>
+                  <p className={styles.airlineLink}>{airline.name}</p>
+                </a>
+              )}
+            </td>
+          </tr>
+        ))}
+      </tbody> */}
     </>
   );
 };
