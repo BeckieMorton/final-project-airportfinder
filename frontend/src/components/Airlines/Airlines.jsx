@@ -12,8 +12,6 @@ export const Airlines = () => {
   //use json airline data to find matches for all the airlines that have the same country code
   //i have done this differently here than i have to get the country codes in the MainSearch. im not sure why i have and which is better? perhaps using the fetch in MainSearch is better?
 
-  //i need to change this
-
   useEffect(() => {
     //get country code from airport store
     setCountryCode(airport?.iso_country);
