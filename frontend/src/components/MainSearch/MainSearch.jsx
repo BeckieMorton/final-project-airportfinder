@@ -21,7 +21,7 @@ export const MainSearch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/src/components/data/countrycodes.json");
+        const response = await fetch("./data/countrycodes.json");
         const data = await response.json();
         setCountryArray(data);
         setLoading(false);
