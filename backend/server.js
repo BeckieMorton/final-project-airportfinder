@@ -3,7 +3,6 @@ import cors from "cors";
 import mongoose from "mongoose";
 // const dotenv = require("dotenv");
 // dotenv.config({ path: "./config.env" });
-import countrycodes from "./data/countrycodes.json";
 
 import airportRoutes from "./routes/airportRoutes";
 

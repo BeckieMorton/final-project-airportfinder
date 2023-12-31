@@ -1,8 +1,6 @@
 .countryContainer {
   /* grid parent */
   display: grid;
-  max-width: 100%;
-  padding: 1rem;
   grid-template-columns: repeat(1, 1fr);
 }
 
