@@ -1,0 +1,1232 @@
+[
+  {
+    "name": "Zimbabwe",
+    "twocode": "ZW",
+    "threecode": "ZWE"
+  },
+  {
+    "name": "Zambia",
+    "twocode": "ZM",
+    "threecode": "ZMB"
+  },
+  {
+    "name": "Yemen",
+    "twocode": "YE",
+    "threecode": "YEM"
+  },
+  {
+    "name": "Western Sahara",
+    "twocode": "EH",
+    "threecode": "ESH"
+  },
+  {
+    "name": "Wallis and Futuna",
+    "twocode": "WF",
+    "threecode": "WLF"
+  },
+  {
+    "name": "Virgin Islands, U.S.",
+    "twocode": "VI",
+    "threecode": "VIR"
+  },
+  {
+    "name": "Virgin Islands, British",
+    "twocode": "VG",
+    "threecode": "VGB"
+  },
+  {
+    "name": "Vietnam",
+    "twocode": "VN",
+    "threecode": "VNM"
+  },
+  {
+    "name": "Venezuela",
+    "twocode": "VE",
+    "threecode": "VEN"
+  },
+  {
+    "name": "Vanuatu",
+    "twocode": "VU",
+    "threecode": "VUT"
+  },
+  {
+    "name": "Uzbekistan",
+    "twocode": "UZ",
+    "threecode": "UZB"
+  },
+  {
+    "name": "Uruguay",
+    "twocode": "UY",
+    "threecode": "URY"
+  },
+  {
+    "name": "United States Minor Outlying Islands",
+    "twocode": "UM",
+    "threecode": "UMI"
+  },
+  {
+    "name": "United States",
+    "twocode": "US",
+    "threecode": "USA"
+  },
+  {
+    "name": "United Kingdom",
+    "twocode": "GB",
+    "threecode": "GBR"
+  },
+  {
+    "name": "United Arab Emirates",
+    "twocode": "AE",
+    "threecode": "ARE"
+  },
+  {
+    "name": "Ukraine",
+    "twocode": "UA",
+    "threecode": "UKR"
+  },
+  {
+    "name": "Uganda",
+    "twocode": "UG",
+    "threecode": "UGA"
+  },
+  {
+    "name": "Tuvalu",
+    "twocode": "TV",
+    "threecode": "TUV"
+  },
+  {
+    "name": "Turks and Caicos",
+    "twocode": "TC",
+    "threecode": "TCA"
+  },
+  {
+    "name": "Turkmenistan",
+    "twocode": "TM",
+    "threecode": "TKM"
+  },
+  {
+    "name": "Turkey",
+    "twocode": "TR",
+    "threecode": "TUR"
+  },
+  {
+    "name": "Tunisia",
+    "twocode": "TN",
+    "threecode": "TUN"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "twocode": "TT",
+    "threecode": "TTO"
+  },
+  {
+    "name": "Tonga",
+    "twocode": "TO",
+    "threecode": "TON"
+  },
+  {
+    "name": "Tokelau",
+    "twocode": "TK",
+    "threecode": "TKL"
+  },
+  {
+    "name": "Togo",
+    "twocode": "TG",
+    "threecode": "TGO"
+  },
+  {
+    "name": "Timor-Leste",
+    "twocode": "TL",
+    "threecode": "TLS"
+  },
+  {
+    "name": "Thailand",
+    "twocode": "TH",
+    "threecode": "THA"
+  },
+  {
+    "name": "Tanzania",
+    "twocode": "TZ",
+    "threecode": "TZA"
+  },
+  {
+    "name": "Tajikistan",
+    "twocode": "TJ",
+    "threecode": "TJK"
+  },
+  {
+    "name": "Taiwan",
+    "twocode": "TW",
+    "threecode": "TWN"
+  },
+  {
+    "name": "Syrian Arab Republic",
+    "twocode": "SY",
+    "threecode": "SYR"
+  },
+  {
+    "name": "Switzerland",
+    "twocode": "CH",
+    "threecode": "CHE"
+  },
+  {
+    "name": "Sweden",
+    "twocode": "SE",
+    "threecode": "SWE"
+  },
+  {
+    "name": "Swaziland",
+    "twocode": "SZ",
+    "threecode": "SWZ"
+  },
+  {
+    "name": "Svalbard and Jan Mayen",
+    "twocode": "SJ",
+    "threecode": "SJM"
+  },
+  {
+    "name": "Suriname",
+    "twocode": "SR",
+    "threecode": "SUR"
+  },
+  {
+    "name": "Sudan",
+    "twocode": "SD",
+    "threecode": "SDN"
+  },
+  {
+    "name": "Sri Lanka",
+    "twocode": "LK",
+    "threecode": "LKA"
+  },
+  {
+    "name": "Spain",
+    "twocode": "ES",
+    "threecode": "ESP"
+  },
+  {
+    "name": "South Korea",
+    "twocode": "KR",
+    "threecode": "KOR"
+  },
+  {
+    "name": "South Georgia and the South Sandwich Islands",
+    "twocode": "GS",
+    "threecode": "SGS"
+  },
+  {
+    "name": "South Africa",
+    "twocode": "ZA",
+    "threecode": "ZAF"
+  },
+  {
+    "name": "Somalia",
+    "twocode": "SO",
+    "threecode": "SOM"
+  },
+  {
+    "name": "Solomon Islands",
+    "twocode": "SB",
+    "threecode": "SLB"
+  },
+  {
+    "name": "Slovenia",
+    "twocode": "SI",
+    "threecode": "SVN"
+  },
+  {
+    "name": "Slovakia",
+    "twocode": "SK",
+    "threecode": "SVK"
+  },
+  {
+    "name": "Singapore",
+    "twocode": "SG",
+    "threecode": "SGP"
+  },
+  {
+    "name": "Sierra Leone",
+    "twocode": "SL",
+    "threecode": "SLE"
+  },
+  {
+    "name": "Seychelles",
+    "twocode": "SC",
+    "threecode": "SYC"
+  },
+  {
+    "name": "Serbia",
+    "twocode": "RS",
+    "threecode": "SRB"
+  },
+  {
+    "name": "Senegal",
+    "twocode": "SN",
+    "threecode": "SEN"
+  },
+  {
+    "name": "Saudi Arabia",
+    "twocode": "SA",
+    "threecode": "SAU"
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "twocode": "ST",
+    "threecode": "STP"
+  },
+  {
+    "name": "San Marino",
+    "twocode": "SM",
+    "threecode": "SMR"
+  },
+  {
+    "name": "Samoa",
+    "twocode": "WS",
+    "threecode": "WSM"
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "twocode": "VC",
+    "threecode": "VCT"
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "twocode": "PM",
+    "threecode": "SPM"
+  },
+  {
+    "name": "Saint Martin",
+    "twocode": "MF",
+    "threecode": "MAF"
+  },
+  {
+    "name": "Saint Lucia",
+    "twocode": "LC",
+    "threecode": "LCA"
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "twocode": "KN",
+    "threecode": "KNA"
+  },
+  {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "twocode": "SH",
+    "threecode": "SHN"
+  },
+  {
+    "name": "Saint Barthélemy",
+    "twocode": "BL",
+    "threecode": "BLM"
+  },
+  {
+    "name": "Rwanda",
+    "twocode": "RW",
+    "threecode": "RWA"
+  },
+  {
+    "name": "Russia",
+    "twocode": "RU",
+    "threecode": "RUS"
+  },
+  {
+    "name": "Romania",
+    "twocode": "RO",
+    "threecode": "ROU"
+  },
+  {
+    "name": "Reunion",
+    "twocode": "RE",
+    "threecode": "REU"
+  },
+  {
+    "name": "Qatar",
+    "twocode": "QA",
+    "threecode": "QAT"
+  },
+  {
+    "name": "Puerto Rico",
+    "twocode": "PR",
+    "threecode": "PRI"
+  },
+  {
+    "name": "Portugal",
+    "twocode": "PT",
+    "threecode": "PRT"
+  },
+  {
+    "name": "Poland",
+    "twocode": "PL",
+    "threecode": "POL"
+  },
+  {
+    "name": "Pitcairn",
+    "twocode": "PN",
+    "threecode": "PCN"
+  },
+  {
+    "name": "Philippines",
+    "twocode": "PH",
+    "threecode": "PHL"
+  },
+  {
+    "name": "Peru",
+    "twocode": "PE",
+    "threecode": "PER"
+  },
+  {
+    "name": "Paraguay",
+    "twocode": "PY",
+    "threecode": "PRY"
+  },
+  {
+    "name": "Papua New Guinea",
+    "twocode": "PG",
+    "threecode": "PNG"
+  },
+  {
+    "name": "Panama",
+    "twocode": "PA",
+    "threecode": "PAN"
+  },
+  {
+    "name": "Palestinian Territory, Occupied",
+    "twocode": "PS",
+    "threecode": "PSE"
+  },
+  {
+    "name": "Palau",
+    "twocode": "PW",
+    "threecode": "PLW"
+  },
+  {
+    "name": "Pakistan",
+    "twocode": "PK",
+    "threecode": "PAK"
+  },
+  {
+    "name": "Oman",
+    "twocode": "OM",
+    "threecode": "OMN"
+  },
+  {
+    "name": "Norway",
+    "twocode": "NO",
+    "threecode": "NOR"
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "twocode": "MP",
+    "threecode": "MNP"
+  },
+  {
+    "name": "Norfolk Island",
+    "twocode": "NF",
+    "threecode": "NFK"
+  },
+  {
+    "name": "Niue",
+    "twocode": "NU",
+    "threecode": "NIU"
+  },
+  {
+    "name": "Nigeria",
+    "twocode": "NG",
+    "threecode": "NGA"
+  },
+  {
+    "name": "Niger",
+    "twocode": "NE",
+    "threecode": "NER"
+  },
+  {
+    "name": "Nicaragua",
+    "twocode": "NI",
+    "threecode": "NIC"
+  },
+  {
+    "name": "New Zealand",
+    "twocode": "NZ",
+    "threecode": "NZL"
+  },
+  {
+    "name": "New Caledonia",
+    "twocode": "NC",
+    "threecode": "NCL"
+  },
+  {
+    "name": "Netherlands Antilles",
+    "twocode": "AN",
+    "threecode": "ANT"
+  },
+  {
+    "name": "Netherlands",
+    "twocode": "NL",
+    "threecode": "NLD"
+  },
+  {
+    "name": "Nepal",
+    "twocode": "NP",
+    "threecode": "NPL"
+  },
+  {
+    "name": "Nauru",
+    "twocode": "NR",
+    "threecode": "NRU"
+  },
+  {
+    "name": "Namibia",
+    "twocode": "NA",
+    "threecode": "NAM"
+  },
+  {
+    "name": "Myanmar",
+    "twocode": "MM",
+    "threecode": "MMR"
+  },
+  {
+    "name": "Mozambique",
+    "twocode": "MZ",
+    "threecode": "MOZ"
+  },
+  {
+    "name": "Morocco",
+    "twocode": "MA",
+    "threecode": "MAR"
+  },
+  {
+    "name": "Montserrat",
+    "twocode": "MS",
+    "threecode": "MSR"
+  },
+  {
+    "name": "Montenegro",
+    "twocode": "ME",
+    "threecode": "MNE"
+  },
+  {
+    "name": "Mongolia",
+    "twocode": "MN",
+    "threecode": "MNG"
+  },
+  {
+    "name": "Monaco",
+    "twocode": "MC",
+    "threecode": "MCO"
+  },
+  {
+    "name": "Moldova, Republic of",
+    "twocode": "MD",
+    "threecode": "MDA"
+  },
+  {
+    "name": "Micronesia, Federated States of",
+    "twocode": "FM",
+    "threecode": "FSM"
+  },
+  {
+    "name": "Mexico",
+    "twocode": "MX",
+    "threecode": "MEX"
+  },
+  {
+    "name": "Mayotte",
+    "twocode": "YT",
+    "threecode": "MYT"
+  },
+  {
+    "name": "Mauritius",
+    "twocode": "MU",
+    "threecode": "MUS"
+  },
+  {
+    "name": "Mauritania",
+    "twocode": "MR",
+    "threecode": "MRT"
+  },
+  {
+    "name": "Martinique",
+    "twocode": "MQ",
+    "threecode": "MTQ"
+  },
+  {
+    "name": "Marshall Islands",
+    "twocode": "MH",
+    "threecode": "MHL"
+  },
+  {
+    "name": "Malta",
+    "twocode": "MT",
+    "threecode": "MLT"
+  },
+  {
+    "name": "Mali",
+    "twocode": "ML",
+    "threecode": "MLI"
+  },
+  {
+    "name": "Maldives",
+    "twocode": "MV",
+    "threecode": "MDV"
+  },
+  {
+    "name": "Malaysia",
+    "twocode": "MY",
+    "threecode": "MYS"
+  },
+  {
+    "name": "Malawi",
+    "twocode": "MW",
+    "threecode": "MWI"
+  },
+  {
+    "name": "Madagascar",
+    "twocode": "MG",
+    "threecode": "MDG"
+  },
+  {
+    "name": "Macedonia, the former Yugoslav Republic of",
+    "twocode": "MK",
+    "threecode": "MKD"
+  },
+  {
+    "name": "Macao",
+    "twocode": "MO",
+    "threecode": "MAC"
+  },
+  {
+    "name": "Luxembourg",
+    "twocode": "LU",
+    "threecode": "LUX"
+  },
+  {
+    "name": "Lithuania",
+    "twocode": "LT",
+    "threecode": "LTU"
+  },
+  {
+    "name": "Liechtenstein",
+    "twocode": "LI",
+    "threecode": "LIE"
+  },
+  {
+    "name": "Libyan Arab Jamahiriya",
+    "twocode": "LY",
+    "threecode": "LBY"
+  },
+  {
+    "name": "Liberia",
+    "twocode": "LR",
+    "threecode": "LBR"
+  },
+  {
+    "name": "Lesotho",
+    "twocode": "LS",
+    "threecode": "LSO"
+  },
+  {
+    "name": "Lebanon",
+    "twocode": "LB",
+    "threecode": "LBN"
+  },
+  {
+    "name": "Latvia",
+    "twocode": "LV",
+    "threecode": "LVA"
+  },
+  {
+    "name": "Lao People's Democratic Republic",
+    "twocode": "LA",
+    "threecode": "LAO"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "twocode": "KG",
+    "threecode": "KGZ"
+  },
+  {
+    "name": "Kuwait",
+    "twocode": "KW",
+    "threecode": "KWT"
+  },
+  {
+    "name": "Korea, Democratic People's Republic of",
+    "twocode": "KP",
+    "threecode": "PRK"
+  },
+  {
+    "name": "Kiribati",
+    "twocode": "KI",
+    "threecode": "KIR"
+  },
+  {
+    "name": "Kenya",
+    "twocode": "KE",
+    "threecode": "KEN"
+  },
+  {
+    "name": "Kazakhstan",
+    "twocode": "KZ",
+    "threecode": "KAZ"
+  },
+  {
+    "name": "Jordan",
+    "twocode": "JO",
+    "threecode": "JOR"
+  },
+  {
+    "name": "Jersey",
+    "twocode": "JE",
+    "threecode": "JEY"
+  },
+  {
+    "name": "Japan",
+    "twocode": "JP",
+    "threecode": "JPN"
+  },
+  {
+    "name": "Jamaica",
+    "twocode": "JM",
+    "threecode": "JAM"
+  },
+  {
+    "name": "Italy",
+    "twocode": "IT",
+    "threecode": "ITA"
+  },
+  {
+    "name": "Israel",
+    "twocode": "IL",
+    "threecode": "ISR"
+  },
+  {
+    "name": "Isle of Man",
+    "twocode": "IM",
+    "threecode": "IMN"
+  },
+  {
+    "name": "Ireland",
+    "twocode": "IE",
+    "threecode": "IRL"
+  },
+  {
+    "name": "Iraq",
+    "twocode": "IQ",
+    "threecode": "IRQ"
+  },
+  {
+    "name": "Iran",
+    "twocode": "IR",
+    "threecode": "IRN"
+  },
+  {
+    "name": "Indonesia",
+    "twocode": "ID",
+    "threecode": "IDN"
+  },
+  {
+    "name": "India",
+    "twocode": "IN",
+    "threecode": "IND"
+  },
+  {
+    "name": "Iceland",
+    "twocode": "IS",
+    "threecode": "ISL"
+  },
+  {
+    "name": "Hungary",
+    "twocode": "HU",
+    "threecode": "HUN"
+  },
+  {
+    "name": "Hong Kong S.A.R., China",
+    "twocode": "HK",
+    "threecode": "HKG"
+  },
+  {
+    "name": "Honduras",
+    "twocode": "HN",
+    "threecode": "HND"
+  },
+  {
+    "name": "Holy See (Vatican City State)",
+    "twocode": "VA",
+    "threecode": "VAT"
+  },
+  {
+    "name": "Heard Island and McDonald Islands",
+    "twocode": "HM",
+    "threecode": "HMD"
+  },
+  {
+    "name": "Haiti",
+    "twocode": "HT",
+    "threecode": "HTI"
+  },
+  {
+    "name": "Guyana",
+    "twocode": "GY",
+    "threecode": "GUY"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "twocode": "GW",
+    "threecode": "GNB"
+  },
+  {
+    "name": "Guinea",
+    "twocode": "GN",
+    "threecode": "GIN"
+  },
+  {
+    "name": "Guernsey",
+    "twocode": "GG",
+    "threecode": "GGY"
+  },
+  {
+    "name": "Guatemala",
+    "twocode": "GT",
+    "threecode": "GTM"
+  },
+  {
+    "name": "Guam",
+    "twocode": "GU",
+    "threecode": "GUM"
+  },
+  {
+    "name": "Guadeloupe",
+    "twocode": "GP",
+    "threecode": "GLP"
+  },
+  {
+    "name": "Grenada",
+    "twocode": "GD",
+    "threecode": "GRD"
+  },
+  {
+    "name": "Greenland",
+    "twocode": "GL",
+    "threecode": "GRL"
+  },
+  {
+    "name": "Greece",
+    "twocode": "GR",
+    "threecode": "GRC"
+  },
+  {
+    "name": "Gibraltar",
+    "twocode": "GI",
+    "threecode": "GIB"
+  },
+  {
+    "name": "Ghana",
+    "twocode": "GH",
+    "threecode": "GHA"
+  },
+  {
+    "name": "Germany",
+    "twocode": "DE",
+    "threecode": "DEU"
+  },
+  {
+    "name": "Georgia",
+    "twocode": "GE",
+    "threecode": "GEO"
+  },
+  {
+    "name": "Gambia",
+    "twocode": "GM",
+    "threecode": "GMB"
+  },
+  {
+    "name": "Gabon",
+    "twocode": "GA",
+    "threecode": "GAB"
+  },
+  {
+    "name": "French Southern Territories",
+    "twocode": "TF",
+    "threecode": "ATF"
+  },
+  {
+    "name": "French Polynesia",
+    "twocode": "PF",
+    "threecode": "PYF"
+  },
+  {
+    "name": "French Guiana",
+    "twocode": "GF",
+    "threecode": "GUF"
+  },
+  {
+    "name": "France",
+    "twocode": "FR",
+    "threecode": "FRA"
+  },
+  {
+    "name": "Finland",
+    "twocode": "FI",
+    "threecode": "FIN"
+  },
+  {
+    "name": "Fiji",
+    "twocode": "FJ",
+    "threecode": "FJI"
+  },
+  {
+    "name": "Faroe Islands",
+    "twocode": "FO",
+    "threecode": "FRO"
+  },
+  {
+    "name": "Falkland Islands (Malvinas)",
+    "twocode": "FK",
+    "threecode": "FLK"
+  },
+  {
+    "name": "Ethiopia",
+    "twocode": "ET",
+    "threecode": "ETH"
+  },
+  {
+    "name": "Estonia",
+    "twocode": "EE",
+    "threecode": "EST"
+  },
+  {
+    "name": "Eritrea",
+    "twocode": "ER",
+    "threecode": "ERI"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "twocode": "GQ",
+    "threecode": "GNQ"
+  },
+  {
+    "name": "El Salvador",
+    "twocode": "SV",
+    "threecode": "SLV"
+  },
+  {
+    "name": "Egypt",
+    "twocode": "EG",
+    "threecode": "EGY"
+  },
+  {
+    "name": "Ecuador",
+    "twocode": "EC",
+    "threecode": "ECU"
+  },
+  {
+    "name": "Dominican Republic",
+    "twocode": "DO",
+    "threecode": "DOM"
+  },
+  {
+    "name": "Dominica",
+    "twocode": "DM",
+    "threecode": "DMA"
+  },
+  {
+    "name": "Djibouti",
+    "twocode": "DJ",
+    "threecode": "DJI"
+  },
+  {
+    "name": "Denmark",
+    "twocode": "DK",
+    "threecode": "DNK"
+  },
+  {
+    "name": "Czech Republic",
+    "twocode": "CZ",
+    "threecode": "CZE"
+  },
+  {
+    "name": "Cyprus",
+    "twocode": "CY",
+    "threecode": "CYP"
+  },
+  {
+    "name": "Cuba",
+    "twocode": "CU",
+    "threecode": "CUB"
+  },
+  {
+    "name": "Croatia",
+    "twocode": "HR",
+    "threecode": "HRV"
+  },
+  {
+    "name": "Costa Rica",
+    "twocode": "CR",
+    "threecode": "CRI"
+  },
+  {
+    "name": "Cook Islands",
+    "twocode": "CK",
+    "threecode": "COK"
+  },
+  {
+    "name": "Congo (Brazzaville)",
+    "twocode": "CD",
+    "threecode": "COD"
+  },
+  {
+    "name": "Congo (Kinshasa)",
+    "twocode": "CG",
+    "threecode": "COG"
+  },
+  {
+    "name": "Comoros",
+    "twocode": "KM",
+    "threecode": "COM"
+  },
+  {
+    "name": "Colombia",
+    "twocode": "CO",
+    "threecode": "COL"
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "twocode": "CC",
+    "threecode": "CCK"
+  },
+  {
+    "name": "Christmas Island",
+    "twocode": "CX",
+    "threecode": "CXR"
+  },
+  {
+    "name": "China",
+    "twocode": "CN",
+    "threecode": "CHN"
+  },
+  {
+    "name": "Chile",
+    "twocode": "CL",
+    "threecode": "CHL"
+  },
+  {
+    "name": "Chad",
+    "twocode": "TD",
+    "threecode": "TCD"
+  },
+  {
+    "name": "Central African Republic",
+    "twocode": "CF",
+    "threecode": "CAF"
+  },
+  {
+    "name": "Cayman Islands",
+    "twocode": "KY",
+    "threecode": "CYM"
+  },
+  {
+    "name": "Cape Verde",
+    "twocode": "CV",
+    "threecode": "CPV"
+  },
+  {
+    "name": "Canada",
+    "twocode": "CA",
+    "threecode": "CAN"
+  },
+  {
+    "name": "Cameroon",
+    "twocode": "CM",
+    "threecode": "CMR"
+  },
+  {
+    "name": "Cambodia",
+    "twocode": "KH",
+    "threecode": "KHM"
+  },
+  {
+    "name": "Côte d'Ivoire",
+    "twocode": "CI",
+    "threecode": "CIV"
+  },
+  {
+    "name": "Burundi",
+    "twocode": "BI",
+    "threecode": "BDI"
+  },
+  {
+    "name": "Burkina Faso",
+    "twocode": "BF",
+    "threecode": "BFA"
+  },
+  {
+    "name": "Bulgaria",
+    "twocode": "BG",
+    "threecode": "BGR"
+  },
+  {
+    "name": "Brunei Darussalam",
+    "twocode": "BN",
+    "threecode": "BRN"
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "twocode": "IO",
+    "threecode": "IOT"
+  },
+  {
+    "name": "Brazil",
+    "twocode": "BR",
+    "threecode": "BRA"
+  },
+  {
+    "name": "Bouvet Island",
+    "twocode": "BV",
+    "threecode": "BVT"
+  },
+  {
+    "name": "Botswana",
+    "twocode": "BW",
+    "threecode": "BWA"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "twocode": "BA",
+    "threecode": "BIH"
+  },
+  {
+    "name": "Bolivia",
+    "twocode": "BO",
+    "threecode": "BOL"
+  },
+  {
+    "name": "Bhutan",
+    "twocode": "BT",
+    "threecode": "BTN"
+  },
+  {
+    "name": "Bermuda",
+    "twocode": "BM",
+    "threecode": "BMU"
+  },
+  {
+    "name": "Benin",
+    "twocode": "BJ",
+    "threecode": "BEN"
+  },
+  {
+    "name": "Belize",
+    "twocode": "BZ",
+    "threecode": "BLZ"
+  },
+  {
+    "name": "Belgium",
+    "twocode": "BE",
+    "threecode": "BEL"
+  },
+  {
+    "name": "Belarus",
+    "twocode": "BY",
+    "threecode": "BLR"
+  },
+  {
+    "name": "Barbados",
+    "twocode": "BB",
+    "threecode": "BRB"
+  },
+  {
+    "name": "Bangladesh",
+    "twocode": "BD",
+    "threecode": "BGD"
+  },
+  {
+    "name": "Bahrain",
+    "twocode": "BH",
+    "threecode": "BHR"
+  },
+  {
+    "name": "Bahamas",
+    "twocode": "BS",
+    "threecode": "BHS"
+  },
+  {
+    "name": "Azerbaijan",
+    "twocode": "AZ",
+    "threecode": "AZE"
+  },
+  {
+    "name": "Austria",
+    "twocode": "AT",
+    "threecode": "AUT"
+  },
+  {
+    "name": "Australia",
+    "twocode": "AU",
+    "threecode": "AUS"
+  },
+  {
+    "name": "Aruba",
+    "twocode": "AW",
+    "threecode": "ABW"
+  },
+  {
+    "name": "Armenia",
+    "twocode": "AM",
+    "threecode": "ARM"
+  },
+  {
+    "name": "Argentina",
+    "twocode": "AR",
+    "threecode": "ARG"
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "twocode": "AG",
+    "threecode": "ATG"
+  },
+  {
+    "name": "Antarctica",
+    "twocode": "AQ",
+    "threecode": "ATA"
+  },
+  {
+    "name": "Anguilla",
+    "twocode": "AI",
+    "threecode": "AIA"
+  },
+  {
+    "name": "Angola",
+    "twocode": "AO",
+    "threecode": "AGO"
+  },
+  {
+    "name": "Andorra",
+    "twocode": "AD",
+    "threecode": "AND"
+  },
+  {
+    "name": "American Samoa",
+    "twocode": "AS",
+    "threecode": "ASM"
+  },
+  {
+    "name": "Algeria",
+    "twocode": "DZ",
+    "threecode": "DZA"
+  },
+  {
+    "name": "Albania",
+    "twocode": "AL",
+    "threecode": "ALB"
+  },
+  {
+    "name": "Afghanistan",
+    "twocode": "AF",
+    "threecode": "AFG"
+  },
+  {
+    "name": "Åland Islands",
+    "twocode": "AX",
+    "threecode": "ALA"
+  }
+]
