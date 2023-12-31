@@ -2,20 +2,22 @@
   /* grid parent */
   display: grid;
   max-width: 100%;
-  margin: 0 auto;
   padding: 1rem;
-  grid-template-columns: 1fr; /* Single column by default */
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .countryBox {
   /* grid child */
+  max-width: 100%;
+  box-sizing: border-box;
   text-align: center;
   border: 1px solid #f99417;
   border-radius: 0.5rem;
   gap: 2rem;
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin: 1rem;
   background-color: white;
+  max-width: 100%;
 }
 
 /* media query for desktop */

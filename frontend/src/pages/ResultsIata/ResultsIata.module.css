@@ -4,21 +4,33 @@
   /* grid parent */
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  overflow: inherit;
-  max-height: fit-content;
-  box-sizing: border-box;
 }
 
-.resultsBox {
-  /* grid child */
-  text-align: center;
-  border: 1px solid #f99417;
-  border-radius: 0.5rem;
-  gap: 2rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  background-color: white;
-  box-sizing: border-box;
+@media screen and (max-width: 600px) {
+  .resultsBox {
+    /* Adjust styles for smaller screens */
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #f99417;
+    border-radius: 0.5rem;
+    gap: 2rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: white;
+    max-width: 100%;
+  }
+
+  .resultsBoxSecond {
+    grid-template-columns: repeat(4, 25%);
+    text-align: center;
+    border: 1px solid #f99417;
+    border-radius: 0.5rem;
+    gap: 2rem;
+    margin: 0.5rem;
+    background-color: white;
+    padding: 0.5em;
+  }
 }
 
 /* media query for desktop */
@@ -43,5 +55,17 @@
     gap: 2rem;
     margin: 0.5rem;
     background-color: white;
+  }
+
+  .resultsBox {
+    /* grid child */
+    text-align: center;
+    border: 1px solid #f99417;
+    border-radius: 0.5rem;
+    gap: 2rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: white;
+    max-width: 100%;
   }
 }

@@ -67,15 +67,12 @@ export const ResultsIata = () => {
           <div className={styles.resultsBox}>
             <Weather />
           </div>
-          <div className={styles.resultsBox}>
-            <MapIata />
-          </div>
+          <div className={styles.resultsBox}>{/* <MapIata /> */}</div>
         </div>
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
           <div className={styles.resultsBoxSecond}>
-            {/* <Distance /> */}
-            Commented out to stop overuse
+            <Distance />
           </div>
         </div>
         {/* 3rd row */}
@@ -85,12 +82,10 @@ export const ResultsIata = () => {
             <Airlines />
           </div>
           <div className={styles.resultsBoxSecond}>
-            {/* <NearbyUser /> */}
-            Commented out to stop overuse
+            <NearbyUser />
           </div>
           <div className={styles.resultsBoxSecond}>
-            {/* <NearbyAirports /> */}
-            Commented out to stop overuse
+            <NearbyAirports />
           </div>
         </div>
         <Footer />

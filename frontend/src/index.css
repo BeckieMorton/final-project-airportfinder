@@ -5,19 +5,13 @@ text dark blue: #363062
 medium blue: #4D4C7D
 orange: #F99417 */
 
-:root {
-  margin: 0;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   font-family: "Poppins", sans-serif;
   color: #363062;
   font-weight: 400;
   background-color: #fbfbfbfb;
-  height: 100%;
   margin: 0;
-  min-width: 100vw;
   overflow-x: hidden;
 }
 
