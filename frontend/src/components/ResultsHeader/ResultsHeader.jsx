@@ -1,7 +1,8 @@
-import { BrowserRouter, NavLink, Routes } from "react-router-dom";
-import styles from "./Header.module.css";
+import { NavLink } from "react-router-dom";
 
-export const Header = () => {
+import styles from "./ResultsHeader.module.css";
+
+export const ResultsHeader = () => {
   return (
     <div>
       <nav>

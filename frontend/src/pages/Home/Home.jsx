@@ -1,11 +1,11 @@
 import { MainSearch } from "../../components/MainSearch/MainSearch";
-import { Header } from "../../components/Header/Header";
+import { HomeHeader } from "../../components/HomeHeader/HomeHeader";
 import { Footer } from "../../components/Footer/Footer";
 
 export const Home = () => {
   return (
     <>
-      <Header />
+      <HomeHeader />
       <MainSearch />
       <Footer />
     </>

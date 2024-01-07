@@ -6,7 +6,7 @@ import { LottieComponent } from "../../LottieComponent/LottieComponent";
 import { SearchResultsIata } from "../../components/SearchResultsIata/SearchResultsIata";
 import { MapIata } from "../../components/MapIata/MapIata";
 import { Weather } from "../../components/Weather/Weather";
-import { Header } from "../../components/Header/Header";
+import { ResultsHeader } from "../../components/ResultsHeader/ResultsHeader";
 import { Footer } from "../../components/Footer/Footer";
 import { CountryImage } from "../../components/CountryImage/CountryImage";
 import { Airlines } from "../../components/Airlines/Airlines";
@@ -58,7 +58,7 @@ export const ResultsIata = () => {
   return (
     <>
       <div className={styles.mainContainer}>
-        <Header />
+        <ResultsHeader />
         <div className={styles.resultsContainer1}>
           {/* 1st row */}
           <div className={styles.resultsBox}>
@@ -67,9 +67,7 @@ export const ResultsIata = () => {
           <div className={styles.resultsBox}>
             <Weather />
           </div>
-          <div className={styles.resultsBox}>
-            <MapIata />
-          </div>
+          <div className={styles.resultsBox}>{/* <MapIata /> */}</div>
         </div>
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>

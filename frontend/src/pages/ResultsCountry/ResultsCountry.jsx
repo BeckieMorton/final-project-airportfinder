@@ -4,7 +4,7 @@ import useCountryStore from "../../stores/useCountryStore";
 import { LottieComponent } from "../../LottieComponent/LottieComponent";
 
 import { SearchResultsCountry } from "../../components/SearchResultsCountry/SearchResultsCountry";
-import { Header } from "../../components/Header/Header";
+import { ResultsHeader } from "../../components/ResultsHeader/ResultsHeader";
 import { Footer } from "../../components/Footer/Footer";
 import { CountryInfo } from "../../components/CountryInfo/CountryInfo";
 import { MapCountry } from "../../MapCountry/MapCountry";
@@ -59,7 +59,7 @@ export const ResultsCountry = () => {
 
   return (
     <>
-      <Header />
+      <ResultsHeader />
       <div className={styles.countryContainer}>
         <div className={styles.countryBox}>
           <CountryInfo />

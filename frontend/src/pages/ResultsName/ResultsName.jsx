@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAirportStore from "../../stores/useAirportStore";
 import { LottieComponent } from "../../LottieComponent/LottieComponent";
-import { Header } from "../../components/Header/Header";
+import { ResultsHeader } from "../../components/ResultsHeader/ResultsHeader";
 import { Footer } from "../../components/Footer/Footer";
 import { SearchResultsName } from "../../components/SearchResultsName/SearchResultsName";
 
@@ -47,7 +47,7 @@ export const ResultsName = () => {
 
   return (
     <>
-      <Header />
+      <ResultsHeader />
       <div className={styles.nameContainer}>
         <div className={styles.nameBox}>
           <SearchResultsName />

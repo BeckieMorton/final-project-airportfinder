@@ -124,48 +124,46 @@ export const MainSearch = () => {
         </h1>
 
         <div className={styles.searchBox}>
-          <p>
-            <select
-              className={styles.searchSelection}
-              value={searchOption}
-              onChange={(event) => setSearchOption(event.target.value)}
-            >
-              <option selected disabled value="">
-                Search by
-              </option>
-              <option value="0">Name</option>
-              <option value="1">IATA Code</option>
-              <option value="2">Country</option>
-            </select>
-            <input
-              className={styles.searchInput}
-              type="text"
-              placeholder="Search"
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  handleButtonClick();
-                }
-              }}
+          <select
+            className={styles.searchSelection}
+            value={searchOption}
+            onChange={(event) => setSearchOption(event.target.value)}
+          >
+            <option selected disabled value="">
+              Search by
+            </option>
+            <option value="0">Name</option>
+            <option value="1">IATA Code</option>
+            <option value="2">Country</option>
+          </select>
+          <input
+            className={styles.searchInput}
+            type="text"
+            placeholder="Search"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleButtonClick();
+              }
+            }}
+          />
+          <button
+            onClick={handleButtonClick}
+            className={styles.searchButton}
+            onKeyDown={(e) => (e.key === "Enter" ? handleButtonClick : "")}
+          >
+            <img
+              className={styles.searchIcon}
+              src="./assets/search-icon-orange.png"
+              alt="Search"
             />
-            <button
-              onClick={handleButtonClick}
-              className={styles.searchButton}
-              onKeyDown={(e) => (e.key === "Enter" ? handleButtonClick : "")}
-            >
-              <img
-                className={styles.searchIcon}
-                src="./assets/search-icon-orange.png"
-                alt="Search"
-              />
-            </button>
-          </p>
+          </button>
         </div>
-        <div className={styles.validateMessage}>{validateMessage}</div>
-        <div className={styles.mobileSelection}>
-          add mobile view section options here
-        </div>
+      </div>
+      <div className={styles.validateMessage}>{validateMessage}</div>
+      <div className={styles.mobileSelection}>
+        add mobile view section options here
       </div>
     </>
   );
