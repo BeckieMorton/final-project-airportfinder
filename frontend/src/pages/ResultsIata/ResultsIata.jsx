@@ -67,14 +67,13 @@ export const ResultsIata = () => {
           <div className={styles.resultsBox}>
             <Weather />
           </div>
-          <div className={styles.resultsBox}>{/* <MapIata /> */}</div>
+          <div className={styles.resultsBox}>
+            <MapIata />
+          </div>
         </div>
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
-          <div className={styles.resultsBoxSecond}>
-            {/* <Distance /> */}
-            commented out to save api calls
-          </div>
+          <div className={styles.resultsBoxSecond}>{/* <Distance /> */}</div>
         </div>
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>
@@ -82,13 +81,9 @@ export const ResultsIata = () => {
             {/* <CountryImage /> */}
             <Airlines />
           </div>
-          <div className={styles.resultsBoxSecond}>
-            {/* <NearbyUser /> */}
-            commented out to save api calls
-          </div>
+          <div className={styles.resultsBoxSecond}>{/* <NearbyUser /> */}</div>
           <div className={styles.resultsBoxSecond}>
             {/* <NearbyAirports /> */}
-            commented out to save api calls
           </div>
         </div>
         <Footer />

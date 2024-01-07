@@ -68,7 +68,18 @@ export const MainSearch = () => {
           navigate(`/airports/iata/${code}`);
         } else {
           setValidateMessage(
-            "Invalid IATA code. An International Air Transport Association Code consists of 3 letters, try again."
+            <>
+              Invalid IATA code. An International Air Transport Association Code
+              consists of 3 letters. Not sure what an IATA code is? Check it out
+              here:{" "}
+              <a
+                href="https://www.iata.org/en/services/codes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.iata.org/en/services/codes/
+              </a>
+            </>
           );
           event.preventDefault();
           setCode("");
@@ -132,6 +143,11 @@ export const MainSearch = () => {
               placeholder="Search"
               value={code}
               onChange={(e) => setCode(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleButtonClick();
+                }
+              }}
             />
             <button
               onClick={handleButtonClick}

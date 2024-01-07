@@ -45,8 +45,8 @@ export const Airlines = () => {
           </tbody>
         </>
       )}
-      <h2>Major airlines in</h2>
-      add code here to display all airlines in the associated continent
+      {/* <h2>Major airlines in</h2>
+      add code here to display all airlines in the associated continent */}
       {/* <tbody className={styles.airlineList}>
         {airlines.map((airline, index) => (
           <tr key={index}>
