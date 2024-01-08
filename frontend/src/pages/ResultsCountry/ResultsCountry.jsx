@@ -7,8 +7,8 @@ import { SearchResultsCountry } from "../../components/SearchResultsCountry/Sear
 import { ResultsHeader } from "../../components/ResultsHeader/ResultsHeader";
 import { Footer } from "../../components/Footer/Footer";
 import { CountryInfo } from "../../components/CountryInfo/CountryInfo";
-import { MapCountry } from "../../MapCountry/MapCountry";
 import { Airlines } from "../../components/Airlines/Airlines";
+import { CountryPagination } from "../../components/CountryPagination/CountryPagination";
 
 import styles from "./ResultsCountry.module.css";
 
@@ -68,7 +68,8 @@ export const ResultsCountry = () => {
           <Airlines />
         </div>
         <div className={styles.countryBox}>
-          <SearchResultsCountry />
+          {/* <SearchResultsCountry /> */}
+          <CountryPagination />
         </div>
       </div>
       <Footer />

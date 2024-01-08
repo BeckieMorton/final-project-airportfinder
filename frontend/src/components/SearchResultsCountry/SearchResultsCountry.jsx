@@ -62,7 +62,6 @@ export const SearchResultsCountry = () => {
               <td>
                 {country.type && <p>{formatAirportSize(country.type)}</p>}
               </td>
-              {/* <td>{country.link && <p>{country.link}</p>}</td> */}
             </tr>
           ))}
         </tbody>
