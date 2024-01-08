@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useCountryStore from "../../stores/useCountryStore";
-import { LottieComponent } from "../../LottieComponent/LottieComponent";
+import { LottieComponent } from "../../components/LottieComponent/LottieComponent";
 
-import { SearchResultsCountry } from "../../components/SearchResultsCountry/SearchResultsCountry";
 import { ResultsHeader } from "../../components/ResultsHeader/ResultsHeader";
 import { Footer } from "../../components/Footer/Footer";
 import { CountryInfo } from "../../components/CountryInfo/CountryInfo";
 import { Airlines } from "../../components/Airlines/Airlines";
-import { CountryPagination } from "../../components/CountryPagination/CountryPagination";
+import { SearchResultsCountry } from "../../components/SearchResultsCountry/SearchResultsCountry";
+import { BusyAirports } from "../../components/BusyAirports/BusyAirports";
+import { MapCountry } from "../../components/MapCountry/MapCountry";
 
 import styles from "./ResultsCountry.module.css";
 
@@ -62,14 +63,19 @@ export const ResultsCountry = () => {
       <ResultsHeader />
       <div className={styles.countryContainer}>
         <div className={styles.countryBox}>
-          <CountryInfo />
-        </div>
-        <div className={styles.countryBox}>
           <Airlines />
         </div>
         <div className={styles.countryBox}>
-          {/* <SearchResultsCountry /> */}
-          <CountryPagination />
+          <CountryInfo />
+        </div>
+        <div className={styles.countryBox}>
+          <SearchResultsCountry />
+        </div>
+        <div className={styles.countryBox}>
+          <MapCountry />
+        </div>
+        <div className={styles.countryBox}>
+          <BusyAirports />
         </div>
       </div>
       <Footer />

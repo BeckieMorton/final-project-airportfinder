@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useAirportStore from "../stores/useAirportStore";
+import useAirportStore from "../../stores/useAirportStore";
 import styles from "./NearbyAirports.module.css";
 import { Link } from "react-router-dom";
 

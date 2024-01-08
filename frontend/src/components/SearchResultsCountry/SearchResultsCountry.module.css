@@ -1,3 +1,35 @@
+.paginationNumbers {
+  display: flex;
+  list-style: none;
+}
+
+.paginationNumbers li {
+  margin-right: 5px;
+  text-align: center;
+}
+
+.paginationBox {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
+  padding: 5px;
+  list-style: none;
+}
+
+.paginationBox a:hover {
+  color: #ff8813;
+}
+
+.paginationBox a {
+  cursor: pointer;
+}
+
+.paginationBox p {
+  margin: 0;
+}
+
 .airportLink:hover {
   color: #ff8813;
 }
@@ -23,5 +55,9 @@
 
   .list a {
     text-decoration: none;
+  }
+
+  .pageNumberingOnRight {
+    text-align: right;
   }
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./MainSearch.module.css";
 import { useNavigate } from "react-router-dom";
-import { LottieComponent } from "../../LottieComponent/LottieComponent";
+import { LottieComponent } from "../../components/LottieComponent/LottieComponent";
 
 export const MainSearch = () => {
   const [code, setCode] = useState("");

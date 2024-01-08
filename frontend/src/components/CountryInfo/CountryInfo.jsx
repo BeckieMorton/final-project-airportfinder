@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
-import styles from "./CountryInfo.module.css";
 import { useEffect, useState } from "react";
-import { MapCountry } from "../../MapCountry/MapCountry";
+import { MapCountry } from "../MapCountry/MapCountry";
+
+import styles from "./CountryInfo.module.css";
 
 export const CountryInfo = () => {
   //info about the country from restcountries.com free API searched using the 2 digit code.
@@ -33,24 +34,22 @@ export const CountryInfo = () => {
     return <div>loading country data</div>;
   }
 
-  console.log(`in country INFO BABY!:`, countryInfo);
   //destructure countryInfo to render relevant information
   const officialName = countryInfo[0].name.official;
   const continent = countryInfo[0].continents;
   const capital = countryInfo[0].capital;
   const flag = countryInfo[0].flags.svg;
   const flagAlt = countryInfo[0].flags.alt;
-  const coatOfArms = countryInfo[0].coatOfArms.svg;
-  const coatOfArmsAlt = countryInfo[0].coatOfArms.alt;
+
   const language = countryInfo.map((info) => {
     const firstLanguageValue = Object.values(info.languages)[0]; //
     return firstLanguageValue;
   });
+
   const currency = countryInfo.map((curr) => {
     const firstCurrencyValue = Object.values(curr.currencies)[0]; //
     return firstCurrencyValue.name;
   });
-  const googleMap = countryInfo[0].maps.googleMaps;
 
   return (
     <>

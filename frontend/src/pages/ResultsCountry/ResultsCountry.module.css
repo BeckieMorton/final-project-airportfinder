@@ -21,6 +21,11 @@
 /* media query for desktop */
 @media screen and (min-width: 825px) {
   .countryContainer {
-    grid-template-columns: 20% 20% 60%;
+    grid-template-rows: 500px 500px auto;
+    grid-template-columns: 20% 20% auto;
+  }
+
+  .countryBox:nth-child(3) {
+    min-height: 967px; /* Set your desired minimum height for the third column */
   }
 }

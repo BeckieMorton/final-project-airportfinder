@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import loadingplane from "../assets/animations/loadingplane.json";
+import loadingplane from "../../assets/animations/loadingplane.json";
 
 import styles from "./LottieComponent.module.css";
 

@@ -8,6 +8,7 @@ export const Airlines = () => {
   const { airport, setAirport } = useAirportStore();
   const [countryCode, setCountryCode] = useState("");
   const [airlines, setAirlines] = useState("");
+  const [countryContinent, setCountryContinent] = useState("");
 
   //use json airline data to find matches for all the airlines that have the same country code
   //i have done this differently here than i have to get the country codes in the MainSearch. im not sure why i have and which is better? perhaps using the fetch in MainSearch is better?
@@ -19,6 +20,16 @@ export const Airlines = () => {
     setAirlines(
       majorairlines.filter((airline) => airline.country_code === countryCode)
     );
+  }, [majorairlines, countryCode]);
+
+  useEffect(() => {
+    // Set country continent
+    const foundAirline = majorairlines.find(
+      (airline) => airline.country_code === countryCode
+    );
+    setCountryContinent(foundAirline?.continent || "");
+
+    console.log(`the country continent is:`, countryContinent);
   }, [majorairlines, countryCode]);
 
   return (
@@ -45,21 +56,6 @@ export const Airlines = () => {
           </tbody>
         </>
       )}
-      {/* <h2>Major airlines in</h2>
-      add code here to display all airlines in the associated continent */}
-      {/* <tbody className={styles.airlineList}>
-        {airlines.map((airline, index) => (
-          <tr key={index}>
-            <td>
-              {airline.name && (
-                <a href={airline.Link} className={styles.airportLink}>
-                  <p className={styles.airlineLink}>{airline.name}</p>
-                </a>
-              )}
-            </td>
-          </tr>
-        ))}
-      </tbody> */}
     </>
   );
 };

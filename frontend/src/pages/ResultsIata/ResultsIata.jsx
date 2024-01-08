@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAirportStore from "../../stores/useAirportStore";
-import { LottieComponent } from "../../LottieComponent/LottieComponent";
+import { LottieComponent } from "../../components/LottieComponent/LottieComponent";
 
 import { SearchResultsIata } from "../../components/SearchResultsIata/SearchResultsIata";
 import { MapIata } from "../../components/MapIata/MapIata";
 import { Weather } from "../../components/Weather/Weather";
 import { ResultsHeader } from "../../components/ResultsHeader/ResultsHeader";
 import { Footer } from "../../components/Footer/Footer";
-import { CountryImage } from "../../components/CountryImage/CountryImage";
 import { Airlines } from "../../components/Airlines/Airlines";
 import { Distance } from "../../components/Distance/Distance";
-import { NearbyAirports } from "../../NearbyAirports/NearbyAirports";
+import { NearbyAirports } from "../../components/NearbyAirports/NearbyAirports";
 import { NearbyUser } from "../../components/NearbyUser/NearbyUser";
 
 import styles from "./ResultsIata.module.css";
@@ -67,7 +66,7 @@ export const ResultsIata = () => {
           <div className={styles.resultsBox}>
             <Weather />
           </div>
-          <div className={styles.resultsBox}>{/* <MapIata /> */}</div>
+          <div className={styles.resultsBox}>{<MapIata />}</div>
         </div>
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
