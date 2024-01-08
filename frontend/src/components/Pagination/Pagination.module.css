@@ -1,8 +1,0 @@
-.paginationNumbers {
-  display: flex;
-  list-style: none; /* Remove default list styles */
-}
-
-.paginationNumbers li {
-  margin-right: 5px; /* Adjust the margin as needed */
-}

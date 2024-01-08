@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Pagination } from "../Pagination/Pagination";
+import ReactPaginate from "react-paginate";
 import useCountryStore from "../../stores/useCountryStore";
 
 import styles from "./CountryPagination.module.css";
 
 export const CountryPagination = () => {
-  const { country, setCountry } = useCountryStore();
+  const { country } = useCountryStore();
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(8);
+  const [postsPerPage] = useState(10);
 
   //need to write code here to order the country array into type largest, medium, small HERE
 
@@ -21,12 +21,16 @@ export const CountryPagination = () => {
     indexOfLastAirport
   );
 
-  console.log(`current airports in new variable,`, currentAirports);
+  const pageCount = Math.ceil(country.length / postsPerPage);
+
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected + 1);
+  };
 
   //change page
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+  //   const paginate = (pageNumber) => {
+  //     setCurrentPage(pageNumber);
+  //   };
 
   // ------formats airport type string------//
   const formatAirportSize = (props) => {
@@ -47,10 +51,8 @@ export const CountryPagination = () => {
         <thead>
           <tr>
             <th>Name</th>
-            {/* <th>Region</th> */}
             <th>City/Area</th>
             <th>Type</th>
-            {/* <th>Homepage</th> */}
           </tr>
         </thead>
         <tbody>
@@ -75,10 +77,16 @@ export const CountryPagination = () => {
           ))}
         </tbody>
       </table>
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={country.length}
-        paginate={paginate}
+      <ReactPaginate
+        pageCount={pageCount}
+        pageRangeDisplayed={5}
+        marginPagesDisplayed={2}
+        previousLabel="< previous"
+        nextLabel="next >"
+        breakLabel="..."
+        onPageChange={handlePageChange}
+        containerClassName={`pagination ${styles.paginationNumbers}`}
+        activeClassName="active"
       />
     </div>
   );
