@@ -7,48 +7,40 @@ import styles from "./MapCountry.module.css";
 export const MapCountry = ({ country }) => {
   console.log(`this is country data passed by props to map:`, country);
 
-  // const [loading, setLoading] = useState(true);
-  // const [latitude, setLatitude] = useState("");
-  // const [longitude, setLongitude] = useState("");
-  // const [name, setName] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [capitalCityLat, setCapitalCityLat] = useState("");
+  const [capitalCityLong, setCapitalCityLong] = useState("");
+  const [name, setName] = useState("");
 
-  // //country[0].capitalInfo.latlng[0] = latitude of the capital city
+  useEffect(() => {
+    if (country) {
+      setCapitalCityLat(country[0].capitalInfo.latlng[0]);
+      setCapitalCityLong(country[0].capitalInfo.latlng[1]);
+      setName(country[0].name.common);
+      setLoading(false);
+    }
+  }, [country]);
 
-  // //country[0].capitalInfo.latlng[1] = longitude of the capital city
+  if (loading) {
+    return <div>loading data</div>;
+  }
 
-  // const lat = country[0].capitalInfo.latlng[0];
-
-  // const long = country[0].capitalInfo.latlng[1];
-
-  // useEffect(() => {
-  //   if (country) {
-  //     setLatitude(country[0].capitalInfo.latlng[0]);
-  //     setLongitude(country[0].capitalInfo.latlng[1]);
-  //     setName(country[0].name.common);
-  //     setLoading(false);
-  //   }
-  // }, [country]);
-
-  // if (loading) {
-  //   return <div>loading data</div>;
-  // }
-
-  return <p>country map displayed here</p>;
-  // <div className={styles.mapBox}>
-  //   <MapContainer
-  //     className={styles.map}
-  //     center={[latitude, longitude]}
-  //     zoom={5}
-  //     scrollWheelZoom={true}
-  //     style={{ width: "100%", height: "100%" }}
-  //   >
-  //     <TileLayer
-  //       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  //       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  //     />
-  //     <Marker position={[latitude, longitude]}>
-  //       <Popup>{name}</Popup>
-  //     </Marker>
-  //   </MapContainer>
-  // </div>
+  return (
+    <div className={styles.mapBox}>
+      <MapContainer
+        className={styles.map}
+        center={[capitalCityLat, capitalCityLong]}
+        zoom={5}
+        scrollWheelZoom={true}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={[capitalCityLat, capitalCityLong]}>
+          <Popup>{name}</Popup>
+        </Marker>
+      </MapContainer>
+    </div>
+  );
 };

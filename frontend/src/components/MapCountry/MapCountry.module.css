@@ -1,18 +1,24 @@
 .mapBox {
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   text-align: center;
 }
 
 .map {
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
 }
 
-/* media query for mobile */
-@media screen and (max-width: 600px) {
+/* media query for desktop */
+@media screen and (min-width: 825px) {
   .mapBox {
-    min-height: 300px; /* Adjust the minimum height for smaller screens */
-    max-height: 80vh; /* Adjust the maximum height for smaller screens */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
   }
 }

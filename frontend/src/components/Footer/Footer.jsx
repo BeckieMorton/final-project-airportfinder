@@ -11,12 +11,12 @@ export const Footer = () => {
         <div className={styles.links}>
           <div className={styles.linkGit}>
             <a href="https://github.com/BeckieMorton">
-              <img src="./assets/github.png" alt="github logo" />
+              <img src="/assets/github.png" alt="github logo" />
             </a>
           </div>
           <div className={styles.linkLinked}>
             <a href="https://www.linkedin.com/in/rebecca-morton-739446204/">
-              <img src="./assets/linkedin.png" alt="linkedin logo" />
+              <img src="/assets/linkedin.png" alt="linkedin logo" />
             </a>
           </div>
         </div>

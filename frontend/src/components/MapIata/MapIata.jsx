@@ -4,7 +4,6 @@ import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
 import styles from "./MapIata.module.css";
 
-//component function Map
 export const MapIata = () => {
   //destructure airport data from Zustand to use lat and long for map
   const { airport, setAirport } = useAirportStore();
