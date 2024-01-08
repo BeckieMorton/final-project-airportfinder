@@ -31,7 +31,7 @@ export const MapCountry = ({ country }) => {
         className={styles.map}
         center={[capitalCityLat, capitalCityLong]}
         zoom={5}
-        scrollWheelZoom={true}
+        // scrollWheelZoom={true}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

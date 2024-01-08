@@ -4,7 +4,10 @@
   background-color: #f99417;
   margin-top: 14em;
   padding: 0.5em;
-  font-size: 10px;
+}
+
+.footerContainer p {
+  font-size: 14px;
 }
 
 .links {
@@ -13,16 +16,16 @@
   justify-content: center;
 }
 
+.links img {
+  max-width: 75%;
+}
+
 .linkGit {
   padding: 0 0.5em 0 0.5em;
 }
 
 .linkGit:hover img {
-  transform: scale(1.1); /* Scale the image by 1.1 times on hover */
-}
-
-.linkLinked:hover img {
-  transform: scale(1.1); /* Scale the image by 1.1 times on hover */
+  transform: scale(1.1);
 }
 
 /* media query for desktop */

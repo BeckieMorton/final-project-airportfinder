@@ -7,17 +7,26 @@
 }
 
 @media screen and (max-width: 600px) {
+  .mapBox {
+    text-align: center;
+    width: 200px;
+  }
+
   .resultsBox {
     max-width: 100%;
     box-sizing: border-box;
     text-align: center;
     border: 1px solid #f99417;
     border-radius: 0.5rem;
-    gap: 2rem;
-    padding: 0.5rem;
-    margin: 1rem;
+    gap: 1rem;
+    margin: 0.2rem;
     background-color: white;
     max-width: 100%;
+  }
+
+  .resultsBox,
+  .resultsBoxSecond h2 {
+    font-size: 10px;
   }
 
   .resultsBoxSecond {
@@ -25,10 +34,9 @@
     text-align: center;
     border: 1px solid #f99417;
     border-radius: 0.5rem;
-    gap: 2rem;
-    margin: 0.5rem;
+    gap: 1rem;
+    margin: 0.2rem;
     background-color: white;
-    padding: 0.5em;
   }
 }
 
@@ -62,7 +70,6 @@
     border: 1px solid #f99417;
     border-radius: 0.5rem;
     gap: 2rem;
-    padding: 0.5rem;
     margin: 0.5rem;
     background-color: white;
     max-width: 100%;

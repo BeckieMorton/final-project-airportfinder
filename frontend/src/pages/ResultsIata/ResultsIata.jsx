@@ -66,11 +66,15 @@ export const ResultsIata = () => {
           <div className={styles.resultsBox}>
             <Weather />
           </div>
-          <div className={styles.resultsBox}>{<MapIata />}</div>
+          <div className={styles.resultsBox}>
+            <div className={styles.mapBox}>{<MapIata />}</div>
+          </div>
         </div>
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
-          <div className={styles.resultsBoxSecond}>{/* <Distance /> */}</div>
+          <div className={styles.resultsBoxSecond}>
+            <Distance />
+          </div>
         </div>
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>

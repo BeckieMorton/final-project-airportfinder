@@ -1,12 +1,10 @@
 .mapBox {
   width: 100vh;
-  height: 100vh;
   text-align: center;
 }
 
 .map {
-  width: 100vh;
-  height: 100vh;
+  height: 400px;
 }
 
 /* media query for desktop */

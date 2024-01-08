@@ -41,19 +41,19 @@ export const Airlines = () => {
         </>
       ) : (
         <>
-          <tbody className={styles.airlineList}>
+          <div className={styles.airlineList}>
             {airlines.map((airline, index) => (
-              <tr key={index}>
-                <td>
+              <div key={index}>
+                <p className={styles.airlineLink}>
                   {airline.name && (
                     <a href={airline.Link} className={styles.airportLink}>
-                      <p className={styles.airlineLink}>{airline.name}</p>
+                      {airline.name}
                     </a>
                   )}
-                </td>
-              </tr>
+                </p>
+              </div>
             ))}
-          </tbody>
+          </div>
         </>
       )}
     </>

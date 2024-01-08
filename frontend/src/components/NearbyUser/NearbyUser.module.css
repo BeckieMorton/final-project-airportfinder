@@ -1,3 +1,7 @@
 .airportLink:hover {
   color: #ff8813;
 }
+
+.airportList p {
+  font-size: 10px;
+}

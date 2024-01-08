@@ -136,7 +136,7 @@ export const NearbyUser = () => {
 
             return (
               <div key={index}>
-                <p>
+                <p classname={styles.airportList}>
                   <Link
                     className={styles.airportLink}
                     to={`/airports/iata/${iatacode}`}
