@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useCountryStore from "../../stores/useCountryStore";
 import { LottieComponent } from "../../components/LottieComponent/LottieComponent";
-
 import { ResultsHeader } from "../../components/ResultsHeader/ResultsHeader";
 import { Footer } from "../../components/Footer/Footer";
 import { CountryInfo } from "../../components/CountryInfo/CountryInfo";
-import { Airlines } from "../../components/Airlines/Airlines";
 import { SearchResultsCountry } from "../../components/SearchResultsCountry/SearchResultsCountry";
 import { BusyAirports } from "../../components/BusyAirports/BusyAirports";
-import { MapCountry } from "../../components/MapCountry/MapCountry";
+
+import { AirlinesCountry } from "../../components/AirlinesCountry/AirlinesCountry";
 
 import styles from "./ResultsCountry.module.css";
 
@@ -63,7 +62,7 @@ export const ResultsCountry = () => {
       <ResultsHeader />
       <div className={styles.countryContainer}>
         <div className={styles.countryBox}>
-          <Airlines />
+          <AirlinesCountry />
         </div>
         <div className={styles.countryBox}>
           <CountryInfo />
@@ -72,7 +71,7 @@ export const ResultsCountry = () => {
           <SearchResultsCountry />
         </div>
         <div className={styles.countryBox}>
-          <MapCountry />
+          <p>test</p>
         </div>
         <div className={styles.countryBox}>
           <BusyAirports />

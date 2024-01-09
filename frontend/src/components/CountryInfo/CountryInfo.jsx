@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { MapCountry } from "../MapCountry/MapCountry";
 
 import styles from "./CountryInfo.module.css";
 
@@ -64,9 +63,6 @@ export const CountryInfo = () => {
         <p>Population: {capital}</p>
         <p>Language: {language}</p>
         <p>Currency: {currency}</p>
-      </div>
-      <div>
-        <MapCountry country={countryInfo} />
       </div>
     </>
   );

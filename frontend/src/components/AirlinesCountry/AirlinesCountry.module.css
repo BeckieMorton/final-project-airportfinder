@@ -1,0 +1,12 @@
+.airlineList {
+  text-align: left;
+}
+
+.airlineLink:hover {
+  color: #ff8813;
+}
+
+.airlineLink {
+  line-height: 0.5;
+  text-align: center;
+}

@@ -72,9 +72,7 @@ export const ResultsIata = () => {
         </div>
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
-          <div className={styles.resultsBoxSecond}>
-            <Distance />
-          </div>
+          <div className={styles.resultsBoxSecond}>{/* <Distance /> */}</div>
         </div>
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>
