@@ -21,11 +21,17 @@
 /* media query for desktop */
 @media screen and (min-width: 825px) {
   .countryContainer {
-    grid-template-rows: 500px 500px auto;
-    grid-template-columns: 20% 20% auto;
+    display: grid;
+    grid-template-rows: repeat(3, 500px) auto auto;
+    grid-template-columns: 25% 25% 50%;
   }
 
   .countryBox:nth-child(3) {
+    grid-row: span 2;
     min-height: 967px; /* Set your desired minimum height for the third column */
+  }
+
+  .countryBox:nth-child(4) {
+    grid-column: span 2; /* Span 2 columns for the fourth cell */
   }
 }

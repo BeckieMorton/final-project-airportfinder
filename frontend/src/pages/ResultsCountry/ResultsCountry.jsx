@@ -71,9 +71,6 @@ export const ResultsCountry = () => {
           <SearchResultsCountry />
         </div>
         <div className={styles.countryBox}>
-          <p>test</p>
-        </div>
-        <div className={styles.countryBox}>
           <BusyAirports />
         </div>
       </div>

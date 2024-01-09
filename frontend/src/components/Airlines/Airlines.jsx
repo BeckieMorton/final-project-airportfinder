@@ -47,7 +47,13 @@ export const Airlines = () => {
               <div key={index}>
                 <p className={styles.airlineLink}>
                   {airline.name && (
-                    <a href={airline.Link} className={styles.airportLink}>
+                    <a
+                      href={airline.Link}
+                      className={styles.airportLink}
+                      target="_blank"
+                      key={airline.name}
+                      rel="noreferrer noopener"
+                    >
                       {airline.name}
                     </a>
                   )}

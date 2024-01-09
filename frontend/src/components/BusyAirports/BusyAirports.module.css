@@ -1,0 +1,17 @@
+.list p,
+.airportLink a {
+  font-size: 14px;
+  text-align: left;
+}
+
+.list a {
+  font-size: 14px;
+}
+
+.airportLink {
+  font-size: 14px !important;
+}
+
+.airportLink:hover {
+  color: #ff8813;
+}
