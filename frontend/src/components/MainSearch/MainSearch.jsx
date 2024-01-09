@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from "./MainSearch.module.css";
 import { useNavigate } from "react-router-dom";
 import { LottieComponent } from "../../components/LottieComponent/LottieComponent";
@@ -12,6 +12,21 @@ export const MainSearch = () => {
   const [test, setTest] = useState("");
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const inputRef = useRef(null);
+
+  // Function to focus on the input element
+  const focusInput = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
+
+  // useEffect to set focus on input after the user makes a selection
+  useEffect(() => {
+    if (searchOption !== "") {
+      focusInput();
+    }
+  }, [searchOption]);
 
   //----HANDLE NAME SEARCH VALIDATION-----//
   const myAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
@@ -71,13 +86,14 @@ export const MainSearch = () => {
             <>
               Invalid IATA code. An International Air Transport Association Code
               consists of 3 letters. Not sure what an IATA code is? Check it out
-              here:{" "}
               <a
                 href="https://www.iata.org/en/services/codes/"
                 target="_blank"
                 rel="noopener noreferrer"
+                key="iata"
+                className={styles.iataLink}
               >
-                https://www.iata.org/en/services/codes/
+                &nbsp;here.
               </a>
             </>
           );
@@ -139,6 +155,8 @@ export const MainSearch = () => {
           <input
             className={styles.searchInput}
             type="text"
+            id="myInput"
+            ref={inputRef}
             placeholder="Search"
             value={code}
             onChange={(e) => setCode(e.target.value)}

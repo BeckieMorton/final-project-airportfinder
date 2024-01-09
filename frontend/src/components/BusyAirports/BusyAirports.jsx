@@ -9,6 +9,7 @@ export const BusyAirports = () => {
   const { country, setCountry } = useCountryStore();
   const [busyAirports, setBusyAirports] = useState([]);
   const [countryContinent, setCountryContinent] = useState("");
+  const [contFullName, setContFullName] = useState("");
 
   //use json airline data to find matches for all the airlines that have the same country code
   //i have done this differently here than i have to get the country codes in the MainSearch. im not sure why i have and which is better? perhaps using the fetch in MainSearch is better?
@@ -28,11 +29,17 @@ export const BusyAirports = () => {
     );
   }, [busiestairports, countryContinent]);
 
-  console.log(`what is in countryContinent?:`, countryContinent);
+  useEffect(() => {
+    if (busyAirports.length !== 0) {
+      setContFullName(busyAirports[0].continent_name);
+    }
+  }, [busyAirports]);
 
+  console.log(`what is in countryContinent?:`, countryContinent);
+  console.log(`what is is setContFullName`, contFullName);
   return (
     <>
-      <h2>Busiest Airports in {busyAirports[0].continent_name}</h2>
+      <h2>Busiest Airports in {contFullName}</h2>
       {busyAirports.length === 0 ? (
         <>
           <p>There are no major airlines currently based in this country</p>

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import useCountryStore from "../../stores/useCountryStore";
-import { LottieComponent } from "../LottieComponent/LottieComponent";
 
 import styles from "./SearchResultsCountry.module.css";
 
@@ -11,12 +10,52 @@ export const SearchResultsCountry = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(11);
 
-  //need to write code here to order the country array into type largest, medium, small HERE
+  //-----sort the country array by type largest, medium, small ----//
+  const sortedCountry = [...country].sort((airportA, airportB) => {
+    const typeOrder = {
+      large_airport: 1,
+      medium_airport: 2,
+      small_airport: 3,
+    };
+
+    const typeA = airportA.type || "";
+    const typeB = airportB.type || "";
+
+    // Check if type is in the predefined order
+    if (typeOrder[typeA] !== undefined && typeOrder[typeB] !== undefined) {
+      // Compare based on the predefined order
+      return typeOrder[typeA] - typeOrder[typeB];
+    } else {
+      // If types are not in the predefined order
+      if (typeA === "large_airport") {
+        return -1; // prioritize large_airport
+      } else if (typeB === "large_airport") {
+        return 1; // prioritize large_airport
+      }
+
+      // Prioritize medium_airport
+      if (typeA === "medium_airport") {
+        return -1;
+      } else if (typeB === "medium_airport") {
+        return 1;
+      }
+
+      // Prioritize small_airport
+      if (typeA === "small_airport") {
+        return -1;
+      } else if (typeB === "small_airport") {
+        return 1;
+      }
+
+      // Sort alphabetically for other types
+      return typeA.localeCompare(typeB);
+    }
+  });
 
   //get current posts for pagination feature
   const indexOfLastAirport = currentPage * postsPerPage;
   const indexOfFirstAirport = indexOfLastAirport - postsPerPage;
-  const currentAirports = country.slice(
+  const currentAirports = sortedCountry.slice(
     indexOfFirstAirport,
     indexOfLastAirport
   );
@@ -39,7 +78,7 @@ export const SearchResultsCountry = () => {
 
   return (
     <div>
-      <h2>We have found {country.length} airports. </h2>
+      <h2>We have found {sortedCountry.length} airports. </h2>
 
       <p>
         Click on the name for further information (Page {currentPage} of&nbsp;
