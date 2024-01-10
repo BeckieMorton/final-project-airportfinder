@@ -14,7 +14,7 @@
 
 .searchBox input {
   box-sizing: border-box;
-  border: 3px solid #4d4c7d;
+  border: 3px solid #363062;
   border-radius: 25px;
   padding: 1rem 3rem 1rem 3rem;
   font-family: "Poppins", sans-serif;
@@ -35,7 +35,7 @@
 
 .searchSelection {
   box-sizing: border-box;
-  border: 3px solid #4d4c7d;
+  border: 3px solid #363062;
   border-radius: 25px;
   padding: 1rem 3rem 1rem 3rem;
   font-family: "Poppins", sans-serif;
@@ -70,14 +70,14 @@
 }
 
 .iataLink:hover {
-  color: black;
+  color: #363062;
 }
 
 /* Media query for tablet */
 @media screen and (min-width: 600px) and (max-width: 824px) {
   .searchSelection {
     box-sizing: border-box;
-    border: 3px solid #4d4c7d;
+    border: 3px solid #363062;
     border-radius: 25px;
     padding: 1rem 3rem 1rem 3rem;
     font-family: "Poppins", sans-serif;
@@ -89,7 +89,7 @@
 
   .searchBox input {
     box-sizing: border-box;
-    border: 3px solid #4d4c7d;
+    border: 3px solid #363062;
     border-radius: 25px;
     padding: 1rem 2rem;
     font-family: "Poppins", sans-serif;
@@ -123,7 +123,7 @@
 @media screen and (min-width: 825px) {
   .searchSelection {
     box-sizing: border-box;
-    border: 3px solid #4d4c7d;
+    border: 3px solid #363062;
     border-radius: 25px;
     padding: 1rem 3rem 1rem 3rem;
     font-family: "Poppins", sans-serif;
@@ -135,13 +135,21 @@
 
   .searchBox input {
     box-sizing: border-box;
-    border: 3px solid #4d4c7d;
+    border: 3px solid #363062;
     border-radius: 25px;
     padding: 1rem 3rem 1rem 3rem;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     color: #363062;
     margin-right: 0.5em;
+  }
+
+  .searchBox input:focus {
+    border-color: #363062;
+  }
+
+  .searchInput:focus {
+    border-color: #363062;
   }
 
   .mainSearchContainer {

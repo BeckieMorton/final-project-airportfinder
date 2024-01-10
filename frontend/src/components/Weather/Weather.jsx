@@ -85,8 +85,8 @@ export const Weather = () => {
     //---Get current time at airport -----//
     const options = {
       year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
+      month: "short",
+      day: "numeric",
       hour: "2-digit",
       hour12: false,
       minute: "2-digit",

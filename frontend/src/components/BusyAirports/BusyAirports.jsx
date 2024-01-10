@@ -16,7 +16,6 @@ export const BusyAirports = () => {
 
   useEffect(() => {
     //OR get country from country store (if coming from Country search)
-    console.log(`what is in country?:`, country);
     setCountryContinent(country[0]?.continent);
     // Filter major airlines based on the country code
   }, [country]);
@@ -35,8 +34,6 @@ export const BusyAirports = () => {
     }
   }, [busyAirports]);
 
-  console.log(`what is in countryContinent?:`, countryContinent);
-  console.log(`what is is setContFullName`, contFullName);
   return (
     <>
       <h2>Busiest Airports in {contFullName}</h2>
@@ -60,26 +57,29 @@ export const BusyAirports = () => {
                 <tr key={index}>
                   <td>
                     <p>
-                      {place.name && (
-                        <Link
-                          className={styles.airportLink}
-                          to={`/airports/iata/${place.iata}`}
-                        >
-                          {place.name}
-                        </Link>
-                      )}
+                      <Link
+                        className={styles.links}
+                        to={`/airports/iata/${place.iata}`}
+                      >
+                        {place.name}
+                      </Link>
                     </p>
                   </td>
                   <td>
                     <p>{place.city}</p>
                   </td>
                   <td>
-                    <p>{place.country}</p>
+                    <Link
+                      className={styles.links}
+                      to={`/airports/country/${place.country_code}`}
+                    >
+                      {place.country || "N/A"}
+                    </Link>
                   </td>
                   <td>
                     <a
                       href={place.Link}
-                      className={styles.airportLink}
+                      className={styles.links}
                       target="_blank"
                       key={place.name}
                       rel="noreferrer noopener"

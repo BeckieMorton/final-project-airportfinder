@@ -1,5 +1,5 @@
 .list p,
-.airportLink a {
+.links a {
   font-size: 14px;
   text-align: left;
 }
@@ -8,10 +8,10 @@
   font-size: 14px;
 }
 
-.airportLink {
-  font-size: 14px !important;
+.links {
+  font-size: 14px;
 }
 
-.airportLink:hover {
+.links:hover {
   color: #ff8813;
 }
