@@ -15,7 +15,7 @@ export const Airlines = () => {
 
   useEffect(() => {
     //get country code from airport store (if coming from Iata search)
-    //OR get country from country store (if coming from Country search)
+
     setCountryCode(airport?.iso_country);
     // Filter major airlines based on the country code
     setAirlines(
