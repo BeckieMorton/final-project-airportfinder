@@ -19,7 +19,6 @@ export const ResultsCountry = () => {
   const { country, setCountry } = useCountryStore();
   const [loading, setLoading] = useState(true);
   const { newCountryCode } = useParams();
-  const countryFooter = "country";
 
   const myAPI = `https://final-project-airportfinder.onrender.com/airports/country/${newCountryCode}`;
 
