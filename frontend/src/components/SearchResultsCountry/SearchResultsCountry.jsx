@@ -107,7 +107,16 @@ export const SearchResultsCountry = () => {
                 )}
               </td>
 
-              <td>{airport.municipality && <p>{airport.municipality}</p>}</td>
+              <td>
+                <td>
+                  {airport.municipality !== undefined &&
+                  airport.municipality !== "" ? (
+                    <p>{airport.municipality}</p>
+                  ) : (
+                    <p>N/A</p>
+                  )}
+                </td>
+              </td>
               <td>
                 {airport.type && <p>{formatAirportSize(airport.type)}</p>}
               </td>

@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import styles from "./CountryInfo.module.css";
 
 export const CountryInfo = () => {
-  //info about the country from restcountries.com free API searched using the 2 digit code.
   const { newCountryCode } = useParams();
   const [countryInfo, setCountryInfo] = useState([]);
-  const countryAPI = `https://restcountries.com/v3.1/alpha/${newCountryCode}`;
   const [loading, setLoading] = useState(true);
+  const countryAPI = `https://restcountries.com/v3.1/alpha/${newCountryCode}`;
 
   useEffect(() => {
     const fetchCountry = async () => {
+      //get info about country from restcountries.com free API searched using the 2 digit code.
       try {
         const response = await fetch(countryAPI);
         if (!response.ok) {
@@ -33,8 +33,6 @@ export const CountryInfo = () => {
     return <div>loading country data</div>;
   }
 
-  console.log(`country info in this here:`, countryInfo);
-
   //destructure countryInfo to render relevant information
   const officialName = countryInfo[0].name.official;
   const continent = countryInfo[0].continents;
@@ -43,17 +41,20 @@ export const CountryInfo = () => {
   const flagAlt = countryInfo[0].flags.alt;
   const population = countryInfo[0].population;
 
+  //get first two official languages
   const language = countryInfo.map((info) => {
-    const firstLanguageValue = Object.values(info.languages)[0]; //
-    return firstLanguageValue;
+    const languageValues = Object.values(info.languages);
+    const firstTwoLanguages = languageValues.slice(0, 2);
+    return firstTwoLanguages;
   });
 
+  //get first currency value
   const currency = countryInfo.map((curr) => {
     const firstCurrencyValue = Object.values(curr.currencies)[0]; //
     return firstCurrencyValue.name;
   });
 
-  // Function to format population with commas
+  //format population with commas to make it readable
   const formatPopulation = (population) => {
     return population.toLocaleString();
   };
@@ -65,11 +66,14 @@ export const CountryInfo = () => {
         <p className={styles.flag}>
           <img src={flag} alt={flagAlt} />
         </p>
-
         <p>Continent: {continent}</p>
         <p>Capital: {capital}</p>
         <p>Population: {formatPopulation(population)}</p>
-        <p>Language: {language}</p>
+        <p>
+          Language/s:&nbsp;
+          {language.map((innerArray) => innerArray.join(", ")).join(", ")}
+        </p>
+
         <p>Currency: {currency}</p>
       </div>
     </>

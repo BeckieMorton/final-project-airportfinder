@@ -16,16 +16,16 @@ import styles from "./ResultsCountry.module.css";
 //https://final-project-airportfinder.onrender.com
 
 export const ResultsCountry = () => {
-  //----Function to fetch country data BEFORE results and relevant components render--IMPORTANT--->
-
   const { country, setCountry } = useCountryStore();
   const [loading, setLoading] = useState(true);
   const { newCountryCode } = useParams();
+  const countryFooter = "country";
 
   const myAPI = `https://final-project-airportfinder.onrender.com/airports/country/${newCountryCode}`;
 
   useEffect(() => {
     const fetchCountryDetails = async () => {
+      //----Function to fetch country data BEFORE results and relevant components render--IMPORTANT--->
       try {
         if (!newCountryCode) {
           console.log("newCountryCode is undefined");
@@ -38,7 +38,6 @@ export const ResultsCountry = () => {
         }
         const json = await response.json();
         setCountry(json);
-        console.log(country);
       } catch (error) {
         console.log("Error fetching data:", error);
       } finally {
@@ -74,7 +73,7 @@ export const ResultsCountry = () => {
           <BusyAirports />
         </div>
       </div>
-      <Footer />
+      <Footer camefrom={countryFooter} />
     </>
   );
 };

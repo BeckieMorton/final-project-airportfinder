@@ -30,11 +30,20 @@
 
 /* media query for desktop */
 @media screen and (min-width: 825px) {
-  .footerContainer {
+  .footerContainerHome {
     grid-template-columns: repeat(1, 1fr);
     text-align: center;
     background-color: #f99417;
     margin-top: 14em;
+    padding: 0.5em;
+    font-size: 18px;
+  }
+
+  .footerContainerCountry {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    background-color: #f99417;
+    margin-top: 5em;
     padding: 0.5em;
     font-size: 18px;
   }

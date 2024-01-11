@@ -164,7 +164,7 @@
 
   .searchBox {
     display: inline-block;
-    display: flex; /* Use flexbox */
+    display: flex;
     align-items: center;
   }
 

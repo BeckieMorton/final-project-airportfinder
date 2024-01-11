@@ -1,9 +1,22 @@
 import styles from "./Footer.module.css";
 
-export const Footer = () => {
+export const Footer = (cameFrom) => {
+  let containerClassName = styles.footerContainer;
+  if (cameFrom === "home") {
+    containerClassName = styles.footerContainerHome;
+  } else if (cameFrom === "country") {
+    containerClassName = styles.footerContainerCountry;
+  } else if (cameFrom === "iata") {
+    containerClassName = styles.footerContainerIata;
+  } else if (cameFrom === "name") {
+    containerClassName = styles.footerContainerName;
+  }
+
+  console.log(`this footer is for this page:`, cameFrom);
+
   return (
     <>
-      <div className={styles.footerContainer}>
+      <div className={containerClassName}>
         <p>
           Technigo Web Development Boot Camp &#183; Autumn 2023 &#183; Beckie
           Morton
