@@ -69,9 +69,9 @@ export const SearchResultsName = () => {
       ) : (
         <>
           <h2>
-            We have found {airport.length} airports that match your search.
+            We have found {airport.length} airport/s that match your search.
           </h2>
-          <p>Click on the airport name for further information</p>
+          <p>Click on the airport or country name for further information</p>
 
           <div className={styles.airportBox}>
             {airport.map((airport, index) => (

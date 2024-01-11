@@ -73,7 +73,7 @@ export const ResultsCountry = () => {
           <BusyAirports />
         </div>
       </div>
-      <Footer camefrom={countryFooter} />
+      <Footer cameFrom="country" />
     </>
   );
 };

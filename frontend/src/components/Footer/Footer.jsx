@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 
-export const Footer = (cameFrom) => {
+export const Footer = ({ cameFrom }) => {
   let containerClassName = styles.footerContainer;
   if (cameFrom === "home") {
     containerClassName = styles.footerContainerHome;
