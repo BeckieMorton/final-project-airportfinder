@@ -12,8 +12,6 @@ export const Footer = ({ cameFrom }) => {
     containerClassName = styles.footerContainerName;
   }
 
-  console.log(`this footer is for this page:`, cameFrom);
-
   return (
     <>
       <div className={containerClassName}>

@@ -10,15 +10,12 @@ export const AirlinesCountry = () => {
   const [countryCode, setCountryCode] = useState("");
   const [airlines, setAirlines] = useState([]);
 
-  //get country code from country store (store was populated in previous component - ResultsCountry)
   useEffect(() => {
-    console.log(`in airlines json`, majorairlines);
-
-    // Set country code
+    //get country code from country store (store was populated in previous component - ResultsCountry)
     const countryIsoCode = country[0].iso_country;
     setCountryCode(countryIsoCode);
 
-    // Run subsequent logic only if countryIsoCode is defined
+    // Filter major airlines based on the country code
     if (countryIsoCode) {
       setAirlines(
         majorairlines.filter(
@@ -27,26 +24,6 @@ export const AirlinesCountry = () => {
       );
     }
   }, [majorairlines, country]);
-
-  useEffect(() => {
-    console.log("Updated countryCode:", countryCode);
-  }, [countryCode]);
-
-  useEffect(() => {
-    console.log("Updated airlines:", airlines);
-  }, [airlines]);
-
-  // useEffect(() => {
-  //   // Filter major airlines based on the country code
-  //   console.log(countryCode);
-  //   if (countryCode) {
-  //     setAirlines(
-  //       majorairlines.filter((airline) => airline.country_code === countryCode)
-  //     );
-  //   } else {
-  //     console.log(`didnt work`);
-  //   }
-  // }, [majorairlines, countryCode]);
 
   return (
     <>

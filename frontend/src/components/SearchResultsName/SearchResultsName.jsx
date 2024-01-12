@@ -63,7 +63,7 @@ export const SearchResultsName = () => {
         <>
           <p>Sorry, no airports were found for your search.</p>
           <NavLink to="/">
-            <p className={styles.homeLink}>Search again</p>
+            <p className={styles.homeLink}>Try again</p>
           </NavLink>
         </>
       ) : (
@@ -81,7 +81,10 @@ export const SearchResultsName = () => {
                     <h2 className={styles.link}> {airport.name}</h2>
                   </Link>
                 )}
-                <p>City/Area: {airport.municipality && airport.municipality}</p>
+                <p>
+                  City/Area:&nbsp;
+                  {(airport.municipality && airport.municipality) || "N/A"}
+                </p>
                 <Link to={`/airports/country/${airport.iso_country}`}>
                   <p className={styles.link}>
                     Country: {formatCountry(airport.iso_country)}
@@ -92,8 +95,10 @@ export const SearchResultsName = () => {
                 <p>Type: {formatType(airport.type)}</p>
                 <p>
                   <img
+                    className={styles.flag}
                     src={`https://flagsapi.com/${airport.iso_country}/flat/64.png`}
-                  ></img>
+                    alt={`flag of ${formatCountry(airport.iso_country)}`}
+                  />
                 </p>
               </div>
             ))}
