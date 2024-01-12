@@ -84,11 +84,11 @@ HTML5, CSS3, React, React Router, with Editor: VS Code
 
 ### Resources
 
-Logo: created using Canva and GIMP
+<ins>Logo</ins>: created using Canva and GIMP
 
-Fonts:
+<ins>Fonts</ins>: Bebas Neue (for logo), Montserrat, Poppins
 
-Colour scheme:
+<ins>Colour scheme</ins>:
 white background: #fbfbfbfb
 text dark blue: #363062
 medium blue: #4D4C7D
@@ -96,12 +96,12 @@ orange: #F99417
 
 ### If I had more time...
 
+Move json files to backend. Create sortable table functionality for every column in the airport country list.
+
 ### View it live
 
-<ins>Frontend:</ins>
+<ins>Frontend</ins>: https://airportfinder.netlify.app/
 
-<ins> Backend:</ins>
-
-<ins> Frontend:</ins>
+<ins>Backend</ins>: https://final-project-airportfinder.onrender.com/
 
 ## Screenshots
