@@ -104,4 +104,12 @@ Move json files to backend. Create sortable table functionality for every column
 
 <ins>Backend</ins>: https://final-project-airportfinder.onrender.com/
 
+### Responsiveness
+
+Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
+
+Tablet view testing: iPad Apple Mini (786 x 1024)
+
+Desktop view testing: 
+
 ## Screenshots
