@@ -47,41 +47,47 @@ HTML5, CSS3, React, React Router, with Editor: VS Code
 
 ### React Libraries/Dependencies
 
-zustand for global state management
+<ins>zustand</ins>: for global state management
 
-moment.js for data and time
+<ins>moment.js</ins>: for data and time
 
-geolib (https://github.com/manuelbieh/geolib - to convert User IP address to latitude and longitude
+<ins>geolib</ins>: (https://github.com/manuelbieh/geolib) - to convert User IP address to latitude and longitude
 
-intl.DisplayNames for country names
+<ins>intl.DisplayNames</ins>: for country names
 
-Lottie files animations for loading page animations
+<ins>Lottie files</ins>: animations for loading page animations
+
+<ins>react-paginate</ins>: for pagination of country airport list
 
 ### API's
 
-My API for the main airport data: https://final-project-airportfinder.onrender.com/
+<ins>My Backend</ins>: My API for the main airport data: https://final-project-airportfinder.onrender.com/
 
-Weather API: https://openweathermap.org
+<ins>Weather API</ins>: https://openweathermap.org - weather information for airport page
 
-Pexel API:
+<ins>Pexel API</ins>: https://www.pexels.com/api/ - displays an image for each country (UPDATE: removed this component and replaced it with busiest airports information)
 
-Flag API: https://flagsapi.com
+<ins>Flag API</ins>: https://flagsapi.com
 
-Map API: Leaflet uses openstreetmap
+<ins>Map API</ins>: Leaflet uses openstreetmap
 
-Nearest airport data: Lufthansa API
+<ins>Nearest airport data</ins>: Lufthansa API
 
-Country search data: http://restcountries.com
+<ins>Country search data</ins>: http://restcountries.com
 
-Continent codes: created my own json file in data folder
+<ins>Continent codes</ins>: created my own json file in data folder
+
+<ins>Busiest Airports</ins>: created my own json file in data folder
+
+<ins>Major Airlines</ins>: created my own json file in data folder
 
 ### Resources
 
-Logo: created using Canva and GIMP
+<ins>Logo</ins>: created using Canva and GIMP
 
-Fonts:
+<ins>Fonts</ins>: Bebas Neue (for logo), Montserrat, Poppins
 
-Colour scheme:
+<ins>Colour scheme</ins>:
 white background: #fbfbfbfb
 text dark blue: #363062
 medium blue: #4D4C7D
@@ -89,12 +95,14 @@ orange: #F99417
 
 ### If I had more time...
 
+Move json files to backend. Create sortable table functionality for every column in the airport country list.
+
 ### View it live
 
-<ins>Frontend:</ins>
+<ins>Frontend</ins>: https://airportfinder.netlify.app/
 
-<ins> Backend:</ins>
+<ins>Backend</ins>: https://final-project-airportfinder.onrender.com/
 
-<ins> Frontend:</ins>
+### Responsiveness
 
-## Screenshots
+Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
