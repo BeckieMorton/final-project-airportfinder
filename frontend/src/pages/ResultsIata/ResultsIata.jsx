@@ -72,7 +72,9 @@ export const ResultsIata = () => {
         </div>
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
-          <div className={styles.resultsBoxSecond}>{/* <Distance /> */}</div>
+          <div className={styles.resultsBoxSecond}>
+            <Distance />
+          </div>
         </div>
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>
@@ -80,9 +82,11 @@ export const ResultsIata = () => {
             {/* <CountryImage /> */}
             <Airlines />
           </div>
-          <div className={styles.resultsBoxSecond}>{/* <NearbyUser /> */}</div>
           <div className={styles.resultsBoxSecond}>
-            {/* <NearbyAirports /> */}
+            <NearbyUser />
+          </div>
+          <div className={styles.resultsBoxSecond}>
+            <NearbyAirports />
           </div>
         </div>
         <Footer />
