@@ -31,7 +31,9 @@ export const AirlinesCountry = () => {
 
       {airlines.length === 0 ? (
         <>
-          <p>Test are no major airlines currently based in this country</p>
+          <p className={styles.noAirports}>
+            There are no major airlines currently based in this country
+          </p>
         </>
       ) : (
         <>

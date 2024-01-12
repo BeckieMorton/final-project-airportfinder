@@ -8,7 +8,7 @@ import styles from "./SearchResultsCountry.module.css";
 export const SearchResultsCountry = () => {
   const { country } = useCountryStore();
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
+  const [postsPerPage] = useState(11);
 
   //-----sort the country array by type largest, medium, small ----//
   const sortedCountry = [...country].sort((airportA, airportB) => {
@@ -122,20 +122,22 @@ export const SearchResultsCountry = () => {
           ))}
         </tbody>
       </table>
-      <div className={styles.paginationBox}>
-        <ReactPaginate
-          pageCount={pageCount}
-          pageRangeDisplayed={5}
-          marginPagesDisplayed={2}
-          previousLabel="< previous"
-          nextLabel="next >"
-          breakLabel="..."
-          renderOnZeroPageCount={null}
-          onPageChange={handlePageChange}
-          containerClassName={styles.paginationNumbers}
-          activeClassName="active"
-        />
-      </div>
+      {pageCount > 1 && (
+        <div className={styles.paginationBox}>
+          <ReactPaginate
+            pageCount={pageCount}
+            pageRangeDisplayed={5}
+            marginPagesDisplayed={2}
+            previousLabel="< previous"
+            nextLabel="next >"
+            breakLabel="..."
+            renderOnZeroPageCount={null}
+            onPageChange={handlePageChange}
+            containerClassName={styles.paginationNumbers}
+            activeClassName="active"
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -52,6 +52,11 @@
   color: #f99417;
 }
 
+.flag img {
+  width: 30%;
+  border: 1px solid #d8d8d8;
+}
+
 /* Media query for tablet */
 @media screen and (min-width: 600px) and (max-width: 824px) {
   .listContainer {
@@ -106,6 +111,11 @@
 
   .homeLink:hover {
     color: #f99417;
+  }
+
+  .flag img {
+    width: 30%;
+    border: 1px solid #d8d8d8;
   }
 }
 
@@ -163,5 +173,10 @@
 
   .homeLink:hover {
     color: #f99417;
+  }
+
+  .flag img {
+    width: 30%;
+    border: 1px solid #d8d8d8;
   }
 }
