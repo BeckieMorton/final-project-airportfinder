@@ -2,7 +2,7 @@
   /* grid parent */
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr; /* Single column by default */
+  grid-template-columns: 1fr;
 }
 
 .nameBox {

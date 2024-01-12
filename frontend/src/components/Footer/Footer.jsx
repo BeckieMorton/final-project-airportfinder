@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 export const Footer = ({ cameFrom }) => {
   let containerClassName = styles.footerContainer;
   if (cameFrom === "home") {
-    containerClassName = styles.footerContainerHome;
+    containerClassName = styles.footerContainerName;
   } else if (cameFrom === "country") {
     containerClassName = styles.footerContainerCountry;
   } else if (cameFrom === "iata") {

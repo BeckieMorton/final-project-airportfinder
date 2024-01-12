@@ -34,6 +34,45 @@
   color: #ff8813;
 }
 
+/* Media query for tablet */
+@media screen and (min-width: 600px) and (max-width: 824px) {
+  .paginationNumbers {
+    display: flex;
+    list-style: none;
+  }
+  
+  .paginationNumbers li {
+    margin-right: 5px;
+    text-align: center;
+  }
+  
+  .paginationBox {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    padding: 5px;
+    list-style: none;
+  }
+  
+  .paginationBox a:hover {
+    color: #ff8813;
+  }
+  
+  .paginationBox a {
+    cursor: pointer;
+  }
+  
+  .paginationBox p {
+    margin: 0;
+  }
+  
+  .airportLink:hover {
+    color: #ff8813;
+  }
+}
+
 /* media query for desktop */
 @media screen and (min-width: 825px) {
   .listContainer {
@@ -46,7 +85,7 @@
   .listBox {
     border: 1px solid #ccc;
     padding: 10px;
-    text-align: center;
+    text-align: left;
   }
 
   .list {

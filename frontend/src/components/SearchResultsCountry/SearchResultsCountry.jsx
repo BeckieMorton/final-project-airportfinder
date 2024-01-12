@@ -8,7 +8,7 @@ import styles from "./SearchResultsCountry.module.css";
 export const SearchResultsCountry = () => {
   const { country } = useCountryStore();
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(11);
+  const [postsPerPage] = useState(10);
 
   //-----sort the country array by type largest, medium, small ----//
   const sortedCountry = [...country].sort((airportA, airportB) => {
@@ -93,7 +93,7 @@ export const SearchResultsCountry = () => {
             <th>Type</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className={styles.listBox}>
           {currentAirports.map((airport, index) => (
             <tr key={index}>
               <td>
@@ -108,14 +108,12 @@ export const SearchResultsCountry = () => {
               </td>
 
               <td>
-                <td>
-                  {airport.municipality !== undefined &&
-                  airport.municipality !== "" ? (
-                    <p>{airport.municipality}</p>
-                  ) : (
-                    <p>N/A</p>
-                  )}
-                </td>
+                {airport.municipality !== undefined &&
+                airport.municipality !== "" ? (
+                  <p>{airport.municipality}</p>
+                ) : (
+                  <p>N/A</p>
+                )}
               </td>
               <td>
                 {airport.type && <p>{formatAirportSize(airport.type)}</p>}

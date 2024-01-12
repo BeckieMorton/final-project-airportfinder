@@ -53,7 +53,7 @@ export const ResultsName = () => {
           <SearchResultsName />
         </div>
       </div>
-      <Footer />
+      <Footer cameFrom="name" />
     </>
   );
 };
