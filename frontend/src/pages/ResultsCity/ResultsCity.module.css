@@ -1,0 +1,19 @@
+.nameContainer {
+  /* grid parent */
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+.nameBox {
+  /* grid child */
+  text-align: center;
+  gap: 2rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: white;
+}
+
+/* media query for desktop */
+@media screen and (min-width: 825px) {
+}

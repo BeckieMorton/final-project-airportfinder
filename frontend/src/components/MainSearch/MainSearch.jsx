@@ -121,9 +121,14 @@ export const MainSearch = () => {
           }
         }
         break;
-      case "": //user hasnt selected a search by option yet
-        setValidateMessage("Please choose a 'Search by' option and try again");
-
+      case "3": //city search
+        if (code) {
+          navigate(`/airports/area/${code}`);
+          console.log(`THIS WORKS`);
+          console.log(`the code is passed as:`, code);
+        } else {
+          console.error("City code is undefined or null.");
+        }
         break;
       default:
         //case for error
@@ -151,6 +156,7 @@ export const MainSearch = () => {
             <option value="0">Name</option>
             <option value="1">IATA Code</option>
             <option value="2">Country</option>
+            <option value="3">City/Area</option>
           </select>
           <input
             className={styles.searchInput}

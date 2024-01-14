@@ -1,0 +1,182 @@
+.listContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.link:hover {
+  color: #ff8813;
+}
+
+.homeLink:hover {
+  color: #ff8813;
+}
+
+.airportBox {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.airportItem {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border: 1px solid #f99417;
+  border-radius: 0.5rem;
+}
+
+.listBox {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+.list {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.list p {
+  font-size: 14;
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.airportLink:hover {
+  color: #f99417;
+}
+
+.homeLink:hover {
+  color: #f99417;
+}
+
+.flag img {
+  width: 30%;
+  border: 1px solid #d8d8d8;
+}
+
+/* Media query for tablet */
+@media screen and (min-width: 600px) and (max-width: 824px) {
+  .listContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+  }
+
+  .link:hover {
+    color: #ff8813;
+  }
+
+  .homeLink:hover {
+    color: #ff8813;
+  }
+
+  .airportBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .airportItem {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border: 1px solid #f99417;
+    border-radius: 0.5rem;
+  }
+
+  .listBox {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .list p {
+    font-size: 14;
+  }
+
+  .list a {
+    text-decoration: none;
+  }
+
+  .airportLink:hover {
+    color: #f99417;
+  }
+
+  .homeLink:hover {
+    color: #f99417;
+  }
+
+  .flag img {
+    width: 30%;
+    border: 1px solid #d8d8d8;
+  }
+}
+
+/* media query for desktop */
+@media screen and (min-width: 825px) {
+  .listContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+  }
+
+  .link:hover {
+    color: #ff8813;
+  }
+
+  .homeLink:hover {
+    color: #ff8813;
+  }
+
+  .airportBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .airportItem {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border: 1px solid #f99417;
+    border-radius: 0.5rem;
+  }
+
+  .listBox {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .list p {
+    font-size: 14;
+  }
+
+  .list a {
+    text-decoration: none;
+  }
+
+  .airportLink:hover {
+    color: #f99417;
+  }
+
+  .homeLink:hover {
+    color: #f99417;
+  }
+
+  .flag img {
+    width: 30%;
+    border: 1px solid #d8d8d8;
+  }
+}

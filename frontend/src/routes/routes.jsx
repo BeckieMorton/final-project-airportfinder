@@ -13,7 +13,7 @@ const routes = (
       path="/airports/country/:newCountryCode"
       element={<ResultsCountry />}
     />
-    <Route path="/airports/area/:municipality" element={<ResultsCity />} />
+    <Route path="/airports/area/:code" element={<ResultsCity />} />
     <Route path="/airports/name/:code" element={<ResultsName />} />
   </>
 );

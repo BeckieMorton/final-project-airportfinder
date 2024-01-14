@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
 import useAirportStore from "../../stores/useAirportStore";
 import { Link, NavLink } from "react-router-dom";
 
-import styles from "./SearchResultsName.module.css";
+import styles from "./SearchResultsCity.module.css";
 
-export const SearchResultsName = () => {
-  //need to access airport store to get results of all airports iwth the name
+export const SearchResultsCity = () => {
+  //need to access airport store to get results of all airports with the municipality
   const { airport, setAirport } = useAirportStore();
 
-  console.log(`in name search`, airport);
+  console.log(`in city search results for airports:`, airport);
   // ------formats continent string------//
   const formatContinent = (airportContinent) => {
     switch (airportContinent) {
@@ -75,30 +74,31 @@ export const SearchResultsName = () => {
           <p>Click on the airport or country name for further information</p>
 
           <div className={styles.airportBox}>
-            {airport.map((airport, index) => (
+            {airport.map((singleAirport, index) => (
               <div key={index} className={styles.airportItem}>
-                {airport.name && (
+                {singleAirport.name && (
                   <Link to={`/airports/iata/${airport.iata_code}`}>
-                    <h2 className={styles.link}> {airport.name}</h2>
+                    <h2 className={styles.link}> {singleAirport.name}</h2>
                   </Link>
                 )}
                 <p>
                   City/Area:&nbsp;
-                  {(airport.municipality && airport.municipality) || "N/A"}
+                  {(singleAirport.municipality && singleAirport.municipality) ||
+                    "N/A"}
                 </p>
-                <Link to={`/airports/country/${airport.iso_country}`}>
+                <Link to={`/airports/country/${singleAirport.iso_country}`}>
                   <p className={styles.link}>
-                    Country: {formatCountry(airport.iso_country)}
+                    Country: {formatCountry(singleAirport.iso_country)}
                   </p>
                 </Link>
 
-                <p> Continent: {formatContinent(airport.continent)}</p>
-                <p>Type: {formatType(airport.type)}</p>
+                <p> Continent: {formatContinent(singleAirport.continent)}</p>
+                <p>Type: {formatType(singleAirport.type)}</p>
                 <p>
                   <img
                     className={styles.flag}
-                    src={`https://flagsapi.com/${airport.iso_country}/flat/64.png`}
-                    alt={`flag of ${formatCountry(airport.iso_country)}`}
+                    src={`https://flagsapi.com/${singleAirport.iso_country}/flat/64.png`}
+                    alt={`flag of ${formatCountry(singleAirport.iso_country)}`}
                   />
                 </p>
               </div>
