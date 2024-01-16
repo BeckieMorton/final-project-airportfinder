@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { LottieComponent } from "../../components/LottieComponent/LottieComponent";
 
 import styles from "./CountryInfo.module.css";
 
@@ -29,8 +30,13 @@ export const CountryInfo = () => {
     fetchCountry();
   }, [countryAPI]);
 
+  //had huge difficulty tring to get the Lottie Animation for loading to stay inside this small Country info Div, so due to time constraints I have removed it completely
   if (loading) {
-    return <div>loading country data</div>;
+    return (
+      <div className={styles.loadingContainer}>
+        <p></p>
+      </div>
+    );
   }
 
   //destructure countryInfo to render relevant information

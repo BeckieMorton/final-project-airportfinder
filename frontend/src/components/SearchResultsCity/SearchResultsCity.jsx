@@ -1,6 +1,5 @@
 import useAirportStore from "../../stores/useAirportStore";
 import { Link, NavLink } from "react-router-dom";
-
 import styles from "./SearchResultsCity.module.css";
 
 export const SearchResultsCity = () => {
