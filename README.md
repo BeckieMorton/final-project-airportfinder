@@ -5,7 +5,7 @@
 <img src="frontend/public/assets/AirportFinder_transparent_orangedb.png" />
 </h2>
 
-For my final project I have built a search engine to search for details about airports around the world. IT has functionality to search for any airport in the world using search by: name, city, country and iata code. It uses 3 APIs I have created (2 with data I created) as well as several other external APIs. It uses Zustand for state management as well as several react libraries, including lottie animations, leaflet maps, pagination and flags. It has been created with responsiveness and accessibility in mind and includes user input and data validation on front and backends.
+For my final project I have built a search engine to search for details about airports around the world. It has functionality to search for any airport in the world using search by: name, city, country and iata code. It uses 3 APIs I have created (2 with data I created) as well as several other external APIs. It uses Zustand for state management as well as several react libraries, including lottie animations, leaflet maps, pagination and flags. It has been created with responsiveness and accessibility in mind and includes user input and data validation on front and backends.
 
 (See assignment requirements at the end of this readme)
 
@@ -66,8 +66,7 @@ orange: #F99417
 
 ### If I had more time...
 
-Move json files to backend. Create sortable table functionality for every column in the airport country list.
-Add city search.
+Create sortable table functionality for every column in the airport country list. Perfect mobile view.
 
 ### View it live
 
