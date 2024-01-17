@@ -2,28 +2,55 @@
   /* grid parent */
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  margin: 0;
 }
 
 .countryBox {
   /* grid child */
-  max-width: 100%;
   box-sizing: border-box;
   text-align: center;
   border: 1px solid #f99417;
   border-radius: 0.5rem;
-  gap: 2rem;
   padding: 0.5rem;
   margin: 1rem;
   background-color: white;
   max-width: 100%;
+  font-size: 1rem;
+}
+
+.desktopView {
+  display: none;
+}
+
+.mobileView {
+  display: block;
+}
+
+/*media query for tablet*/
+@media screen and (min-width: 667px) and (max-width: 825px) {
+  .desktopView {
+    display: none;
+  }
+
+  .mobileView {
+    display: block;
+  }
 }
 
 /* media query for desktop */
-@media screen and (min-width: 825px) {
+@media screen and (min-width: 930px) {
   .countryContainer {
     display: grid;
     grid-template-rows: repeat(3, 482px) auto auto;
     grid-template-columns: 25% 25% 50%;
+  }
+
+  .desktopView {
+    display: block;
+  }
+
+  .mobileView {
+    display: none;
   }
 
   .countryBox:nth-child(3) {

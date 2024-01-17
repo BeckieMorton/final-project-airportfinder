@@ -57,22 +57,37 @@ export const ResultsCountry = () => {
 
   return (
     <>
-      <ResultsHeader />
-      <div className={styles.countryContainer}>
-        <div className={styles.countryBox}>
-          <AirlinesCountry />
+      <>
+        <ResultsHeader />
+        <div className={styles.countryContainer}>
+          <div className={`${styles.countryBox} ${styles.desktopView}`}>
+            <AirlinesCountry />
+          </div>
+          <div className={`${styles.countryBox} ${styles.desktopView}`}>
+            <CountryInfo />
+          </div>
+          <div className={`${styles.countryBox} ${styles.desktopView}`}>
+            <SearchResultsCountry />
+          </div>
+          <div className={`${styles.countryBox} ${styles.desktopView}`}>
+            <BusyAirports />
+          </div>
+
+          <div className={`${styles.countryBox} ${styles.mobileView}`}>
+            <CountryInfo />
+          </div>
+          <div className={`${styles.countryBox} ${styles.mobileView}`}>
+            <SearchResultsCountry />
+          </div>
+          <div className={`${styles.countryBox} ${styles.mobileView}`}>
+            <AirlinesCountry />
+          </div>
+          <div className={`${styles.countryBox} ${styles.mobileView}`}>
+            <BusyAirports />
+          </div>
         </div>
-        <div className={styles.countryBox}>
-          <CountryInfo />
-        </div>
-        <div className={styles.countryBox}>
-          <SearchResultsCountry />
-        </div>
-        <div className={styles.countryBox}>
-          <BusyAirports />
-        </div>
-      </div>
-      <Footer cameFrom="country" />
+        <Footer cameFrom="country" />
+      </>
     </>
   );
 };

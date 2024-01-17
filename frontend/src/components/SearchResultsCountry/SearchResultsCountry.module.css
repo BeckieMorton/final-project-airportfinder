@@ -1,41 +1,91 @@
-.paginationNumbers {
-  display: flex;
-  list-style: none;
-}
+/* Media query for mobile */
+@media screen and (max-width: 666px) {
+  .paginationNumbers {
+    display: flex;
+    list-style: none;
+  }
 
-.paginationNumbers li {
-  margin-right: 5px;
-  text-align: center;
-}
+  .paginationNumbers li {
+    margin-right: 5px;
+    text-align: center;
+  }
 
-.paginationBox {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f6f6f6;
-  padding: 5px;
-  list-style: none;
-}
+  .paginationBox {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    padding: 5px;
+    list-style: none;
+  }
 
-.paginationBox a:hover {
-  color: #ff8813;
-}
+  .paginationBox a:hover {
+    color: #ff8813;
+  }
 
-.paginationBox a {
-  cursor: pointer;
-}
+  .paginationBox a {
+    cursor: pointer;
+  }
 
-.paginationBox p {
-  margin: 0;
-}
+  .paginationBox p {
+    margin: 0;
+  }
 
-.airportLink:hover {
-  color: #ff8813;
+  .airportLink:hover {
+    color: #ff8813;
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+  * aria-label has no advantage, it won't be read inside a table
+  content: attr(aria-label);
+  */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
 }
 
 /* Media query for tablet */
-@media screen and (min-width: 600px) and (max-width: 824px) {
+@media screen and (min-width: 667px) and (max-width: 1023px) {
   .paginationNumbers {
     display: flex;
     list-style: none;
@@ -54,6 +104,7 @@
     background-color: #f6f6f6;
     padding: 3px;
     list-style: none;
+    max-width: 100%;
   }
 
   .paginationBox a:hover {
@@ -74,8 +125,8 @@
 }
 
 /* media query for desktop */
-@media screen and (min-width: 825px) {
-  .listContainer {
+@media screen and (min-width: 1024px) {
+  .listBox {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -92,16 +143,6 @@
     list-style: none;
   }
 
-  .listBox {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-  }
-
-  .list {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   .list p {
     font-size: 16px;
   }
@@ -112,5 +153,22 @@
 
   .pageNumberingOnRight {
     text-align: right;
+  }
+
+  table thead {
+    height: auto;
+    position: static;
+    clip: auto;
+    margin: 0;
+    overflow: visible;
+    width: auto;
+  }
+
+  table tr {
+    display: table-row;
+  }
+
+  table td {
+    display: table-cell;
   }
 }

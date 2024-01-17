@@ -6,6 +6,7 @@
   grid-template-columns: repeat(1, 1fr);
 }
 
+/* media query for mobile */
 @media screen and (max-width: 600px) {
   .mapBox {
     text-align: center;
