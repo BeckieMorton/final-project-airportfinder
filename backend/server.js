@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 
 import airportRoutes from "./routes/airportRoutes";
 import airlineRoutes from "./routes/airlineRoutes";
+import busiestairportsRoutes from "./routes/busiestairportsRoutes";
 
 //------Connect to database------//
 const mongoUrl =
@@ -30,6 +31,7 @@ app.use(express.json());
 
 app.use("/", airportRoutes);
 app.use("/", airlineRoutes);
+app.use("/", busiestairportsRoutes);
 
 // Start the server
 app.listen(port, () => {
