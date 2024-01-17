@@ -15,15 +15,37 @@ export const AirlinesCountry = () => {
     const countryIsoCode = country[0].iso_country;
     setCountryCode(countryIsoCode);
 
-    // Filter major airlines based on the country code
-    if (countryIsoCode) {
-      setAirlines(
-        majorairlines.filter(
-          (airline) => airline.country_code === countryIsoCode
-        )
-      );
-    }
-  }, [majorairlines, country]);
+    //-- Function to fetch airline data from backend airlineRoutes UPDATED 17/01/24 --//
+
+    const myAirlinesAPI = `https://final-project-airportfinder.onrender.com/airlines/country/${countryCode}`;
+
+    const fetchIataDetails = async () => {
+      try {
+        const response = await fetch(myAirlinesAPI);
+        if (!response.ok) {
+          throw new Error("Network Response Error");
+        }
+        const json = await response.json();
+        setAirlines(json);
+      } catch (error) {
+        console.log("Error fetching iata data:", error);
+      } finally {
+      }
+    };
+    fetchIataDetails();
+  }, [countryCode, setAirlines, country]);
+
+  // const fetchIataDetails = async () => {
+  //   try {
+  // Filter major airlines based on the country code
+  //   if (countryIsoCode) {
+  //     setAirlines(
+  //       majorairlines.filter(
+  //         (airline) => airline.country_code === countryIsoCode
+  //       )
+  //     );
+  //   }
+  // }, [majorairlines, country]);
 
   return (
     <>

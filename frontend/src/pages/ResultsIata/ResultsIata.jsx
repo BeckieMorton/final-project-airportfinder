@@ -19,7 +19,7 @@ import styles from "./ResultsIata.module.css";
 //https://final-project-airportfinder.onrender.com
 
 export const ResultsIata = () => {
-  //----Function to fetch airport data BEFORE results and relevant components render--IMPORTANT--->
+  //----Function to fetch airport data from backend BEFORE results and relevant components render--IMPORTANT--->
 
   const { code } = useParams(null);
   const myAPI = `https://final-project-airportfinder.onrender.com/airports/iata/${code}`;
@@ -72,9 +72,7 @@ export const ResultsIata = () => {
         </div>
         {/* 2nd row */}
         <div className={styles.resultsContainer2}>
-          <div className={styles.resultsBoxSecond}>
-            <Distance />
-          </div>
+          <div className={styles.resultsBoxSecond}>{/* <Distance /> */}</div>
         </div>
         {/* 3rd row */}
         <div className={styles.resultsContainer3}>
@@ -82,11 +80,9 @@ export const ResultsIata = () => {
             {/* <CountryImage /> */}
             <Airlines />
           </div>
+          <div className={styles.resultsBoxSecond}>{/* <NearbyUser /> */}</div>
           <div className={styles.resultsBoxSecond}>
-            <NearbyUser />
-          </div>
-          <div className={styles.resultsBoxSecond}>
-            <NearbyAirports />
+            {/* <NearbyAirports /> */}
           </div>
         </div>
         <Footer />
