@@ -111,8 +111,8 @@ Add city search.
 
 Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
 
-Tablet view testing:
+Tablet view testing: Apple ipad mini
 
-Desktop testing:
+Desktop testing: chrome, safari, edge
 
 ### Screenshots
