@@ -3,7 +3,6 @@
 ## Technigo Web Development Bootcamp - FINAL PROJECT
 
 <img src="frontend/public/assets/AirportFinder_transparent_orangedb.png" />
-<img src="frontend/public/assets/AirportFinder_landing.png" />
 </h2>
 
 For my final project I have built a search engine to search for details about airports around the world.
@@ -114,7 +113,7 @@ Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
 
 ### Screenshots
 
-![Screenshot of App](/public/assets//screenshot1.png?raw=true "Screenshot of frontpage") 
+![Screenshot of App](//assets//screenshot1.png?raw=true "Screenshot of frontpage") 
 
 Tablet view testing: Apple ipad mini
 
