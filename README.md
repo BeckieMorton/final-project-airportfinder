@@ -2,7 +2,7 @@
 
 ## Technigo Web Development Bootcamp - FINAL PROJECT
 
-<img align=center src="frontend/public/assets/AirportFinder_transparent_orangedb.png" />
+<img src="frontend/public/assets/AirportFinder_transparent_orangedb.png" />
 </h2>
 
 For my final project I have built a search engine to search for details about airports around the world.
@@ -111,8 +111,8 @@ Add city search.
 
 Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
 
-Tablet view testing:
+Tablet view testing: Apple ipad mini
 
-Desktop testing:
+Desktop testing: chrome, safari, edge
 
 ### Screenshots
