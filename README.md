@@ -113,7 +113,7 @@ Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
 
 ### Screenshots
 
-![Screenshot of App](//assets//screenshot1.png?raw=true "Screenshot of frontpage") 
+![Screenshot of App](//public/assets//screenshot1.png?raw=true "Screenshot of frontpage") 
 
 Tablet view testing: Apple ipad mini
 
