@@ -1,38 +1,55 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import busiestairports from "../../data/busiestairports.json";
 import useCountryStore from "../../stores/useCountryStore";
+// import busiestairports from "../../data/busiestairports.json";
 
 import styles from "./BusyAirports.module.css";
 
 export const BusyAirports = () => {
-  const { country, setCountry } = useCountryStore();
+  const { country } = useCountryStore();
   const [busyAirports, setBusyAirports] = useState([]);
-  const [countryContinent, setCountryContinent] = useState("");
   const [contFullName, setContFullName] = useState("");
 
-  //use json airline data to find matches for all the airlines that have the same country code
-  //i have done this differently here than i have to get the country codes in the MainSearch. im not sure why i have and which is better? perhaps using the fetch in MainSearch is better?
-
+  //-- Function to fetch busy airport data from backend busiestairportsRoutes UPDATED 17/01/24 --//
   useEffect(() => {
-    //OR get country from country store (if coming from Country search)
-    setCountryContinent(country[0]?.continent);
-    // Filter major airlines based on the country code
-  }, [country]);
+    const fetchBusyAirports = async () => {
+      try {
+        const continent = country[0]?.continent;
 
-  useEffect(() => {
-    setBusyAirports(
-      busiestairports.filter(
-        (airport) => airport.continent === countryContinent
-      )
-    );
-  }, [busiestairports, countryContinent]);
+        if (continent) {
+          const myBusyairportsAPI = `https://final-project-airportfinder.onrender.com/busiestairports/continent/${continent}`;
+          const response = await fetch(myBusyairportsAPI);
+
+          if (!response.ok) {
+            throw new Error("Network Response Error");
+          }
+
+          const json = await response.json();
+          setBusyAirports(json);
+          setContFullName(json.length > 0 ? json[0].continent_name : "");
+        }
+      } catch (error) {
+        console.log("Error fetching busy airport data:", error);
+      }
+    };
+
+    fetchBusyAirports();
+  }, [country, setBusyAirports, setContFullName]);
 
   useEffect(() => {
     if (busyAirports.length !== 0) {
       setContFullName(busyAirports[0].continent_name);
     }
   }, [busyAirports]);
+
+  //-- OLD METHOD to get data from json in frontend ---//
+  // useEffect(() => {
+  //   setBusyAirports(
+  //     busiestairports.filter(
+  //       (airport) => airport.continent === countryContinent
+  //     )
+  //   );
+  // }, [busiestairports, countryContinent]);
 
   return (
     <>

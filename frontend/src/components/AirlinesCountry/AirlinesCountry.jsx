@@ -18,7 +18,7 @@ export const AirlinesCountry = () => {
     //-- Function to fetch airline data from backend airlineRoutes UPDATED 17/01/24 --//
     const myAirlinesAPI = `https://final-project-airportfinder.onrender.com/airlines/country/${countryCode}`;
 
-    const fetchIataDetails = async () => {
+    const fetchAirlines = async () => {
       try {
         const response = await fetch(myAirlinesAPI);
         if (!response.ok) {
@@ -31,7 +31,7 @@ export const AirlinesCountry = () => {
       } finally {
       }
     };
-    fetchIataDetails();
+    fetchAirlines();
   }, [countryCode, setAirlines, country]);
 
   //-- OLD METHOD to get data from json in frontend ---//

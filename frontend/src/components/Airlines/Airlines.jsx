@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import majorairlines from "../../data/majorairlines.json";
+//import majorairlines from "../../data/majorairlines.json";
 import useAirportStore from "../../stores/useAirportStore";
 
 import styles from "./Airlines.module.css";
@@ -16,7 +16,7 @@ export const Airlines = () => {
     //-- Function to fetch airline data from backend airlineRoutes UPDATED 17/01/24 --//
     const myAirlinesAPI = `https://final-project-airportfinder.onrender.com/airlines/country/${countryCode}`;
 
-    const fetchIataDetails = async () => {
+    const fetchAirlines = async () => {
       try {
         const response = await fetch(myAirlinesAPI);
         if (!response.ok) {
@@ -29,11 +29,11 @@ export const Airlines = () => {
       } finally {
       }
     };
-    fetchIataDetails();
+    fetchAirlines();
   }, [countryCode, setAirlines]);
 
-  // useEffect(() => {
   //-- OLD METHOD to get data from json in frontend ---//
+  // useEffect(() => {
   // Filter major airlines based on the country code
   //   setAirlines(
   //     majorairlines.filter((airline) => airline.country_code === countryCode)
