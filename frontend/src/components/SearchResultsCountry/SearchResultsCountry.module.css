@@ -36,15 +36,15 @@
     color: #ff8813;
   }
 
-  table {
+  .list table {
     border: 0;
   }
 
-  table caption {
+  .list table caption {
     font-size: 1.3em;
   }
 
-  table thead {
+  .list thead {
     border: none;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -55,13 +55,13 @@
     width: 1px;
   }
 
-  table tr {
+  .list tr {
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: 0.625em;
   }
 
-  table td {
+  .list td {
     border-bottom: 1px solid #ddd;
     display: block;
     font-size: 0.8em;
@@ -126,11 +126,18 @@
 
 /* media query for desktop */
 @media screen and (min-width: 1024px) {
-  .listBox {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
+  .paginationNumbers {
+    display: flex;
+    list-style: none;
+  }
+
+  .list {
+    padding: 0;
+  }
+
+  .paginationNumbers li {
+    margin-right: 5px;
+    text-align: center;
   }
 
   .paginationBox {
@@ -139,36 +146,24 @@
     align-items: center;
     justify-content: center;
     background-color: #f6f6f6;
-    padding: 1px;
+    padding: 3px;
     list-style: none;
+    max-width: 100%;
   }
 
-  .list p {
-    font-size: 16px;
+  .paginationBox a:hover {
+    color: #ff8813;
   }
 
-  .list a {
-    text-decoration: none;
+  .paginationBox a {
+    cursor: pointer;
   }
 
-  .pageNumberingOnRight {
-    text-align: right;
-  }
-
-  table thead {
-    height: auto;
-    position: static;
-    clip: auto;
+  .paginationBox p {
     margin: 0;
-    overflow: visible;
-    width: auto;
   }
 
-  table tr {
-    display: table-row;
-  }
-
-  table td {
-    display: table-cell;
+  .airportLink:hover {
+    color: #ff8813;
   }
 }

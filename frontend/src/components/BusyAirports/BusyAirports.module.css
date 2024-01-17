@@ -1,17 +1,100 @@
-.list p,
-.links a {
-  font-size: 14px;
-  text-align: left;
+/* Media query for mobile */
+@media screen and (max-width: 666px) {
+  .list p,
+  .links a {
+    font-size: 10px;
+    text-align: left;
+  }
+
+  .list table {
+    border: 0;
+  }
+
+  .list thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .list tr {
+    margin-bottom: 0.625em;
+  }
+
+  .list td {
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+  * aria-label has no advantage, it won't be read inside a table
+  content: attr(aria-label);
+  */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  .list a {
+    font-size: 14px;
+  }
+
+  .links {
+    font-size: 14px;
+  }
+
+  .links:hover {
+    color: #ff8813;
+  }
 }
 
-.list a {
-  font-size: 14px;
+/* Media query for tablet */
+@media screen and (min-width: 667px) and (max-width: 1023px) {
+  .list p,
+  .links a {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .list a {
+    font-size: 14px;
+  }
+
+  .links {
+    font-size: 14px;
+  }
+
+  .links:hover {
+    color: #ff8813;
+  }
 }
 
-.links {
-  font-size: 14px;
-}
+/* media query for desktop */
+@media screen and (min-width: 1024px) {
+  .list p,
+  .links a {
+    font-size: 14px;
+    text-align: left;
+  }
 
-.links:hover {
-  color: #ff8813;
+  .list a {
+    font-size: 14px;
+  }
+
+  .links {
+    font-size: 14px;
+  }
+
+  .links:hover {
+    color: #ff8813;
+  }
 }

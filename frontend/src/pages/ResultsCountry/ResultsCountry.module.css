@@ -27,7 +27,7 @@
 }
 
 /*media query for tablet*/
-@media screen and (min-width: 667px) and (max-width: 825px) {
+@media screen and (min-width: 667px) and (max-width: 1023px) {
   .desktopView {
     display: none;
   }
@@ -38,7 +38,7 @@
 }
 
 /* media query for desktop */
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 1024px) {
   .countryContainer {
     display: grid;
     grid-template-rows: repeat(3, 482px) auto auto;
@@ -47,6 +47,7 @@
 
   .desktopView {
     display: block;
+    max-width: 100%;
   }
 
   .mobileView {
@@ -55,11 +56,12 @@
 
   .countryBox:nth-child(3) {
     grid-row: span 2;
-    min-height: 900px;
+    min-height: 1100px;
   }
 
   .countryBox:nth-child(4) {
     grid-column: span 2;
+    min-height: 618px;
   }
 
   .paginationBox {
