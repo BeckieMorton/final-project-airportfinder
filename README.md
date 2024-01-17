@@ -5,41 +5,9 @@
 <img src="frontend/public/assets/AirportFinder_transparent_orangedb.png" />
 </h2>
 
-For my final project I have built a search engine to search for details about airports around the world.
+For my final project I have built a search engine to search for details about airports around the world. IT has functionality to search for any airport in the world using search by: name, city, country and iata code. It uses 3 APIs I have created (2 with data I created) as well as several other external APIs. It uses Zustand for state management as well as several react libraries, including lottie animations, leaflet maps, pagination and flags. It has been created with responsiveness and accessibility in mind and includes user input and data validation on front and backends.
 
-Minimal requirements:
-
-<aside>
-👾 **Technical requirements**
-
-✓ Frontend in React
-
-✓ Backend in Node.js
-
-✓ MongoDB database
-
-✓ Navigation using React Router
-
-✓ Should work in Chrome, Firefox & Safari
-
-✓ Be responsive and work well on mobile, tablet and desktop
-
-✓ Follow the accessibility guidelines
-
-</aside>
-
-<aside>
-🎨 **Visual requirements**
-
-✓ Your application should have a clear structure, using the box model as a reference, with consistent margins/paddings.
-
-✓ You should use consistent h1-h6 styles and sizes throughout your site and for multiple devices.
-
-✓ You should use a colour scheme based on one or a few colours.
-
-✓ You should have a design that can be adjusted to fit devices of all sizes. Remember that **58.43%** (Mar 2023) of all users will visit your page from a mobile device and that the page should therefore be optimised for these users too!
-
-</aside>
+(See assignment requirements at the end of this readme)
 
 ### Technologies used
 
@@ -111,12 +79,54 @@ Add city search.
 
 Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
 
-### Screenshots
-
-![Screenshot of App](/frontend/public/assets//screenshot1.png?raw=true "Screenshot of frontpage") 
-
 Tablet view testing: Apple ipad mini
 
 Desktop testing: chrome, safari, edge
 
 ### Screenshots
+
+![Screenshot of App](/frontend/public/assets//screenshot1.png?raw=true "Screenshot of frontpage") 
+
+![Screenshot of App](/frontend/public/assets//screenshot2.png?raw=true "Screenshot of IATA search ") 
+![Screenshot of App](/frontend/public/assets//screenshot3.png?raw=true "Screenshot of IATA search lower page ") 
+![Screenshot of App](/frontend/public/assets//screenshot4.png?raw=true "Screenshot of Country search ") 
+![Screenshot of App](/frontend/public/assets//screenshot5.png?raw=true "Screenshot of Country search lower page ") 
+![Screenshot of App](/frontend/public/assets//screenshot6.png?raw=true "Screenshot of Name/City search ") 
+![Screenshot of App](/frontend/public/assets//screenshot7.png?raw=true "Screenshot of landing page validation ") 
+![Screenshot of App](/frontend/public/assets//screenshot8.png?raw=true "Screenshot of landing page validation ") 
+
+### Requirements
+
+Minimal requirements:
+
+<aside>
+👾 **Technical requirements**
+
+✓ Frontend in React
+
+✓ Backend in Node.js
+
+✓ MongoDB database
+
+✓ Navigation using React Router
+
+✓ Should work in Chrome, Firefox & Safari
+
+✓ Be responsive and work well on mobile, tablet and desktop
+
+✓ Follow the accessibility guidelines
+
+</aside>
+
+<aside>
+🎨 **Visual requirements**
+
+✓ Your application should have a clear structure, using the box model as a reference, with consistent margins/paddings.
+
+✓ You should use consistent h1-h6 styles and sizes throughout your site and for multiple devices.
+
+✓ You should use a colour scheme based on one or a few colours.
+
+✓ You should have a design that can be adjusted to fit devices of all sizes. Remember that **58.43%** (Mar 2023) of all users will visit your page from a mobile device and that the page should therefore be optimised for these users too!
+
+</aside>
