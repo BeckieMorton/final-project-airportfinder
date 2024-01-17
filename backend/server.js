@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 // dotenv.config({ path: "./config.env" });
 
 import airportRoutes from "./routes/airportRoutes";
+import airlineRoutes from "./routes/airlineRoutes";
 
 //------Connect to database------//
 const mongoUrl =
@@ -28,6 +29,7 @@ app.use(express.json());
 //------------Routes----------//
 
 app.use("/", airportRoutes);
+app.use("/", airlineRoutes);
 
 // Start the server
 app.listen(port, () => {

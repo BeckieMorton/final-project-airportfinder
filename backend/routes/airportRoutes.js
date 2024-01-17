@@ -4,6 +4,12 @@ const router = express.Router();
 const listEndpoints = require("express-list-endpoints");
 const asyncHandler = require("express-async-handler");
 
+// For ES6 syntax it says to use d of:
+// import asyncHandler from "express-async-handler";
+// instead of
+// const asyncHandler = require("express-async-handler");
+//but i dont want to break anything so ill keep as is
+
 //List endpoints to display for render URL
 router.get("/", (req, res) => {
   res.send(listEndpoints(router));
