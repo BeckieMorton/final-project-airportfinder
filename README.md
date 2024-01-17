@@ -50,26 +50,24 @@ HTML5, CSS3, React, React Router, with Editor: VS Code
 <ins>zustand</ins>: for global state management
 
 <ins>moment.js</ins>: for data and time
-<ins>zustand</ins>: for global state management
 
-<ins>moment.js</ins>: for data and time
-
-<ins>geolib</ins>: (https://github.com/manuelbieh/geolib) - to convert User IP address to latitude and longitude
 <ins>geolib</ins>: (https://github.com/manuelbieh/geolib) - to convert User IP address to latitude and longitude
 
 <ins>intl.DisplayNames</ins>: for country names
-<ins>intl.DisplayNames</ins>: for country names
 
 <ins>Lottie files</ins>: animations for loading page animations
-<ins>Lottie files</ins>: animations for loading page animations
 
-<ins>react-paginate</ins>: for pagination of country airport list
 <ins>react-paginate</ins>: for pagination of country airport list
 
 ### API's
 
-<ins>My Backend</ins>: My API for the main airport data: https://final-project-airportfinder.onrender.com/
-<ins>My Backend</ins>: My API for the main airport data: https://final-project-airportfinder.onrender.com/
+<ins>My Backend</ins>: My MongoDB Database has 3 collections for 3 datasets: airports, airlines and busiestairports.
+
+1. My API for the main airport data: https://final-project-airportfinder.onrender.com/airports/
+
+2. My API for airlines (dataset I created): https://final-project-airportfinder.onrender.com/airlines/
+
+3. MY API from busiest airports (dataset I created): https://final-project-airportfinder.onrender.com/busiestairports/
 
 <ins>Weather API</ins>: https://openweathermap.org - weather information for airport page
 
@@ -78,26 +76,17 @@ HTML5, CSS3, React, React Router, with Editor: VS Code
 <ins>Flag API</ins>: https://flagsapi.com
 
 <ins>Map API</ins>: Leaflet uses openstreetmap
-<ins>Map API</ins>: Leaflet uses openstreetmap
 
 <ins>Nearest airport data</ins>: Lufthansa API
-<ins>Nearest airport data</ins>: Lufthansa API
 
-<ins>Country search data</ins>: http://restcountries.com
 <ins>Country search data</ins>: http://restcountries.com
 
 <ins>Continent codes</ins>: created my own json file in data folder
 
-<ins>Busiest Airports</ins>: created my own json file in data folder
-
-<ins>Major Airlines</ins>: created my own json file in data folder
-
 ### Resources
 
 <ins>Logo</ins>: created using Canva and GIMP
-<ins>Logo</ins>: created using Canva and GIMP
 
-<ins>Fonts</ins>: Bebas Neue (for logo), Montserrat, Poppins
 <ins>Fonts</ins>: Bebas Neue (for logo), Montserrat, Poppins
 
 <ins>Colour scheme</ins>:
@@ -110,8 +99,7 @@ orange: #F99417
 ### If I had more time...
 
 Move json files to backend. Create sortable table functionality for every column in the airport country list.
-
-Move json files to backend. Create sortable table functionality for every column in the airport country list.
+Add city search.
 
 ### View it live
 
@@ -122,3 +110,9 @@ Move json files to backend. Create sortable table functionality for every column
 ### Responsiveness
 
 Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
+
+Tablet view testing:
+
+Desktop testing:
+
+### Screenshots
