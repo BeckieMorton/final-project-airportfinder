@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import useAirportStore from "../../stores/useAirportStore";
 import { LottieComponent } from "../../components/LottieComponent/LottieComponent";
 
@@ -56,37 +56,48 @@ export const ResultsIata = () => {
 
   return (
     <>
-      <div className={styles.mainContainer}>
-        <ResultsHeader />
-        <div className={styles.resultsContainer1}>
-          {/* 1st row */}
-          <div className={styles.resultsBox}>
-            <SearchResultsIata />
+      {airport.length === 0 ? (
+        <>
+          <p>Sorry, no airports were found for your search.</p>
+          <NavLink to="/">
+            <p className={styles.homeLink}>Try again</p>
+          </NavLink>
+        </>
+      ) : (
+        <div className={styles.mainContainer}>
+          <ResultsHeader />
+          <div className={styles.resultsContainer1}>
+            {/* 1st row */}
+            <div className={styles.resultsBox}>
+              <SearchResultsIata />
+            </div>
+            <div className={styles.resultsBox}>
+              <Weather />
+            </div>
+            <div className={styles.resultsBox}>
+              <div className={styles.mapBox}>{<MapIata />}</div>
+            </div>
           </div>
-          <div className={styles.resultsBox}>
-            <Weather />
+          {/* 2nd row */}
+          <div className={styles.resultsContainer2}>
+            <div className={styles.resultsBoxSecond}>{/* <Distance /> */}</div>
           </div>
-          <div className={styles.resultsBox}>
-            <div className={styles.mapBox}>{<MapIata />}</div>
+          {/* 3rd row */}
+          <div className={styles.resultsContainer3}>
+            <div className={styles.resultsBoxSecond}>
+              {/* <CountryImage /> */}
+              <Airlines />
+            </div>
+            <div className={styles.resultsBoxSecond}>
+              {/* <NearbyUser /> */}
+            </div>
+            <div className={styles.resultsBoxSecond}>
+              {/* <NearbyAirports /> */}
+            </div>
           </div>
+          <Footer />
         </div>
-        {/* 2nd row */}
-        <div className={styles.resultsContainer2}>
-          <div className={styles.resultsBoxSecond}>{/* <Distance /> */}</div>
-        </div>
-        {/* 3rd row */}
-        <div className={styles.resultsContainer3}>
-          <div className={styles.resultsBoxSecond}>
-            {/* <CountryImage /> */}
-            <Airlines />
-          </div>
-          <div className={styles.resultsBoxSecond}>{/* <NearbyUser /> */}</div>
-          <div className={styles.resultsBoxSecond}>
-            {/* <NearbyAirports /> */}
-          </div>
-        </div>
-        <Footer />
-      </div>
+      )}
     </>
   );
 };

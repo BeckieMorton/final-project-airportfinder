@@ -1,87 +1,93 @@
-.mainSearchContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1em;
-}
+/* default styles for mobile */
+@media screen and (max-width: 666px) {
+  .mainSearchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-.searchIcon {
-  max-width: 50px;
-  text-align: center;
-  justify-content: center;
-}
+  .searchIcon {
+    max-width: 80px;
+    text-align: center;
+    justify-content: center;
+  }
 
-.searchBox input {
-  box-sizing: border-box;
-  border: 3px solid #363062;
-  border-radius: 25px;
-  padding: 0.5rem 3rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  color: #363062;
-  margin-right: 0.5em;
-}
+  .searchBox {
+    display: inline-block;
+    text-align: center;
+    margin: 3em;
+  }
 
-.searchBox {
-  display: inline-block;
-  align-items: center;
-}
+  .searchBox input {
+    box-sizing: border-box;
+    border: 3px solid #363062;
+    border-radius: 25px;
+    padding: 0.5rem 3rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #363062;
+    margin-bottom: 2em;
+  }
 
-.searchBox img {
-  align-items: center;
-}
+  .searchBox img {
+    align-items: center;
+  }
 
-.searchSelection {
-  box-sizing: border-box;
-  border: 3px solid #363062;
-  border-radius: 25px;
-  padding: 0.5rem 3rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  color: #363062;
-  margin-right: 0.5em;
-  display: inline-block;
-}
+  .searchSelection {
+    box-sizing: border-box;
+    border: 3px solid #363062;
+    border-radius: 25px;
+    padding: 0.5rem 3rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #363062;
+    display: inline-block;
+    margin-bottom: 1em;
+  }
 
-.searchSlogan {
-  font-size: 20px;
-  color: #363062;
-  text-align: center;
-  margin: 0 1em 1em 1em;
-}
+  .searchSlogan {
+    font-size: 20px;
+    color: #363062;
+    text-align: center;
+    margin: 0 1em 1em 1em;
+  }
 
-.mobileSelection {
-  display: none;
-}
+  .validateMessage {
+    color: red;
+    padding: 1em 3em;
+    text-align: center;
+    font-size: 16px;
+  }
 
-.validateMessage {
-  color: red;
-  padding: 1em 3em;
-  text-align: center;
-  font-size: 16px;
-}
+  .iataLink {
+    text-decoration: none;
+    color: red;
+    font-size: 16px;
+  }
 
-.iataLink {
-  text-decoration: none;
-  color: red;
-  font-size: 16px;
-}
+  .iataLink:hover {
+    color: #363062;
+  }
 
-.iataLink:hover {
-  color: #363062;
-}
+  .searchBox input:focus {
+    border-color: #363062;
+  }
 
-.searchBox input:focus {
-  border-color: #363062;
-}
-
-.searchInput:focus {
-  border-color: #363062;
+  .searchInput:focus {
+    border-color: #363062;
+  }
 }
 
 /* Media query for tablet */
-@media screen and (min-width: 600px) and (max-width: 824px) {
+@media screen and (min-width: 667px) and (max-width: 1023px) {
+  .mainSearchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .searchSelection {
     box-sizing: border-box;
     border: 3px solid #363062;
@@ -132,10 +138,34 @@
   .searchInput:focus {
     border-color: #363062;
   }
+  .searchIcon {
+    max-width: 50px;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 /* media query for desktop */
-@media screen and (min-width: 825px) {
+@media screen and (min-width: 1024px) {
+  .mainSearchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1em;
+    font-size: 16px;
+  }
+
+  .searchIcon {
+    max-width: 50px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .searchBox img {
+    align-items: center;
+  }
+
   .searchSelection {
     box-sizing: border-box;
     border: 3px solid #363062;
@@ -159,16 +189,18 @@
     margin-right: 0.5em;
   }
 
+  .searchBox {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+  }
+
   .searchBox input:focus {
     border-color: #363062;
   }
 
   .searchInput:focus {
     border-color: #363062;
-  }
-
-  .mainSearchContainer {
-    font-size: 16px;
   }
 
   .validateMessage {
@@ -180,10 +212,6 @@
   .searchBox {
     display: inline-block;
     display: flex;
-    align-items: center;
-  }
-
-  .searchBox img {
     align-items: center;
   }
 }

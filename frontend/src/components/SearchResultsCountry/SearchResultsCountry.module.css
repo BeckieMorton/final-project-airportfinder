@@ -3,10 +3,12 @@
   .paginationNumbers {
     display: flex;
     list-style: none;
+    font-size: 10px;
+    text-align: center;
   }
 
   .paginationNumbers li {
-    margin-right: 5px;
+    margin-right: 2px;
     text-align: center;
   }
 
@@ -16,7 +18,7 @@
     align-items: center;
     justify-content: center;
     background-color: #f6f6f6;
-    padding: 5px;
+    padding: 2px;
     list-style: none;
   }
 

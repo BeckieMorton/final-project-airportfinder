@@ -1,13 +1,11 @@
 /* Media query for mobile */
 @media screen and (max-width: 666px) {
-  .list p,
-  .links a {
-    font-size: 10px;
-    text-align: left;
-  }
-
   .list table {
     border: 0;
+  }
+
+  .list table caption {
+    font-size: 1.3em;
   }
 
   .list thead {
@@ -22,18 +20,22 @@
   }
 
   .list tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
     margin-bottom: 0.625em;
   }
 
   .list td {
+    display: block;
+    font-size: 0.8em;
     text-align: right;
   }
 
   table td::before {
     /*
-  * aria-label has no advantage, it won't be read inside a table
-  content: attr(aria-label);
-  */
+* aria-label has no advantage, it won't be read inside a table
+content: attr(aria-label);
+*/
     content: attr(data-label);
     float: left;
     font-weight: bold;
@@ -42,18 +44,6 @@
 
   table td:last-child {
     border-bottom: 0;
-  }
-
-  .list a {
-    font-size: 14px;
-  }
-
-  .links {
-    font-size: 14px;
-  }
-
-  .links:hover {
-    color: #ff8813;
   }
 }
 

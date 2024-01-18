@@ -186,9 +186,6 @@ export const MainSearch = () => {
         </div>
       </div>
       <div className={styles.validateMessage}>{validateMessage}</div>
-      <div className={styles.mobileSelection}>
-        add mobile view section options here
-      </div>
     </>
   );
 };
