@@ -80,7 +80,7 @@ Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
 
 Tablet view testing: Apple ipad mini
 
-Desktop testing: chrome, safari, edge
+Desktop testing: chrome, firefox, edge
 
 ### Screenshots
 
