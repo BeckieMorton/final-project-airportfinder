@@ -12,6 +12,9 @@ body {
   background-color: #fbfbfbfb;
   margin: 0;
   overflow-x: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 h1 {

@@ -150,7 +150,7 @@ export const MainSearch = () => {
             value={searchOption}
             onChange={(event) => setSearchOption(event.target.value)}
           >
-            <option selected disabled value="">
+            <option disabled value="">
               Search by
             </option>
             <option value="0">Name</option>
