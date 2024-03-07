@@ -58,7 +58,6 @@ HTML5, CSS3, React, React Router, with Editor: VS Code
 <ins>Fonts</ins>: Bebas Neue (for logo), Montserrat, Poppins
 
 <ins>Colour scheme</ins>:
-<ins>Colour scheme</ins>:
 white background: #fbfbfbfb
 text dark blue: #363062
 medium blue: #4D4C7D
@@ -80,7 +79,7 @@ Mobile view testing: Pixel 7 (412 x 915), iPhone 12 Pro (390 x 814)
 
 Tablet view testing: Apple ipad mini
 
-Desktop testing: chrome, safari, edge
+Desktop testing: chrome, firefox, edge
 
 ### Screenshots
 
